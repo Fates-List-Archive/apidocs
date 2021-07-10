@@ -18,19 +18,19 @@ BTW please add your bots there if you wish to support us or even
 
 3. Buy a Linux VPS (You need a Linux VPS or a Linux home server with a public ip with port 443 open)
 
-4a) In Cloudflare, create a record (A/CNAME) called @ that points to your VPS ip/hostname
+4. In Cloudflare, create a record (A/CNAME) called @ that points to your VPS ip/hostname
 
-4b) In Cloudflare, go to Speed &gt; Optimization. Enable AMP Real URL
+5. In Cloudflare, go to Speed > Optimization. Enable AMP Real URL
 
-4c) In Cloudflare, go to SSL/TLS, set the mode to Full (strict), enable Authenticated Origin Pull, make an origin certificate (in Origin Server) and save the private key as /key.pem on your VPS and the certificate as /cert.pem on your VPS
+6. In Cloudflare, go to SSL/TLS, set the mode to Full (strict), enable Authenticated Origin Pull, make an origin certificate (in Origin Server) and save the private key as /key.pem on your VPS and the certificate as /cert.pem on your VPS
 
-4d) Download [https://support.cloudflare.com/hc/en-us/article_attachments/360044928032/origin-pull-ca.pem](https://support.cloudflare.com/hc/en-us/article_attachments/360044928032/origin-pull-ca.pem) and save it on the VPS as /origin-pull-ca.pem.
+7. Download [https://support.cloudflare.com/hc/en-us/article_attachments/360044928032/origin-pull-ca.pem](https://support.cloudflare.com/hc/en-us/article_attachments/360044928032/origin-pull-ca.pem) and save it on the VPS as /origin-pull-ca.pem.
 
 ## VPS Setup
 
-1. Download this repo on the VPS using `git clone https://github.com/Fates-List/FatesList`. Make sure the location it is downloaded to is publicly accessible AKA not in a /root folder or anything like that.
+1. Download the Fates List repo on the VPS using `git clone https://github.com/Fates-List/FatesList`. Make sure the location it is downloaded to is publicly accessible AKA not in a /root folder or anything like that.
 
-2. Download snowtuft using `git clone https://github.com/Fates-List/FatesList`. Make sure you have xkcdpass, python3.10 and docker compose ready. Make sure gcc-c++, libffi-devel, libxslt-devel, libxml2-devel, libpq-devel packages are installed. Run `make install` to install Snowtuft
+2. Download snowtuft using `git clone https://github.com/Fates-List/Snowtuft`. Make sure you have xkcdpass, python3.10 and docker compose ready. Make sure gcc-c++, libffi-devel, libxslt-devel, libxml2-devel, libpq-devel packages are installed. Run `make install` to install Snowtuft
 
 3. Enter Fates List directory, copy config_secrets_template.py to config_secrets.py and fill in the required information on there. You do not need to change site_url or mobile_site_url fields (site and mobile_site do need to be filled in without the https://). 
 4. If you have a packup, copy it to /backups/latest.bak, then run `snowtuft dbs setup`. Setup venv using `snowtuft venv setup` (you may need to run this multiple times to install all development dependencies
@@ -43,6 +43,6 @@ BTW please add your bots there if you wish to support us or even
 
 8. Run `bin/run` in the repo folder
 
-9. Follow [this](https://stevescargall.com/2020/05/13/how-to-install-prometheus-and-grafana-on-fedora-server/) on setting up Prometheus and Grafana. Set Grafanas port to 5050. Use a firewall or digiocean firewall to block other ports. Do not open prometheus port in digiocean firewall.
+9. Follow [this](https://stevescargall.com/2020/05/13/how-to-install-prometheus-and-grafana-on-fedora-server/) to set up Prometheus and Grafana for monitoring. Set Grafanas port to 5050. Use a firewall or the digital ocean firewall to block other ports. Do not open prometheus's port in the firewall, only open Grafana's.
 
 Fates List probihits the monetization or resale of coins or any part of Fates List for real money.
