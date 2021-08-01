@@ -1,0 +1,4 @@
+cd ../FatesList
+python manage.py site enums2md > ../apidocs/docs/structures/enums.autogen.md
+cd ../apidocs
+python3.9 -m mkdocs build
