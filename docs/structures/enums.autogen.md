@@ -92,6 +92,7 @@ Handles bot admin operations
 | staff_unlock | 16 | Staff Unlock Bot |
 | bot_lock | 17 | Bot Lock |
 | bot_unlock | 18 | Bot Unlock |
+| bot_delete | 19 | Bot Delete |
 
 ## BotLock
 
@@ -148,6 +149,7 @@ Handles bot admin operations
 | transfer | 30.0 | An enumeration. |
 | reset | 60 | An enumeration. |
 | lock | 120 | An enumeration. |
+| delete | 210.0 | An enumeration. |
 
 ## LongDescType
 
@@ -190,6 +192,31 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | offline | 2 | Offline |
 | idle | 3 | Idle |
 | dnd | 4 | Do Not Disturb |
+
+## ULAFeature
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| get_bot | 1 | Get Bot |
+| post_stats | 2 | Post Stats |
+| get_user_voted | 3 | Get User Voted |
+
+## ULAMethod
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| get | 0 | GET method |
+| post | 1 | POST method |
+| put | 2 | PUT method |
+| patch | 3 | PATCH method |
+| delete | 4 | DELETE method |
+
+## ULAState
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| pending | 0 | Pending Verification |
+| approved | 1 | Approved |
 
 ## UserState
 
@@ -236,4 +263,5 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | :--- | :--- | :--- |
 | json | json | JSON Widget |
 | html | html | HTML Widget |
+| png | png | Widget (as png image) |
 | webp | webp | Widget (as webp image) |
