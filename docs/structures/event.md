@@ -6,7 +6,7 @@ Metadata
 
 | Key | Description | Type |
 | :--- | :--- | :--- |
-| e | Event Name (see [here](enums.autogen.md#APIEvent)) | Integer |
+| e | Event Name (see [here](enums.autogen.md#APIEvents)) | Integer |
 | eid | Event ID (random on websocket auth) | UUID |
 | t | Event Type (multi) | Integer/List |
 | id | Target Bot/User ID | Snowflake |
