@@ -6,12 +6,12 @@ Metadata
 
 | Key | Description | Type |
 | :--- | :--- | :--- |
-| e | Event Name (see [here](https://github.com/Fates-List/FatesList/blob/cf339725f2f3082eae39dc03b67be8807a782efb/modules/models/enums.py#L59)) | Integer |
+| e | Event Name (see [here](enums.autogen.md#APIEvent)) | Integer |
 | eid | Event ID (random on websocket auth) | UUID |
 | t | Event Type (multi) | Integer/List |
 | id | Target Bot/User ID | Snowflake |
 | ts | Event Timestamp | Float |
-| wt | Webhook Type (Webhook Only) (see [here](enums.autogen.md)) | Integer |
+| wt | Webhook Type (Webhook Only) (see [here](enums.autogen.md#WebhookType)) | Integer |
 
 **Key** 
 
