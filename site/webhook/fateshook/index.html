@@ -654,33 +654,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#base-event-context" class="md-nav__link">
-    Base Event Context
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-event-contexts" class="md-nav__link">
-    Special Event Contexts
-  </a>
-  
-    <nav class="md-nav" aria-label="Special Event Contexts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reviews" class="md-nav__link">
-    Reviews
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -793,33 +766,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#base-event-context" class="md-nav__link">
-    Base Event Context
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-event-contexts" class="md-nav__link">
-    Special Event Contexts
-  </a>
-  
-    <nav class="md-nav" aria-label="Special Event Contexts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reviews" class="md-nav__link">
-    Reviews
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -848,88 +794,7 @@
 <p>All Fates Client libraries which support v2 will support this. Some v1 libraries may also work but this is not guaranteed as the format for webhooks has changed a bit during the transition to v2</p>
 </div>
 <h3 id="basic-format">Basic Format</h3>
-<table>
-<thead>
-<tr>
-<th align="left">Key</th>
-<th align="left">Description</th>
-<th align="left">Type</th>
-<th align="left">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">payload</td>
-<td align="left">This will always be ”event” in FatesHook</td>
-<td align="left">String</td>
-<td align="left">None</td>
-</tr>
-<tr>
-<td align="left">event</td>
-<td align="left">This is the name of the event in question</td>
-<td align="left">String</td>
-<td align="left">None</td>
-</tr>
-<tr>
-<td align="left">context</td>
-<td align="left">This is the extra information about your event.</td>
-<td align="left">Object</td>
-<td align="left">Different events have different key value pairs</td>
-</tr>
-<tr>
-<td align="left">bot_id</td>
-<td align="left">This is the corresponding Bot ID of the event</td>
-<td align="left">Snowflake?</td>
-<td align="left">Only sent when dealing with bors</td>
-</tr>
-<tr>
-<td align="left">guild_id</td>
-<td align="left">This is the corresponding Guild ID of the event</td>
-<td align="left">Snowflake?</td>
-<td align="left">Only sent when dealing with servers/guilds</td>
-</tr>
-<tr>
-<td align="left">event_id</td>
-<td align="left">This is the event ID of the event in question</td>
-<td align="left">UUID</td>
-<td align="left">None</td>
-</tr>
-<tr>
-<td align="left">type</td>
-<td align="left">What type of entity you are dealing with (whether its a bot or a guild)</td>
-<td align="left">String</td>
-<td align="left">Will either be ”bot” or ”guild” depending on the entity.</td>
-</tr>
-<tr>
-<td align="left">mode</td>
-<td align="left">This tells you the mode and allows you to quickly check between ”FC” (FatesHook) or ”VOTE” (Vote Webhook)</td>
-<td align="left">String</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<h3 id="base-event-context">Base Event Context</h3>
-<p>All events in Fates List share the basic format in the below table. If it does mot, then you have 99% found a bug and you should report it on the support server. Additional key valie pairs may be present and these will be noted below.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Key</th>
-<th align="left">Value</th>
-<th align="left">Typw</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">user</td>
-<td align="left">This is the User ID responsible for the event</td>
-<td align="left">Snowflake</td>
-</tr>
-</tbody>
-</table>
-<h3 id="special-event-contexts">Special Event Contexts</h3>
-<p>If an event does not appear here, then it uses rhe simple base context format.</p>
-<h4 id="reviews">Reviews</h4>
-<p>The context of a new review or a edit review event is a <a href="../../structures/partial-review/">Partial Review</a> of the review and if the event is new review or edit review, all the <a href="../../structures/review/">Reviews</a> of the bot or server as well (which has every review of your bot or server including the newly added or edited one. Note that all the reviews is only sent on new review and edit review)</p>
+<p>All Fates Hook Webhooks follow the <a href="../../structures/event/">Event</a> format.</p>
                 
                   
                     
@@ -938,7 +803,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2021</span>
       
     
   </small>

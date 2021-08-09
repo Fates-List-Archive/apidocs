@@ -558,9 +558,59 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Events
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Events
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-event-context" class="md-nav__link">
+    Base Event Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-event-contexts" class="md-nav__link">
+    Special Event Contexts
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Event Contexts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reviews" class="md-nav__link">
+    Reviews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -723,6 +773,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-event-context" class="md-nav__link">
+    Base Event Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-event-contexts" class="md-nav__link">
+    Special Event Contexts
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Event Contexts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reviews" class="md-nav__link">
+    Reviews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -752,7 +837,7 @@
 <tbody>
 <tr>
 <td align="left">e</td>
-<td align="left">Event Name (see <a href="https://github.com/Fates-List/FatesList/blob/cf339725f2f3082eae39dc03b67be8807a782efb/modules/models/enums.py#L59">here</a>)</td>
+<td align="left">Event Name (see <a href="../enums.autogen/#APIEvents">here</a>)</td>
 <td align="left">Integer</td>
 </tr>
 <tr>
@@ -777,15 +862,35 @@
 </tr>
 <tr>
 <td align="left">wt</td>
-<td align="left">Webhook Type (Webhook Only) (see <a href="https://github.com/Fates-List/FatesList/blob/cf339725f2f3082eae39dc03b67be8807a782efb/modules/models/enums.py#L14">here</a>)</td>
+<td align="left">Webhook Type (Webhook Only) (see <a href="../enums.autogen/#WebhookType">here</a>)</td>
 <td align="left">Integer</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Key</strong> </p>
-<p>multi:  List can be returned if multiple choices are present</p>
-<p>Context</p>
-<p>The context of a event is different per event, but will mostly have a "user" key (type is Snowflake) with the user ID the action applies to.</p>
+<p>multi: List can be returned if multiple choices are present</p>
+<h3 id="base-event-context">Base Event Context</h3>
+<p>All event contexts in Fates List share the basic format in the below table. If it does not, then you have 99% found a bug and you should report it on our support server. Additional key valie pairs may be present and these will be noted below.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">user</td>
+<td align="left">This is the User ID responsible for the event</td>
+<td align="left">Snowflake</td>
+</tr>
+</tbody>
+</table>
+<h3 id="special-event-contexts">Special Event Contexts</h3>
+<p>If an event does not appear here, then it uses the simple base context format.</p>
+<h4 id="reviews">Reviews</h4>
+<p>The context of a new review or a edit review event is a <a href="../partial-review/">Partial Review</a> object</p>
                 
                   
                     
@@ -794,7 +899,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2021</span>
       
     
   </small>
