@@ -15,8 +15,20 @@ Metadata
 
 **Key** 
 
-multi:  List can be returned if multiple choices are present
+multi: List can be returned if multiple choices are present
 
-Context
+### Base Event Context
 
-The context of a event is different per event, but will mostly have a "user" key (type is Snowflake) with the user ID the action applies to.
+All event contexts in Fates List share the basic format in the below table. If it does not, then you have 99% found a bug and you should report it on our support server. Additional key valie pairs may be present and these will be noted below.
+
+| Key | Value | Type |
+| :--- | :--- | :--- |
+| user | This is the User ID responsible for the event | Snowflake |
+
+### Special Event Contexts
+
+If an event does not appear here, then it uses the simple base context format.
+
+#### Reviews
+
+The context of a new review or a edit review event is a [Review](structures/review.md) object
