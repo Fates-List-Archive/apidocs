@@ -235,6 +235,19 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | bot | 1 | Bot |
 | profile | 2 | Profile |
 
+## WSCloseCode
+
+
+    Websocket close codes used by Fates List
+    
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| InvalidConn | 4000 | Invalid identity or connection |
+| InvalidAuth | 4004 | Invalid authentication |
+| Ratelimited | 4012 | Ratelimited |
+| InternalError | 4500 | Internal client or server error |
+
 ## WebSocketCommand
 
 | Name | Value | Description |
