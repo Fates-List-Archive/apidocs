@@ -739,13 +739,11 @@
                 
                 
                 <h1 id="ratelimits">Ratelimits</h1>
-<p>Ratelimits are, as of right now, applied on the <strong>IDENTIFY</strong> step of connecting to the WebSocket API. They are silent meaning you will not know that you have been ratelimited and will appear as a no auth error or your bot being skipped if you have multiple</p>
-<p>The ratelimits below are the potential ratelimits for Fates List. They keep changing so don't hardcode them and be sure to wait at least 65-80 seconds between each IDENTITY to avoid it:</p>
-<ol>
-<li>You can only connect to the WS 100 times per day, so use each IDENTITY wisely</li>
-<li>For burst authentication (where your websocket drops, you must reconnect within 5 seconds or you will be forced to wait the normal time between identities</li>
-<li>You must wait 65 seconds between identities unless its a burst authentication within 5 seconds</li>
-</ol>
+<p>Ratelimits are applied on data sent over the websocket. A client can get this information from a control packet under the <code>requests_remaining</code> key. A response by the client to a <code>identity</code> control packet sent from the server is equivalent to 2 requests.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Further ratelimits may be added to prevent abuse in the future. These <em>may</em> be documented as they are implemented.</p>
+</div>
                 
                   
                     

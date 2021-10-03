@@ -709,8 +709,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-steps" class="md-nav__link">
-    The Steps
+  <a href="#receiving-responses" class="md-nav__link">
+    Receiving Responses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payloads" class="md-nav__link">
+    Payloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity" class="md-nav__link">
+    Identity
   </a>
   
 </li>
@@ -774,8 +788,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-steps" class="md-nav__link">
-    The Steps
+  <a href="#receiving-responses" class="md-nav__link">
+    Receiving Responses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payloads" class="md-nav__link">
+    Payloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity" class="md-nav__link">
+    Identity
   </a>
   
 </li>
@@ -798,18 +826,99 @@
                 
                 
                 <h1 id="getting-started">Getting Started</h1>
-<p>Fates List offers websockets to allow you to get real time stats about your bot. Before we dive into how it works, here is some basic information</p>
+<p>Fates List offers websockets to allow you to get real time stats about your bot. This has been rewritten in golang to allow for better performance and reliability as well as new features that could not be implemented performantly in python</p>
 <h3 id="what-are-websockets">What are Websockets?</h3>
-<p>Please read <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">this nice MDN doc on WebSockets</a> first before attempting this. Check if your library supports this and is a v2 library as v1 had a completely different process</p>
-<h3 id="the-steps">The Steps</h3>
-<p>We'll go over each step in detail in these docs, but here are the main steps in connecting to the Fates List WebSocket API:</p>
-<ol>
-<li><strong>IDENTIFYING</strong> to the API and dealing with errors</li>
-<li><strong>LISTENING</strong> for a <strong>READY</strong> event</li>
-<li>(optional) <strong>Getting old events</strong> using the ws_event API for your bot (exact URL for your bot will be provided in the ready message)</li>
-<li><strong>Receiving new events</strong> from the API</li>
-<li><strong>Handling duplicate events</strong> and <strong>handling ratelimits</strong></li>
-</ol>
+<p>Please read <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">this nice MDN doc on WebSockets</a> first before attempting this. Check if your library supports the new v2 websocket rewrite first or use one of the example reference libraries <a href="https://github.com/Fates-List/FatesList/tree/main/data/snowfall/info">here</a>.</p>
+<h3 id="receiving-responses">Receiving Responses</h3>
+<p>Large responses are seperated using ASCII Code 31 This is <code>\x1f</code> in python.</p>
+<p>Some example code on how to recieve responses from websocket is below:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">event</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\x1f</span><span class="s2">&quot;</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\x1f</span><span class="s2">&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">e_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e_json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">):</span>
+            <span class="n">e_type</span> <span class="o">=</span> <span class="n">e_json</span><span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+            <span class="o">...</span>
+        <span class="k">elif</span> <span class="n">e_json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;control&quot;</span><span class="p">):</span>
+            <span class="o">...</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">hooks</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">](</span><span class="n">e_json</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="payloads">Payloads</h3>
+<p>Payloads sent by the websocket server are either <a href="../../structures/event/">events</a> or control payloads.</p>
+<p>The format for sending data from the client to the websocket is still being worked on and is not yet implemented in any case.</p>
+<p>Below is the format for a control payload:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">code</td>
+<td align="left">The control payload name. This can be used to check for an identity etc.</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">detail</td>
+<td align="left">Human friendly information describing the control payload for debugging. May be used in future for non-debugging purposes</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">ts</td>
+<td align="left">The timestamp in seconds for the event</td>
+<td align="left">Integer/Float</td>
+</tr>
+<tr>
+<td align="left">requests_remaining</td>
+<td align="left">The amount of requests remaining before you are ratelimited. Is always -1 in initial identity <em>for now</em></td>
+<td align="left">Integer</td>
+</tr>
+<tr>
+<td align="left">control</td>
+<td align="left">Always set to true in a control payload</td>
+<td align="left">Boolean</td>
+</tr>
+</tbody>
+</table>
+<p>All other payloads sent to you by websocket will be a event as of right now. This may change in the future.</p>
+<h3 id="identity">Identity</h3>
+<p>When you recieve a <code>identity</code> control payload, you should respond with the following format (or as given in the <code>detail</code> key)</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">id</td>
+<td align="left">Bot ID</td>
+<td align="left">Snowflake</td>
+</tr>
+<tr>
+<td align="left">token</td>
+<td align="left">API Token</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">send_all</td>
+<td align="left">Whether or not to send all prior events. This may cause disconnects/instability, more memory usage and ratelimits</td>
+<td align="left">Boolean</td>
+</tr>
+<tr>
+<td align="left">send_none</td>
+<td align="left">Whether or not to send events after sending prior events if <code>send_all</code> is set</td>
+<td align="left">Boolean</td>
+</tr>
+</tbody>
+</table>
+<p>After a successful identity, you will now have a established websocket connection</p>
                 
                   
                     
