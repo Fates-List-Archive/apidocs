@@ -49,30 +49,32 @@ May or may not be in numeric order
 | server_archive | 76 | Server Archive Event |
 | vote_reminder | 110 | Vote Reminder |
 
+
 ## BotAdminOp
 
 Handles bot admin operations
 
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| requeue | REQUEUE | Requeue Bot |
-| claim | CLAIM | Claim Bot |
-| unclaim | UNCLAIM | Unclaim Bot |
-| ban | BAN | Ban Bot |
-| unban | UNBAN | Unban Bot |
-| certify | CERTIFY | Certify Bot |
-| uncertify | UNCERTTIFY | Uncertify Bot |
-| approve | APPROVE | Approve Bot |
-| deny | DENY | Deny Bot |
-| unverify | UNVERIFY | Unverify Bot |
-| transfer | TRANSFER | Transfer Bot Ownership |
-| root_update | ROOTUPDATE | Root State Update |
-| reset_votes | RESETVOTES | Reset All Votes |
-| staff_lock | SLOCK | Staff Lock Bot |
-| staff_unlock | SUNLOCK | Staff Unlock Bot |
-| bot_lock | BLOCK | Bot Lock |
-| bot_unlock | BUNLOCK | Bot Unlock |
-| bot_delete | DELETE | Bot Delete |
+| Name | Value | Description |   Perm   |   Reason Needed   |   Recursive   |   Cooldown   |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| requeue | REQUEUE | Requeue Bot | 3 | True | False | CooldownBucket.requeue (12.0) |
+| claim | CLAIM | Claim Bot | 2 | False | False | None |
+| unclaim | UNCLAIM | Unclaim Bot | 2 | False | False | None |
+| ban | BAN | Ban Bot | 3 | True | False | CooldownBucket.ban (18.0) |
+| unban | UNBAN | Unban Bot | 3 | True | False | CooldownBucket.ban (18.0) |
+| certify | CERTIFY | Certify Bot | 5 | False | False | None |
+| uncertify | UNCERTTIFY | Uncertify Bot | 5 | True | False | None |
+| approve | APPROVE | Approve Bot | 2 | True | False | None |
+| deny | DENY | Deny Bot | 2 | True | False | None |
+| unverify | UNVERIFY | Unverify Bot | 3 | True | False | CooldownBucket.ban (18.0) |
+| transfer | TRANSFER | Transfer Bot Ownership | 4 | True | False | CooldownBucket.transfer (30.0) |
+| root_update | ROOTUPDATE | Root State Update | 5 | True | False | CooldownBucket.transfer (30.0) |
+| reset_votes | RESETVOTES | Reset All Votes | (5, 7) | True | True | CooldownBucket.reset (60) |
+| staff_lock | SLOCK | Staff Lock Bot | 4 | True | False | None |
+| staff_unlock | SUNLOCK | Staff Unlock Bot | 4 | True | False | CooldownBucket.lock (120) |
+| bot_lock | BLOCK | Bot Lock | 0 | False | False | None |
+| bot_unlock | BUNLOCK | Bot Unlock | 4 | False | False | CooldownBucket.lock (120) |
+| bot_delete | DELETE | Bot Delete | 4 | True | False | CooldownBucket.delete (210.0) |
+
 
 ## BotLock
 
@@ -81,6 +83,7 @@ Handles bot admin operations
 | unlocked | 0 | Bot unlocked for editing |
 | locked | 1 | Bot locked for editing |
 | locked_staff | 2 | Bot locked by staff |
+
 
 ## BotState
 
@@ -94,6 +97,7 @@ Handles bot admin operations
 | under_review | 5 | Under Review |
 | certified | 6 | Certified |
 | archived | 7 | Archived |
+
 
 ## CommandType
 
@@ -111,6 +115,7 @@ Handles bot admin operations
 | guild_slash | 1 | Slash Command (guild) |
 | global_slash | 2 | Slash Command (global) |
 
+
 ## CooldownBucket
 
 | Name | Value | Description |
@@ -122,6 +127,7 @@ Handles bot admin operations
 | lock | 120 | An enumeration. |
 | delete | 210.0 | An enumeration. |
 
+
 ## LongDescType
 
 | Name | Value | Description |
@@ -130,6 +136,7 @@ Handles bot admin operations
 | markdown_pymarkdown | 1 | Markdown using Python Markdown |
 | markdown_marked | 2 | Markdown using JavaScript Marked |
 
+
 ## PromotionType
 
 | Name | Value | Description |
@@ -137,6 +144,7 @@ Handles bot admin operations
 | announcement | 0 | Announcement |
 | promotion | 1 | Promotion |
 | generic | 2 | Generic |
+
 
 ## Status
 
@@ -150,6 +158,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | idle | 3 | Idle |
 | dnd | 4 | Do Not Disturb |
 
+
 ## ULAFeature
 
 | Name | Value | Description |
@@ -157,6 +166,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | get_bot | 1 | Get Bot |
 | post_stats | 2 | Post Stats |
 | get_user_voted | 3 | Get User Voted |
+
 
 ## ULAMethod
 
@@ -168,6 +178,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | patch | 3 | PATCH method |
 | delete | 4 | DELETE method |
 
+
 ## ULAState
 
 | Name | Value | Description |
@@ -175,14 +186,16 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | pending | 0 | Pending Verification |
 | approved | 1 | Approved |
 
+
 ## UserState
 
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| normal | 0 | Normal (No Ban) |
-| global_ban | 1 | Global Ban |
-| pedit_ban | 2 | Profile Edit Ban |
-| ddr_ban | 3 | Data Deletion Request Ban |
+| Name | Value | Description |   Sitelock   |
+| :--- | :--- | :--- | :--- |
+| normal | 0 | Normal (No Ban) | False |
+| global_ban | 1 | Global Ban | True |
+| pedit_ban | 2 | Profile Edit Ban | False |
+| ddr_ban | 3 | Data Deletion Request Ban | True |
+
 
 ## Vanity
 
@@ -192,6 +205,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | bot | 1 | Bot |
 | profile | 2 | Profile |
 
+
 ## WebhookType
 
 | Name | Value | Description |
@@ -199,6 +213,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | vote | 0 | Vote Webhook |
 | discord | 1 | Discord Integration |
 | fc | 2 | Fates Client |
+
 
 ## WidgetFormat
 
@@ -208,3 +223,4 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | html | html | HTML Widget |
 | png | png | Widget (as png image) |
 | webp | webp | Widget (as webp image) |
+

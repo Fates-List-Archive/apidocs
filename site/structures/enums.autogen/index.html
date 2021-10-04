@@ -1216,6 +1216,10 @@
 <th align="left">Name</th>
 <th align="left">Value</th>
 <th align="left">Description</th>
+<th align="left">Perm</th>
+<th align="left">Reason Needed</th>
+<th align="left">Recursive</th>
+<th align="left">Cooldown</th>
 </tr>
 </thead>
 <tbody>
@@ -1223,91 +1227,163 @@
 <td align="left">requeue</td>
 <td align="left">REQUEUE</td>
 <td align="left">Requeue Bot</td>
+<td align="left">3</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.requeue (12.0)</td>
 </tr>
 <tr>
 <td align="left">claim</td>
 <td align="left">CLAIM</td>
 <td align="left">Claim Bot</td>
+<td align="left">2</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">unclaim</td>
 <td align="left">UNCLAIM</td>
 <td align="left">Unclaim Bot</td>
+<td align="left">2</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">ban</td>
 <td align="left">BAN</td>
 <td align="left">Ban Bot</td>
+<td align="left">3</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.ban (18.0)</td>
 </tr>
 <tr>
 <td align="left">unban</td>
 <td align="left">UNBAN</td>
 <td align="left">Unban Bot</td>
+<td align="left">3</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.ban (18.0)</td>
 </tr>
 <tr>
 <td align="left">certify</td>
 <td align="left">CERTIFY</td>
 <td align="left">Certify Bot</td>
+<td align="left">5</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">uncertify</td>
 <td align="left">UNCERTTIFY</td>
 <td align="left">Uncertify Bot</td>
+<td align="left">5</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">approve</td>
 <td align="left">APPROVE</td>
 <td align="left">Approve Bot</td>
+<td align="left">2</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">deny</td>
 <td align="left">DENY</td>
 <td align="left">Deny Bot</td>
+<td align="left">2</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">unverify</td>
 <td align="left">UNVERIFY</td>
 <td align="left">Unverify Bot</td>
+<td align="left">3</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.ban (18.0)</td>
 </tr>
 <tr>
 <td align="left">transfer</td>
 <td align="left">TRANSFER</td>
 <td align="left">Transfer Bot Ownership</td>
+<td align="left">4</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.transfer (30.0)</td>
 </tr>
 <tr>
 <td align="left">root_update</td>
 <td align="left">ROOTUPDATE</td>
 <td align="left">Root State Update</td>
+<td align="left">5</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.transfer (30.0)</td>
 </tr>
 <tr>
 <td align="left">reset_votes</td>
 <td align="left">RESETVOTES</td>
 <td align="left">Reset All Votes</td>
+<td align="left">(5, 7)</td>
+<td align="left">True</td>
+<td align="left">True</td>
+<td align="left">CooldownBucket.reset (60)</td>
 </tr>
 <tr>
 <td align="left">staff_lock</td>
 <td align="left">SLOCK</td>
 <td align="left">Staff Lock Bot</td>
+<td align="left">4</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">staff_unlock</td>
 <td align="left">SUNLOCK</td>
 <td align="left">Staff Unlock Bot</td>
+<td align="left">4</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.lock (120)</td>
 </tr>
 <tr>
 <td align="left">bot_lock</td>
 <td align="left">BLOCK</td>
 <td align="left">Bot Lock</td>
+<td align="left">0</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">None</td>
 </tr>
 <tr>
 <td align="left">bot_unlock</td>
 <td align="left">BUNLOCK</td>
 <td align="left">Bot Unlock</td>
+<td align="left">4</td>
+<td align="left">False</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.lock (120)</td>
 </tr>
 <tr>
 <td align="left">bot_delete</td>
 <td align="left">DELETE</td>
 <td align="left">Bot Delete</td>
+<td align="left">4</td>
+<td align="left">True</td>
+<td align="left">False</td>
+<td align="left">CooldownBucket.delete (210.0)</td>
 </tr>
 </tbody>
 </table>
@@ -1650,6 +1726,7 @@
 <th align="left">Name</th>
 <th align="left">Value</th>
 <th align="left">Description</th>
+<th align="left">Sitelock</th>
 </tr>
 </thead>
 <tbody>
@@ -1657,21 +1734,25 @@
 <td align="left">normal</td>
 <td align="left">0</td>
 <td align="left">Normal (No Ban)</td>
+<td align="left">False</td>
 </tr>
 <tr>
 <td align="left">global_ban</td>
 <td align="left">1</td>
 <td align="left">Global Ban</td>
+<td align="left">True</td>
 </tr>
 <tr>
 <td align="left">pedit_ban</td>
 <td align="left">2</td>
 <td align="left">Profile Edit Ban</td>
+<td align="left">False</td>
 </tr>
 <tr>
 <td align="left">ddr_ban</td>
 <td align="left">3</td>
 <td align="left">Data Deletion Request Ban</td>
+<td align="left">True</td>
 </tr>
 </tbody>
 </table>
@@ -1769,7 +1850,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2021</span>
       
     
   </small>
