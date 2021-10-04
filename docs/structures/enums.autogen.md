@@ -2,19 +2,6 @@
 
 Below is a reference of all the enums used in Fates List, It is automatically generated
 
-## APIEventTypes
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| ws_invalid | 0 | Websocket Invalid Response |
-| ws_no_auth | 1 | Websocket No Authentication |
-| ws_ready | 3 | Websocket Ready |
-| ws_event_single | 4 | Single Websocket Event |
-| ws_event_multi | 5 | Mutliple Websocket Events |
-| auth_token | 20 | Token Auth |
-| auth_manager_key | 21 | Manager Auth |
-| vote_webhook | 40 | Vote Webhook Event |
-
 ## APIEvents
 
 May or may not be in numeric order
@@ -60,11 +47,6 @@ May or may not be in numeric order
 | server_ban | 74 | Server Ban Event |
 | server_hide | 75 | Server Hide Event |
 | server_archive | 76 | Server Archive Event |
-| ws_identity | 90 | Websocket Identity Event |
-| ws_identity_res | 91 | Websocket Identity Response Event |
-| ws_kill | 92 | Websocket Kill Event |
-| ws_status | 93 | Websocket Status Event |
-| ws_event | 94 | Websocket Event |
 | vote_reminder | 110 | Vote Reminder |
 
 ## BotAdminOp
@@ -73,26 +55,24 @@ Handles bot admin operations
 
 | Name | Value | Description |
 | :--- | :--- | :--- |
-| requeue | 0 | Requeue Bot |
-| claim | 1 | Claim Bot |
-| unclaim | 2 | Unclaim Bot |
-| ban | 3 | Ban Bot |
-| unban | 4 | Unban Bot |
-| certify | 5 | Certify Bot |
-| uncertify | 6 | Uncertify Bot |
-| approve | 7 | Approve Bot |
-| deny | 8 | Deny Bot |
-| unverify | 9 | Unverify Bot |
-| transfer | 10 | Transfer Bot Ownership |
-| root_update | 11 | Root State Update |
-| reset_votes | 12 | Reset All Votes |
-| dummy_recursive | 13 | Dummy Resursive |
-| dummy_nrecursive | 14 | Dummy Nonrecursive |
-| staff_lock | 15 | Staff Lock Bot |
-| staff_unlock | 16 | Staff Unlock Bot |
-| bot_lock | 17 | Bot Lock |
-| bot_unlock | 18 | Bot Unlock |
-| bot_delete | 19 | Bot Delete |
+| requeue | REQUEUE | Requeue Bot |
+| claim | CLAIM | Claim Bot |
+| unclaim | UNCLAIM | Unclaim Bot |
+| ban | BAN | Ban Bot |
+| unban | UNBAN | Unban Bot |
+| certify | CERTIFY | Certify Bot |
+| uncertify | UNCERTTIFY | Uncertify Bot |
+| approve | APPROVE | Approve Bot |
+| deny | DENY | Deny Bot |
+| unverify | UNVERIFY | Unverify Bot |
+| transfer | TRANSFER | Transfer Bot Ownership |
+| root_update | ROOTUPDATE | Root State Update |
+| reset_votes | RESETVOTES | Reset All Votes |
+| staff_lock | SLOCK | Staff Lock Bot |
+| staff_unlock | SUNLOCK | Staff Unlock Bot |
+| bot_lock | BLOCK | Bot Lock |
+| bot_unlock | BUNLOCK | Bot Unlock |
+| bot_delete | DELETE | Bot Delete |
 
 ## BotLock
 
@@ -101,15 +81,6 @@ Handles bot admin operations
 | unlocked | 0 | Bot unlocked for editing |
 | locked | 1 | Bot locked for editing |
 | locked_staff | 2 | Bot locked by staff |
-| locked_staff_spam | 3 | Bot locked by staff due to spamming edits |
-
-## BotRequeue
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| claim | 0 | Claim Bot |
-| requeue | 1 | Requeue Bot |
-| unclaim | 2 | Unclaim Bot |
 
 ## BotState
 
@@ -158,20 +129,6 @@ Handles bot admin operations
 | html | 0 | HTML/Raw Description |
 | markdown_pymarkdown | 1 | Markdown using Python Markdown |
 | markdown_marked | 2 | Markdown using JavaScript Marked |
-
-## PartnerAdType
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| server | server | Server Ad |
-| site | site | Site Ad |
-
-## PartnerType
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| bot | 0 | Bot |
-| guild | 1 | Guild |
 
 ## PromotionType
 
@@ -234,33 +191,6 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | server | 0 | Server |
 | bot | 1 | Bot |
 | profile | 2 | Profile |
-
-## WSCloseCode
-
-
-    Websocket close codes used by Fates List
-    
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| InvalidConn | 4000 | Invalid identity or connection |
-| InvalidAuth | 4004 | Invalid authentication |
-| Ratelimited | 4012 | Ratelimited |
-| InternalError | 4500 | Internal client or server error |
-
-## WebSocketCommand
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| dispatch_old | 0 | Dispatch Old Events |
-
-## WebhookResolver
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| not_ack | 0 | Not Acknowledged |
-| error | 1 | Post Error |
-| posted | 2 | Posted |
 
 ## WebhookType
 
