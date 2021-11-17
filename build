@@ -1,4 +1,2 @@
-cd ../FatesList
-python manage.py site enums2md > ../apidocs/docs/structures/enums.autogen.md
-cd ../apidocs
-python3.9 -m mkdocs build
+dragon --cmd site.enum2html > docs/structures/enums.autogen.md
+python -m mkdocs build

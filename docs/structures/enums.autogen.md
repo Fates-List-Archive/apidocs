@@ -36,10 +36,10 @@ May or may not be in numeric order
 | review_add | 31 | Bot Review Add Event |
 | review_edit | 32 | Bot Review Edit Event |
 | review_delete | 33 | Bot Review Delete Event |
-| command_vote | 50 | Bot Command Vote Event |
-| command_add | 51 | Bot Command Add Event |
-| command_edit | 52 | Bot Command Edit Event |
-| command_delete | 53 | Bot Command Delete Event |
+| resource_add | 40 | Bot Resource Add Event |
+| resource_delete | 41 | Bot Resource Delete Event |
+| command_add | 50 | Bot Command Add Event |
+| command_delete | 51 | Bot Command Delete Event |
 | server_vote | 70 | Server Vote Event |
 | server_add | 71 | Server Add Event |
 | server_edit | 72 | Server Edit Event |
@@ -47,14 +47,15 @@ May or may not be in numeric order
 | server_ban | 74 | Server Ban Event |
 | server_hide | 75 | Server Hide Event |
 | server_archive | 76 | Server Archive Event |
-| vote_reminder | 110 | Vote Reminder |
+| staff_lock | 80 | Staff Lock |
+| staff_unlock | 81 | Staff Unlock |
 
 
 ## BotAdminOp
 
 Handles bot admin operations
 
-| Name | Value | Description |   Perm   |   Reason Needed   |   Recursive   |   Cooldown   |
+| Name | Value | Description | Perm | Reason Needed | Recursive | Cooldown |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | requeue | REQUEUE | Requeue Bot | 3 | True | False | CooldownBucket.requeue (12.0) |
 | claim | CLAIM | Claim Bot | 2 | False | False | None |
@@ -66,14 +67,11 @@ Handles bot admin operations
 | approve | APPROVE | Approve Bot | 2 | True | False | None |
 | deny | DENY | Deny Bot | 2 | True | False | None |
 | unverify | UNVERIFY | Unverify Bot | 3 | True | False | CooldownBucket.ban (18.0) |
-| transfer | TRANSFER | Transfer Bot Ownership | 4 | True | False | CooldownBucket.transfer (30.0) |
-| root_update | ROOTUPDATE | Root State Update | 5 | True | False | CooldownBucket.transfer (30.0) |
 | reset_votes | RESETVOTES | Reset All Votes | (5, 7) | True | True | CooldownBucket.reset (60) |
-| staff_lock | SLOCK | Staff Lock Bot | 4 | True | False | None |
-| staff_unlock | SUNLOCK | Staff Unlock Bot | 4 | True | False | CooldownBucket.lock (120) |
+| staff_lock | STAFFLOCK | Staff Lock Bot | 4 | True | False | None |
+| staff_unlock | STAFFUNLOCK | Staff Unlock Bot | 4 | True | False | CooldownBucket.lock (120) |
 | bot_lock | BLOCK | Bot Lock | 0 | False | False | None |
 | bot_unlock | BUNLOCK | Bot Unlock | 4 | False | False | CooldownBucket.lock (120) |
-| bot_delete | DELETE | Bot Delete | 4 | True | False | CooldownBucket.delete (210.0) |
 
 
 ## BotLock
@@ -97,6 +95,7 @@ Handles bot admin operations
 | under_review | 5 | Under Review |
 | certified | 6 | Certified |
 | archived | 7 | Archived |
+| private_viewable | 8 | Private, but viewable with link (server only) |
 
 
 ## CommandType
@@ -146,6 +145,14 @@ Handles bot admin operations
 | generic | 2 | Generic |
 
 
+## ReviewType
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| bot | 0 | Bot |
+| server | 1 | Server |
+
+
 ## Status
 
 Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for more information)
@@ -189,7 +196,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 
 ## UserState
 
-| Name | Value | Description |   Sitelock   |
+| Name | Value | Description | Sitelock |
 | :--- | :--- | :--- | :--- |
 | normal | 0 | Normal (No Ban) | False |
 | global_ban | 1 | Global Ban | True |
