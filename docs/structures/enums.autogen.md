@@ -92,6 +92,7 @@ Handles bot admin operations
 | certified | 6 | Certified |
 | archived | 7 | Archived |
 | private_viewable | 8 | Private, but viewable with link (server only) |
+| private_staff_only | 9 | Private, only staff may join (server only) |
 
 
 ## CommandType
@@ -224,7 +225,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | :--- | :--- | :--- |
 | vote | 0 | Vote Webhook |
 | discord | 1 | Discord Integration |
-| fc | 2 | Fates Client |
+| fc | 2 | Fates Client (deprecated) |
 
 
 ## WidgetFormat
