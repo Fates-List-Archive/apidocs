@@ -706,41 +706,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          FatesHook (Fates Client)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         FatesHook (Fates Client)
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-format" class="md-nav__link">
-    Basic Format
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -850,21 +818,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-format" class="md-nav__link">
-    Basic Format
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -881,17 +834,7 @@
                 
                 
                 <h1 id="fateshook-fates-client">FatesHook (Fates Client)</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There are many types of webhooks in Fates List. Please choose the one you use carefully. Also note that all Fates List webhooks (excl. Discord Integration) will have a Authorization header with your API Token so you can validate the request.</p>
-</div>
-<p>FatesHook is a webhook type to get additional events like edit bot, review events and more. These events cannot be sent using something like vote webhook and need their own format which is what FatesHook is for. All Fates Client Webhooks like the Vote Webhook will be sent as a JSON with the Authorization header being your API token.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>All Fates Client libraries which support v2 will support this. Some v1 libraries may also work but this is not guaranteed as the format for webhooks has changed a bit during the transition to v2</p>
-</div>
-<h3 id="basic-format">Basic Format</h3>
-<p>All Fates Hook Webhooks follow the <a href="../../structures/event/">Event</a> format.</p>
+<p>This has been deprecated and now behaves exactly like a vote webhook. Use <a href="../../websockets/getting-started/">websockets</a> to get additional events like edit_bot, review events and more!</p>
                 
                   
                     
