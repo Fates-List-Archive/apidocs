@@ -26,3 +26,19 @@ but **please feel free to privately report bad staff to an owner or via FL Kreml
     On main server, Minotaur and Wick can be used. Use Xenon as a backup bot
 
     On the test server, Minotaur is the only moderation bot as antinuke on a test server is dumb**
+
+## Reviewing Bots
+
+Fates List uses Ashfur to handle bots (using slash commands)
+
+/claim - Claims a bot, **be sure to unclaim it if you are not reviewing it anymore or else I might have to do another 3000 @everyone pings**
+
+/unclaim - Unclaims a bot
+
+/approve - Approves a bot. Get the guild count from the authorize/oauth screen. Be sure to give good appropriate feedback though
+
+/deny - Denies a bot
+
+/requeue - Requeues a bot if it is denied
+
+**Update Discord if you don't see the commands and then DM a Administrator+**
