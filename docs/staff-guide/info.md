@@ -66,6 +66,7 @@ and we want to deal with our queue as well...*).
 **Remember, case-by-case basis means use your own judgement and ask other staff members if unsure**
 
 Some things that should be checked for. Note that *all of the below is changeable on a case by case basis*:
+
 - Admin Commands (antinuke is a special case and has an exemption here)
 - Admin-locked bots (antinuke is a special case and has an examption here)
 - NSFW commands with proper channel gating
