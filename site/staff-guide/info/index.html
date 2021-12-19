@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://fateslist.xyz/basics/endpoints/">
+        <link rel="canonical" href="https://fateslist.xyz/staff-guide/info/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Endpoints - Fates List Docs</title>
+        <title>Staff Info - Fates List Docs</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#endpoints" class="md-skip">
+        <a href="#staff-info" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Endpoints
+              Staff Info
             
           </span>
         </div>
@@ -307,14 +307,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -337,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-pinning/" class="md-nav__link">
+      <a href="../../basics/api-pinning/" class="md-nav__link">
         API Pinning
       </a>
     </li>
@@ -351,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-versions/" class="md-nav__link">
+      <a href="../../basics/api-versions/" class="md-nav__link">
         API Versions
       </a>
     </li>
@@ -363,21 +361,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../basics/endpoints/" class="md-nav__link">
         Endpoints
       </a>
-      
     </li>
   
 
@@ -575,12 +563,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -601,11 +591,53 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../staff-guide/info/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Staff Info
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Staff Info
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moderation-rules" class="md-nav__link">
+    Moderation Rules
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -866,6 +898,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moderation-rules" class="md-nav__link">
+    Moderation Rules
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -876,22 +923,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Fates-List/apidocs/edit/main/docs/basics/endpoints.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Fates-List/apidocs/edit/main/docs/staff-guide/info.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="endpoints">Endpoints</h1>
-<p>You can see the documentation for the actual API endpoints provided by Fates List via Swagger, Redoc or the raw OpenAPI schema (for those who just want the raw OpenAPI schema to plug into an API tester):</p>
-<p>Redoc (recommended): <a href="https://fateslist.xyz/api/docs/redoc">https://fateslist.xyz/api/docs/redoc</a></p>
-<p>Swagger: <a href="https://fateslist.xyz/api/docs/swagger">https://fateslist.xyz/api/docs/swagger</a></p>
-<p>OpenAPI JSON: <a href="https://fateslist.xyz/api/docs/openapi">https://fateslist.xyz/api/docs/openapi</a></p>
-<details class="warning" open="open">
-<summary>Warning</summary>
-<p><strong>Do not use Swagger "Try It Out" to test the API as Swagger does not support Authorization headers unless it's a Bearer token or HTTP Basic Auth.</strong></p>
-<p>It is recommended to use (python) requests, (NodeJS) node-fetch or <a href="https://reqbin.com">reqbin</a> though reqbin should be used as a <strong>last resort</strong> as it does not support DELETE requests with a request body.</p>
-</details>
-<p>These endpoints are subject to change over time. For information on the rest of the API and how to use the API, continue reading the API Documentation here. The above URLs cover all the endpoints while this documentation (the main one) just covers the additional things you need to know in order to read the above properly.</p>
+                <h1 id="staff-info">Staff Info</h1>
+<p><strong>Some important information regarding Fates List</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Staff server is fully <strong>PRIVATE</strong>, inviting people to our staff server is not allowed and you will be demoted unless you ask 
+permission from me or a Admin/Head Admin before inviting. Additionally, moderation commands for bots should probably be discussed 
+in the staff server and then done in the main server.</p>
+<p>Test Server is fully <strong>PUBLIC</strong> meaning people can join it if they wish and you can/should invite them if there’s a issue reviewing the bot or whatever as it’s more helpful than a picture</p>
+</div>
+<h2 id="moderation-rules">Moderation Rules</h2>
+<p>Please don’t abuse the bots please <strong>and only invite bots with permission from an Administrator+</strong></p>
+<p>People higher in clearance <em>override</em> statements made by people lower (Head Admin word overrides Admin’s word) 
+but <strong>please feel free to privately report bad staff to an owner or via FL Kremlin/FL Secret Kremlin (if you have access to those)</strong></p>
+<p><strong>Wick is only for antinuke on the staff server (down right now), use &lt;@906732932918542366&gt; (prefix of m/) for all normal moderation.
+This is why very few people (only Paul with EO and I have permissions)</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Wick is only for antinuke on the staff server (down right now), use &lt;@906732932918542366&gt; (prefix of m/) for all normal moderation.
+This is why very few people (only Paul with EO and I have permissions)</strong></p>
+<p>On main server, Minotaur and Wick can be used. Use Xenon as a backup bot</p>
+<p>On the test server, Minotaur is the only moderation bot as antinuke on a test server is dumb**</p>
+</div>
                 
                   
                     
@@ -900,7 +958,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2021</span>
       
     
   </small>
@@ -925,7 +983,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../api-versions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API Versions" rel="prev">
+        <a href="../../css/useful-information/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Useful Information" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -934,20 +992,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              API Versions
+              Useful Information
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../changelog/v2_beta2/" class="md-footer__link md-footer__link--next" aria-label="Next: API v2 beta 2 (April 5th, 2021)" rel="next">
+        <a href="../../structures/basic-structures/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic Structures" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              API v2 beta 2 (April 5th, 2021)
+              Basic Structures
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -563,6 +563,54 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Staff guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Staff guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Staff guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../staff-guide/info/" class="md-nav__link">
+        Staff Info
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -570,18 +618,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Structures
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Structures" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Structures
         </label>
@@ -656,8 +704,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#botlock" class="md-nav__link">
-    BotLock
+  <a href="#botflag" class="md-nav__link">
+    BotFlag
   </a>
   
 </li>
@@ -735,6 +783,13 @@
         <li class="md-nav__item">
   <a href="#ulastate" class="md-nav__link">
     ULAState
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#userbotaction" class="md-nav__link">
+    UserBotAction
   </a>
   
 </li>
@@ -835,18 +890,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           Webhook
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Webhook" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Webhook
         </label>
@@ -897,18 +952,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           Websockets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Websockets" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Websockets
         </label>
@@ -990,8 +1045,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#botlock" class="md-nav__link">
-    BotLock
+  <a href="#botflag" class="md-nav__link">
+    BotFlag
   </a>
   
 </li>
@@ -1069,6 +1124,13 @@
         <li class="md-nav__item">
   <a href="#ulastate" class="md-nav__link">
     ULAState
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#userbotaction" class="md-nav__link">
+    UserBotAction
   </a>
   
 </li>
@@ -1470,7 +1532,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="botlock">BotLock</h2>
+<h2 id="botflag">BotFlag</h2>
 <table>
 <thead>
 <tr>
@@ -1486,14 +1548,29 @@
 <td align="left">Bot unlocked for editing</td>
 </tr>
 <tr>
-<td align="left">locked</td>
+<td align="left">edit_locked</td>
 <td align="left">1</td>
 <td align="left">Bot locked for editing</td>
 </tr>
 <tr>
-<td align="left">locked_staff</td>
+<td align="left">staff_locked</td>
 <td align="left">2</td>
 <td align="left">Bot locked by staff</td>
+</tr>
+<tr>
+<td align="left">stats_locked</td>
+<td align="left">3</td>
+<td align="left">Stats locked</td>
+</tr>
+<tr>
+<td align="left">vote_locked</td>
+<td align="left">4</td>
+<td align="left">Vote locked</td>
+</tr>
+<tr>
+<td align="left">system</td>
+<td align="left">5</td>
+<td align="left">System bot</td>
 </tr>
 </tbody>
 </table>
@@ -1861,6 +1938,48 @@
 </tr>
 </tbody>
 </table>
+<h2 id="userbotaction">UserBotAction</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">approve</td>
+<td align="left">0</td>
+<td align="left">Approve</td>
+</tr>
+<tr>
+<td align="left">deny</td>
+<td align="left">1</td>
+<td align="left">Deny</td>
+</tr>
+<tr>
+<td align="left">certify</td>
+<td align="left">2</td>
+<td align="left">Certify</td>
+</tr>
+<tr>
+<td align="left">ban</td>
+<td align="left">3</td>
+<td align="left">Ban</td>
+</tr>
+<tr>
+<td align="left">claim</td>
+<td align="left">4</td>
+<td align="left">Claim</td>
+</tr>
+<tr>
+<td align="left">unclaim</td>
+<td align="left">5</td>
+<td align="left">Unclaim</td>
+</tr>
+</tbody>
+</table>
 <h2 id="userstate">UserState</h2>
 <table>
 <thead>
@@ -1885,7 +2004,7 @@
 <td align="left">True</td>
 </tr>
 <tr>
-<td align="left">pedit_ban</td>
+<td align="left">profile_edit_ban</td>
 <td align="left">2</td>
 <td align="left">Profile Edit Ban</td>
 <td align="left">False</td>

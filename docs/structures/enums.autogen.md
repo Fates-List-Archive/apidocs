@@ -70,13 +70,16 @@ Handles bot admin operations
 | bot_unlock | BUNLOCK | Bot Unlock | 4 | False | False | CooldownBucket.lock (120) |
 
 
-## BotLock
+## BotFlag
 
 | Name | Value | Description |
 | :--- | :--- | :--- |
 | unlocked | 0 | Bot unlocked for editing |
-| locked | 1 | Bot locked for editing |
-| locked_staff | 2 | Bot locked by staff |
+| edit_locked | 1 | Bot locked for editing |
+| staff_locked | 2 | Bot locked by staff |
+| stats_locked | 3 | Stats locked |
+| vote_locked | 4 | Vote locked |
+| system | 5 | System bot |
 
 
 ## BotState
@@ -200,13 +203,25 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | approved | 1 | Approved |
 
 
+## UserBotAction
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| approve | 0 | Approve |
+| deny | 1 | Deny |
+| certify | 2 | Certify |
+| ban | 3 | Ban |
+| claim | 4 | Claim |
+| unclaim | 5 | Unclaim |
+
+
 ## UserState
 
 | Name | Value | Description | Sitelock |
 | :--- | :--- | :--- | :--- |
 | normal | 0 | Normal (No Ban) | False |
 | global_ban | 1 | Global Ban | True |
-| pedit_ban | 2 | Profile Edit Ban | False |
+| profile_edit_ban | 2 | Profile Edit Ban | False |
 | ddr_ban | 3 | Data Deletion Request Ban | True |
 
 
