@@ -1,6 +1,14 @@
 # Staff Info
 
-**Some important information regarding Fates List**
+## Contributing
+
+If you believe you have found a bug or wish to suggest an improvement to these docs, please make a PR [here](https://github.com/Fates-List/apidocs)
+
+When making the PR, clone the Fates-List repository, add dragon to your PATH and then run the `./build` in your forked/modified repository to build
+the changes. **If you do not have a linux machine or if you do not understand the above, just say so in the PR and allow edits from others so we can
+build the new site docs for you**
+
+## Important Info
 
 !!! warning
 
@@ -35,10 +43,21 @@ Fates List uses Ashfur to handle bots (using slash commands)
 
 /unclaim - Unclaims a bot
 
-/approve - Approves a bot. Get the guild count from the authorize/oauth screen. Be sure to give good appropriate feedback though
+/approve - Approves a bot. Be sure to give good appropriate feedback and be polite and *most importantly* be formal.
 
-/deny - Denies a bot
+/deny - Denies a bot. Once again, be sure to give good appropriate feedback and be polite and *most importantly* be formal.
 
-/requeue - Requeues a bot if it is denied
+/requeue - Requeues a bot if it is denied. **This is moderator only**
 
-**Update Discord if you don't see the commands and then DM a Administrator+**
+**Update Discord if you don't see the commands and then DM a Administrator+ if you still cannot see it**
+
+And... that's it! Yes, it's really that easy!
+
+## Bots in other languages
+
+Do not deny bots for using other languages. These are officially supported. Instead, do one of the following:
+
+- Use Google Translate: https://translate.google.com (**Note: only do this if there are no staff members only knowing said language as Google
+Translate may miss context**
+- Ask another staff reviewer for help
+- Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*)
