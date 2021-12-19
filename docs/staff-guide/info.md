@@ -80,8 +80,8 @@ Some things that should be checked for. Note that *all of the below is changeabl
 
 !!! info
 
-    Head Admins+ may approve known large bots without fully testing them if they are KNOWN to be high quality and have been widely used
-by them. This is in place to reduce our queue size allowing smaller bots to be tested more quickly and with better feedback
+    Head Admins+ may approve known large bots without fully testing them if they are KNOWN to be high quality and have been widely used 
+    by them. This is in place to reduce our queue size allowing smaller bots to be tested more quickly and with better feedback
 
 
 If a bot is in need of verification, it may also be tested on its support server. This also goes for regular bots as well.
