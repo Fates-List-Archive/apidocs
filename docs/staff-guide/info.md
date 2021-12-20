@@ -94,3 +94,10 @@ Do not deny bots for using other languages. These are officially supported. Inst
 Translate may miss context**
 - Ask another staff reviewer for help
 - Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*)
+
+## Prefix Changes
+
+Do not deny bots for not supporting custom prefixes. This is a suggestion. Instead mute the bot on the support server after approval and adding to the
+main server.
+
+**Same goes will any other suggestions in the rules**
