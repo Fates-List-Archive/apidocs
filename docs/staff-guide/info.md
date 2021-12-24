@@ -60,6 +60,8 @@ And... that's it! Yes, it's really that easy!
 Our bot list rules and requirements can be found [here](https://fateslist.xyz/fates/rules). Please read through them before reviewing 
 bots.
 
+Whoever first adds the bot to this server can claim and check that bot. If you need to unclaim however, anyone may check it
+
 Where possible, test at least 70-100% of all bot commands randomly (*it would be preferable to test all of them but this is time consuming 
 and we want to deal with our queue as well...*).
 
@@ -72,6 +74,7 @@ Some things that should be checked for. Note that *all of the below is changeabl
 - NSFW commands with proper channel gating
 - Does the bot follow Discord ToS?
 - Quality of the bot. Does it provide unique and interesting features? What is its use case?
+- **Is the bot well-known and known to be high-quality?**
 - **Is the bots owner correct (validate using other bot lists or Head Admins+ if needed), report violations to a Admin+ ASAP**
 - **Quality of bot descriptions and long description**
 

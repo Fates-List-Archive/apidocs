@@ -1,7 +1,7 @@
 # Vote Webhook
 
 !!! note
-    There are many types of webhooks in Fates List. Please choose the one you use carefully. Also note that all Fates List webhooks (excl. Discord Integration) will have a Authorization header with your API Token so you can validate the request.
+    There are many types of webhooks in Fates List. Please choose the one you use carefully. Also note that all Fates List webhooks (excl. Discord Integration) will have a Authorization header with your API Token or Webhook Secret so you can validate the request. You will also see a X-Request-Sig header that is a HMAC SHA256 of the request body signed with your API Token or Webhook Secret for extra security.
 
 Vote Webhooks are the webhook type if you want to just capture votes in a simple format that is compatible with other lists. If you want more events like review creation and review voting, edit bot and other such events, you will need to switch to the FatesHook webhook type (see [FatesHook](fateshook.md)) but in most cases, this is not required. It is also harder to handle FatesHook events compared to this and you are better off using websockets (documentation coming soon) if u need those real time stats.
 

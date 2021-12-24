@@ -162,6 +162,19 @@ Handles bot admin operations
 | profile | profile | Profile |
 
 
+## SiteLang
+
+Site languages
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| en | en | English |
+| es | es | Spanish |
+| fr | fr | France |
+| hi | hi | Hindi |
+| ru | ru | Russian |
+
+
 ## Status
 
 Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for more information)
