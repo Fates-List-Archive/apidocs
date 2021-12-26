@@ -73,9 +73,10 @@ Some things that should be checked for. Note that *all of the below is changeabl
 - Admin-locked bots (antinuke is a special case and has an examption here)
 - NSFW commands with proper channel gating
 - Does the bot follow Discord ToS?
-- Is the bot offline? If so, take a screenshot of the bot being offline. The staff verification code is Mistystar. Once you have taken a
-screenshot, post the media link in the reason for denial
-- Quality of the bot. Does it provide unique and interesting features? What is its use case?
+- Is the bot offline? If so, take a screenshot of the bot being offline. Once you have taken a screenshot, 
+post the media link in the reason for denial
+- Quality of the bot. Does it provide *any* unique and interesting features? What is its use case? The staff verification
+code is Frostpaw/[SHA1 of user id]. Is it a copy/fork of another bot?
 - **Is the bot well-known and known to be high-quality?**
 - **Is the bots owner correct (validate using other bot lists or Head Admins+ if needed), report violations to a Admin+ ASAP**
 - **Quality of bot descriptions and long description**
