@@ -76,7 +76,7 @@ Some things that should be checked for. Note that *all of the below is changeabl
 - Is the bot offline? If so, take a screenshot of the bot being offline. Once you have taken a screenshot, 
 post the media link in the reason for denial
 - Quality of the bot. Does it provide *any* unique and interesting features? What is its use case? The staff verification
-code is Frostpaw/[SHA1 of user id]. Is it a copy/fork of another bot?
+code is SHA1 of Frostpaw/[user id]. Is it a copy/fork of another bot?
 - **Is the bot well-known and known to be high-quality?**
 - **Is the bots owner correct (validate using other bot lists or Head Admins+ if needed), report violations to a Admin+ ASAP**
 - **Quality of bot descriptions and long description**
