@@ -25,8 +25,10 @@ build the new site docs for you**
 
 Please don’t abuse the bots please **and only invite bots with permission from an Administrator+**
 
-People higher in clearance *override* statements made by people lower (Head Admin word overrides Admin’s word) 
+People **higher in clearance *override* statements made by people lower** (Head Admin word overrides Admin’s word) 
 but **please feel free to privately report bad staff to an owner or via FL Kremlin/FL Secret Kremlin (if you have access to those)**
+
+*Never bash or complain about things in the Testing Server. We have a Staff Server for a very good reason*
 
 !!! note
 
@@ -76,7 +78,7 @@ Some things that should be checked for. Note that *all of the below is changeabl
 - Is the bot offline? If so, take a screenshot of the bot being offline. Once you have taken a screenshot, 
 post the media link in the reason for denial
 - Quality of the bot. Does it provide *any* unique and interesting features? What is its use case? The staff verification
-code is SHA1 of Frostpaw/[user id]. Is it a copy/fork of another bot?
+code is *not* SHA1 of Frostpaw/[user id]. Is it a copy/fork of another bot?
 - **Is the bot well-known and known to be high-quality?**
 - **Is the bots owner correct (validate using other bot lists or Head Admins+ if needed), report violations to a Admin+ ASAP**
 - **Quality of bot descriptions and long description**
@@ -98,7 +100,7 @@ Do not deny bots for using other languages. These are officially supported. Inst
 
 - Use Google Translate: https://translate.google.com (**Note: only do this if there are no staff members only knowing said language as Google
 Translate may miss context**
-- Ask another staff reviewer for help
+- Ask another staff reviewer for help. The staff verification code is the SHA3 hash of Fidgetflake/[USER ID] in lowercase.
 - Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*)
 
 ## Prefix Changes
@@ -106,4 +108,14 @@ Translate may miss context**
 Do not deny bots for not supporting custom prefixes. This is a suggestion. Instead mute the bot on the support server after approval and adding to the
 main server.
 
-**Same goes will any other suggestions in the rules**
+**Same goes with any other suggestions in the rules**
+
+## Partnerships
+
+All partnerships are to be decided by FL Kremlin or Overseers. If you are not in FL Kremlin, DM any partnership requests to a Head Admin+.
+
+**The same goes with staff applications**
+
+## Getting Help
+
+Feel DM any staff member if you need help with something. We are here to help you. Don't be rude and always strive to be respectful.
