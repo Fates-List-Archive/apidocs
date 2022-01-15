@@ -226,6 +226,8 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | ban | 3 | Ban |
 | claim | 4 | Claim |
 | unclaim | 5 | Unclaim |
+| transfer_ownership | 6 | Transfer Bot Ownership |
+| edit_bot | 7 | Edit Bot |
 
 
 ## UserState
@@ -246,6 +248,14 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | server | 0 | Server |
 | bot | 1 | Bot |
 | profile | 2 | Profile |
+
+
+## VanityType
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| bot | bot | Bot |
+| guild | guild | Server |
 
 
 ## WebhookType

@@ -284,9 +284,89 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Custom Clients
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Custom Clients
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#frostpaw-auth" class="md-nav__link">
+    Frostpaw Auth
+  </a>
+  
+    <nav class="md-nav" aria-label="Frostpaw Auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-login-link" class="md-nav__link">
+    Getting the login link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-login-information" class="md-nav__link">
+    Get login information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#botserver-pages" class="md-nav__link">
+    Bot/Server Pages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#botserver-invites" class="md-nav__link">
+    Bot/Server Invites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -866,6 +946,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#frostpaw-auth" class="md-nav__link">
+    Frostpaw Auth
+  </a>
+  
+    <nav class="md-nav" aria-label="Frostpaw Auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-login-link" class="md-nav__link">
+    Getting the login link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-login-information" class="md-nav__link">
+    Get login information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#botserver-pages" class="md-nav__link">
+    Bot/Server Pages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#botserver-invites" class="md-nav__link">
+    Bot/Server Invites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -882,7 +1025,72 @@
                 
                 
                 <h1 id="custom-clients">Custom Clients</h1>
-<p>Custom clients used to be supported by Fates List but are not currently due to security issues. This may change in the future</p>
+<p>Custom clients are supported however you are responsible for keeping them up-to-date. Some features require whitelisting in order to use (DM a Fates List staff member for this):</p>
+<h2 id="frostpaw-auth">Frostpaw Auth</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature requires whitelisting in order to use</p>
+</div>
+<p>In order to authorize to the API through OAuth (without using a inputted user token, you need to use Frostpaw Authentication)</p>
+<h3 id="getting-the-login-link">Getting the login link</h3>
+<p>The first step in Frostpaw Auth is getting the login link:</p>
+<p>To do this:</p>
+<ul>
+<li>
+<p>Store the current location if needed (use localStorage if needed)</p>
+</li>
+<li>
+<p>Send a POST request to <code>https://fateslist.xyz/api/v2/oauth</code>.</p>
+<ul>
+<li>Make sure to send the <code>Frostpaw</code> header (set this to the client version in the <a href="https://fateslist.xyz/frostpaw/about">About</a> section)</li>
+<li>Set the <code>Frostpaw-Server</code> header to the <em>origin servers hostname</em>, for example https://fateslist.xyz/bot/admin/add would set <code>Frostpaw-Server</code> as https://fateslist.xyz. You can use <code>window.location.origin</code> for this if this is for a browser</li>
+<li>The final redirect <em>requires explicit whitelisting, possible source code access and a possible POC to be shown</em></li>
+</ul>
+</li>
+<li>
+<p>JSON body should contain the scopes key (which should just be a array containing just <code>identify</code>). <strong>redirect is deprecated</strong></p>
+</li>
+<li>
+<p>The final url to redirect to will be in the <code>url</code> key of the response</p>
+</li>
+<li>
+<p>We will guide you on the <code>redirect_uri</code> side. There is a very specific route you will need to give (official sunbeam client uses <code>/frostpaw/login</code> and as such your client will also need to expose a <code>/frostpaw/login</code> route as well)</p>
+</li>
+<li>
+<p><a href="https://api.fateslist.xyz/api/docs/redoc#operation/get_login_link">Relevant API Docs</a></p>
+</li>
+</ul>
+<h3 id="get-login-information">Get login information</h3>
+<p>This step is domain-dependent, you might need another server to set the required cookies and/or parse JWTs. We do not recommend using <code>/jwtparse/_sunbeam</code> or our <code>Set-Cookie</code> headers without asking us beforehand as these may or may not work in the future and may need extra whitelisting in the future</p>
+<p>The general idea is the below:</p>
+<ul>
+<li>
+<p>Get the code and state from query string (<code>new URLSearchParams(window.location.search)</code> if you are on browser)</p>
+</li>
+<li>
+<p>Send a POST request to <code>https://api.fateslist.xyz/api/v2/users</code></p>
+<ul>
+<li>Make sure to send the <code>Frostpaw</code> header (set this to the client version in the <a href="https://fateslist.xyz/frostpaw/about">About</a> section)</li>
+<li>Set the <code>Frostpaw-Server</code> header to the <em>origin servers hostname</em>, for example https://fateslist.xyz/bot/admin/add would set <code>Frostpaw-Server</code> as https://fateslist.xyz. You can use <code>window.location.origin</code> for this if this is for a browser</li>
+<li>Be sure to set <code>code</code> to the code you got from query string and <code>scopes</code> which should be a array containing just <code>identify</code></li>
+<li>Handle errors from our API properly (ask staff if you need a test account banned etc.). This is where <code>done</code> is set to <code>false</code></li>
+<li>If all goes well, you will get a json with <code>done</code> set to <code>true</code>. In this case, you will get a <code>token</code> and a <code>user</code> amongst other things (this changes constantly, see <a href="https://api.fateslist.xyz/api/docs/redoc#operation/login_user">here</a> for up to date information) (<a href="../../structures/basic-structures/#baseuser">BaseUser</a>). Store these somehow and redirect back to where they last were (you did store this in step 1 right?)</li>
+</ul>
+</li>
+<li>
+<p><a href="https://api.fateslist.xyz/api/docs/redoc#operation/login_user">Relevant API Docs</a></p>
+</li>
+</ul>
+<h3 id="botserver-pages">Bot/Server Pages</h3>
+<p>For Bot Pages, we recommend calling <a href="https://api.fateslist.xyz/api/docs/redoc#operation/get_bot_page">Get Bot Page</a>. Even if you do not use most/all the information in the response, it will still trigger analytics at least and won't trigger some of our anti abuse code we have on our API (which could get you banned).</p>
+<p>Similarly for Server Pages, call <a href="https://api.fateslist.xyz/api/docs/redoc#operation/get_server_page">Get Server Page</a>. This is actually the only way to get server information actually as of time of writing, our other APIs require authorization.</p>
+<h2 id="botserver-invites">Bot/Server Invites</h2>
+<p>For Bots, use <a href="https://api.fateslist.xyz/api/docs/redoc#operation/get_bot_invite">Get Bot Invite</a>. This takes a ton of stuff into account and returns a proper invite URL. It also handles analytics and won't trigger some of our anti abuse code we have on our API (which could get you banned).</p>
+<p>Similarly for Servers, use <a href="https://api.fateslist.xyz/api/docs/redoc#operation/get_server_invite">Get Server Invite</a></p>
+<h2 id="documentation">Documentation</h2>
+<p>Not all of our APIs are fully documented especially for sunbeam and custom client stuff. This is to allow quick breaking changes to our API. When in doubt, try testing our API using cURL or <a href="https://reqbin.com">reqbin</a></p>
+<h2 id="headers">Headers</h2>
+<p>Make sure to send the <code>Frostpaw</code> header on <em>all requests</em> (set this to the client version in the <a href="https://fateslist.xyz/frostpaw/about">About</a> section). Our anti-abuse code takes this header into account and your responses may be easier to parse as well with possibly fewer restrictions in some areas.</p>
                 
                   
                     
