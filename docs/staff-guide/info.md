@@ -119,3 +119,13 @@ All partnerships are to be decided by FL Kremlin or Overseers. If you are not in
 ## Getting Help
 
 Feel DM any staff member if you need help with something. We are here to help you. Don't be rude and always strive to be respectful.
+
+## Ban Appeals
+
+We use our [Ban Appeals Server](https://fateslist.xyz/banappeal/invite) to handle Ban Appeals. 
+
+This approach was chosen to ensure that ban appeals are personalised for users. Not everyone that gets banned may want to appeal (some just want the ban reason) and not everyone that gets banned falls into the same category as someone else.
+
+As staff, you are expected to deal with ban appeals and turn to a higher up when required.
+
+**Do not unban someone before asking for permission from Head Admin+**
