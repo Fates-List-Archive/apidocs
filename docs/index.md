@@ -15,3 +15,4 @@ and not on our HTTP API documentation at this time.
 <div style="background: white">
 	<iframe src="https://api.fateslist.xyz/api/docs/redoc" style="width: 100%; height: 800px; border: none" frameBorder="0"></iframe>
 </div>
+ 
