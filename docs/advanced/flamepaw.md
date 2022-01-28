@@ -1,10 +1,10 @@
 # Flamepaw
 Flamepaw is internally used by the bot to provide a RESTful API for tasks requiring high concurrency.
 
-## GET /api/dragon/ping
-#### ping_server
+## Ping Server
 
-**Description:**Ping the server
+#### GET /api/dragon/ping
+**Description:** Ping the server
 
 **Request Body:**
 ```json
@@ -20,10 +20,10 @@ null
 }
 ```
 
-## GET /api/dragon/__stats
-#### get_stats
+## Get Stats
 
-**Description:**Get stats of websocket server
+#### GET /api/dragon/__stats
+**Description:** Get stats of websocket server
 
 **Request Body:**
 ```json
@@ -35,10 +35,10 @@ null
 null
 ```
 
-## POST /api/dragon/github
-#### github_webhook
+## Github Webhook
 
-**Description:**Post to github webhook. Needs authorization
+#### POST /api/dragon/github
+**Description:** Post to github webhook. Needs authorization
 
 **Request Body:**
 ```json
@@ -96,10 +96,10 @@ null
 }
 ```
 
-## OPTIONS /api/dragon/bots/:id/votes
-#### vote_bot
+## Vote Bot
 
-**Description:**Creates a vote for a bot. Needs authorization. This is the CORS code
+#### OPTIONS /api/dragon/bots/:id/votes
+**Description:** Creates a vote for a bot. Needs authorization. This is the CORS code
 
 **Request Body:**
 ```json
@@ -111,10 +111,10 @@ null
 null
 ```
 
-## PATCH /api/dragon/bots/:id/votes
-#### vote_bot
+## Vote Bot
 
-**Description:**Creates a vote for a bot. Needs authorization. This is the actual route
+#### PATCH /api/dragon/bots/:id/votes
+**Description:** Creates a vote for a bot. Needs authorization. This is the actual route
 
 **Request Body:**
 ```json
@@ -134,10 +134,10 @@ null
 }
 ```
 
-## WS /api/dragon/ws
-#### websocket
+## Websocket
 
-**Description:**The websocket gateway for Fates List
+#### WS /api/dragon/ws
+**Description:** The websocket gateway for Fates List
 
 **Request Body:**
 ```json
