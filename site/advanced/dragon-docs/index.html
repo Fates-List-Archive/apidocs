@@ -400,11 +400,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options-apidragonbotsidvotes_1" class="md-nav__link">
-    OPTIONS /api/dragon/bots/:id/votes
+  <a href="#patch-apidragonbotsidvotes" class="md-nav__link">
+    PATCH /api/dragon/bots/:id/votes
   </a>
   
-    <nav class="md-nav" aria-label="OPTIONS /api/dragon/bots/:id/votes">
+    <nav class="md-nav" aria-label="PATCH /api/dragon/bots/:id/votes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1120,11 +1120,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options-apidragonbotsidvotes_1" class="md-nav__link">
-    OPTIONS /api/dragon/bots/:id/votes
+  <a href="#patch-apidragonbotsidvotes" class="md-nav__link">
+    PATCH /api/dragon/bots/:id/votes
   </a>
   
-    <nav class="md-nav" aria-label="OPTIONS /api/dragon/bots/:id/votes">
+    <nav class="md-nav" aria-label="PATCH /api/dragon/bots/:id/votes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1185,7 +1185,11 @@
 <div class="highlight"><pre><span></span><code><span class="kc">null</span>
 </code></pre></div></p>
 <p><strong>Response Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;done&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;context&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h2 id="get-apidragon__stats">GET /api/dragon/__stats</h2>
 <h4 id="get_stats">get_stats</h4>
@@ -1200,10 +1204,56 @@
 <h4 id="github_webhook">github_webhook</h4>
 <p><strong>Description:</strong>Post to github webhook. Needs authorization</p>
 <p><strong>Request Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;ref&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;Commits&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;repository&quot;</span><span class="p">:{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;full_name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;owner&quot;</span><span class="p">:{</span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;html_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;organizations_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span><span class="nt">&quot;html_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;commits_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span><span class="nt">&quot;pusher&quot;</span><span class="p">:{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span><span class="nt">&quot;sender&quot;</span><span class="p">:{</span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;html_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;organizations_url&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span><span class="nt">&quot;head_commit&quot;</span><span class="p">:{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;author&quot;</span><span class="p">:{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}}}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ref&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Commits&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;repository&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;full_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;owner&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;login&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;html_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;organizations_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;html_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;commits_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pusher&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;sender&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;login&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;html_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;organizations_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;head_commit&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Response Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;done&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;context&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h2 id="options-apidragonbotsidvotes">OPTIONS /api/dragon/bots/:id/votes</h2>
 <h4 id="vote_bot">vote_bot</h4>
@@ -1214,14 +1264,22 @@
 <p><strong>Response Body:</strong>
 <div class="highlight"><pre><span></span><code><span class="kc">null</span>
 </code></pre></div></p>
-<h2 id="options-apidragonbotsidvotes_1">OPTIONS /api/dragon/bots/:id/votes</h2>
+<h2 id="patch-apidragonbotsidvotes">PATCH /api/dragon/bots/:id/votes</h2>
 <h4 id="vote_bot_1">vote_bot</h4>
 <p><strong>Description:</strong>Creates a vote for a bot. Needs authorization. This is the actual route</p>
 <p><strong>Request Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;bot_id&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bot_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <p><strong>Response Body:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;done&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;context&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h2 id="ws-apidragonws">WS /api/dragon/ws</h2>
 <h4 id="websocket">websocket</h4>
