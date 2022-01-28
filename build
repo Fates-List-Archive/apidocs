@@ -1,2 +1,3 @@
-dragon --cmd site.enum2html > docs/structures/enums.autogen.md
+flamepaw --cmd site.enum2html > docs/structures/enums.autogen.md
+flamepaw --cmd site.getdragondocs > docs/advanced/dragon-docs.md
 python -m mkdocs build

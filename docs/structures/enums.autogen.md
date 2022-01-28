@@ -160,6 +160,7 @@ Handles bot admin operations
 | bot | bot | Bot |
 | server | server | Server |
 | profile | profile | Profile |
+| pack | pack | Bot Pack |
 
 
 ## SiteLang
