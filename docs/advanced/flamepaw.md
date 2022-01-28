@@ -1,3 +1,6 @@
+# Flamepaw
+Flamepaw is internally used by the bot to provide a RESTful API for tasks requiring high concurrency.
+
 ## GET /api/dragon/ping
 #### ping_server
 
