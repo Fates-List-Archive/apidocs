@@ -83,6 +83,115 @@ null
 			"email": "",
 			"username": ""
 		}
+	},
+	"pull_request": {
+		"id": 0,
+		"number": 0,
+		"state": "",
+		"locked": false,
+		"title": "",
+		"body": "",
+		"html_url": "",
+		"url": "",
+		"user": {
+			"login": "",
+			"id": 0,
+			"avatar_url": "",
+			"url": "",
+			"html_url": "",
+			"organizations_url": ""
+		},
+		"base": {
+			"repo": {
+				"id": 0,
+				"name": "",
+				"full_name": "",
+				"description": "",
+				"url": "",
+				"owner": {
+					"login": "",
+					"id": 0,
+					"avatar_url": "",
+					"url": "",
+					"html_url": "",
+					"organizations_url": ""
+				},
+				"html_url": "",
+				"commits_url": ""
+			},
+			"id": 0,
+			"number": 0,
+			"state": "",
+			"title": "",
+			"body": "",
+			"html_url": "",
+			"url": "",
+			"ref": "",
+			"label": "",
+			"user": {
+				"login": "",
+				"id": 0,
+				"avatar_url": "",
+				"url": "",
+				"html_url": "",
+				"organizations_url": ""
+			},
+			"commits_url": ""
+		},
+		"head": {
+			"repo": {
+				"id": 0,
+				"name": "",
+				"full_name": "",
+				"description": "",
+				"url": "",
+				"owner": {
+					"login": "",
+					"id": 0,
+					"avatar_url": "",
+					"url": "",
+					"html_url": "",
+					"organizations_url": ""
+				},
+				"html_url": "",
+				"commits_url": ""
+			},
+			"id": 0,
+			"number": 0,
+			"state": "",
+			"title": "",
+			"body": "",
+			"html_url": "",
+			"url": "",
+			"ref": "",
+			"label": "",
+			"user": {
+				"login": "",
+				"id": 0,
+				"avatar_url": "",
+				"url": "",
+				"html_url": "",
+				"organizations_url": ""
+			},
+			"commits_url": ""
+		}
+	},
+	"issue": {
+		"id": 0,
+		"number": 0,
+		"state": "",
+		"title": "",
+		"body": "",
+		"html_url": "",
+		"url": "",
+		"user": {
+			"login": "",
+			"id": 0,
+			"avatar_url": "",
+			"url": "",
+			"html_url": "",
+			"organizations_url": ""
+		}
 	}
 }
 ```
