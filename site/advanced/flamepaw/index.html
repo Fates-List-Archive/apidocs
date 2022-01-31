@@ -324,6 +324,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pprof" class="md-nav__link">
+    Pprof
+  </a>
+  
+    <nav class="md-nav" aria-label="Pprof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pprof-apidragonpprof" class="md-nav__link">
+    PPROF /api/dragon/pprof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ping-server" class="md-nav__link">
     Ping Server
   </a>
@@ -374,6 +394,26 @@
           <li class="md-nav__item">
   <a href="#post-apidragongithub" class="md-nav__link">
     POST /api/dragon/github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-vote-token" class="md-nav__link">
+    Get Vote Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Vote Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-apidragonusersuidbotsbidtsts_vote-token" class="md-nav__link">
+    GET /api/dragon/users/:uid/bots/:bid/ts/:ts/_vote-token
   </a>
   
 </li>
@@ -1046,6 +1086,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pprof" class="md-nav__link">
+    Pprof
+  </a>
+  
+    <nav class="md-nav" aria-label="Pprof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pprof-apidragonpprof" class="md-nav__link">
+    PPROF /api/dragon/pprof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ping-server" class="md-nav__link">
     Ping Server
   </a>
@@ -1096,6 +1156,26 @@
           <li class="md-nav__item">
   <a href="#post-apidragongithub" class="md-nav__link">
     POST /api/dragon/github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-vote-token" class="md-nav__link">
+    Get Vote Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Vote Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-apidragonusersuidbotsbidtsts_vote-token" class="md-nav__link">
+    GET /api/dragon/users/:uid/bots/:bid/ts/:ts/_vote-token
   </a>
   
 </li>
@@ -1184,6 +1264,15 @@
                 
                 <h1 id="flamepaw">Flamepaw</h1>
 <p>Flamepaw is internally used by the bot to provide a RESTful API for tasks requiring high concurrency.</p>
+<h2 id="pprof">Pprof</h2>
+<h4 id="pprof-apidragonpprof">PPROF /api/dragon/pprof</h4>
+<p><strong>Description:</strong> Golang pprof (debugging, may not always exist!)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="kc">null</span>
+</code></pre></div></p>
+<p><strong>Response Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="kc">null</span>
+</code></pre></div></p>
 <h2 id="ping-server">Ping Server</h2>
 <h4 id="get-apidragonping">GET /api/dragon/ping</h4>
 <p><strong>Description:</strong> Ping the server</p>
@@ -1370,6 +1459,19 @@
     <span class="nt">&quot;context&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
 </code></pre></div></p>
+<h2 id="get-vote-token">Get Vote Token</h2>
+<h4 id="get-apidragonusersuidbotsbidtsts_vote-token">GET /api/dragon/users/:uid/bots/:bid/ts/:ts/_vote-token</h4>
+<p><strong>Description:</strong> Returns a vote token. Needs whitelisting and a access key.</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="kc">null</span>
+</code></pre></div></p>
+<p><strong>Response Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;done&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;context&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h2 id="vote-bot">Vote Bot</h2>
 <h4 id="options-apidragonbotsidvotes">OPTIONS /api/dragon/bots/:id/votes</h4>
 <p><strong>Description:</strong> Creates a vote for a bot. Needs authorization. This is the CORS code</p>
@@ -1413,7 +1515,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 28, 2022</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2022</span>
       
     
   </small>

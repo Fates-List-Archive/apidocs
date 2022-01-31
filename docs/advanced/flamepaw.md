@@ -1,6 +1,21 @@
 # Flamepaw
 Flamepaw is internally used by the bot to provide a RESTful API for tasks requiring high concurrency.
 
+## Pprof
+
+#### PPROF /api/dragon/pprof
+**Description:** Golang pprof (debugging, may not always exist!)
+
+**Request Body:**
+```json
+null
+```
+
+**Response Body:**
+```json
+null
+```
+
 ## Ping Server
 
 #### GET /api/dragon/ping
@@ -194,6 +209,25 @@ null
 		}
 	}
 }
+```
+
+**Response Body:**
+```json
+{
+	"done": false,
+	"reason": null,
+	"context": null
+}
+```
+
+## Get Vote Token
+
+#### GET /api/dragon/users/:uid/bots/:bid/ts/:ts/_vote-token
+**Description:** Returns a vote token. Needs whitelisting and a access key.
+
+**Request Body:**
+```json
+null
 ```
 
 **Response Body:**
