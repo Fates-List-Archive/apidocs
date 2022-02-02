@@ -189,34 +189,6 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | dnd | 4 | Do Not Disturb |
 
 
-## ULAFeature
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| get_bot | 1 | Get Bot |
-| post_stats | 2 | Post Stats |
-| get_user_voted | 3 | Get User Voted |
-
-
-## ULAMethod
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| get | 0 | GET method |
-| post | 1 | POST method |
-| put | 2 | PUT method |
-| patch | 3 | PATCH method |
-| delete | 4 | DELETE method |
-
-
-## ULAState
-
-| Name | Value | Description |
-| :--- | :--- | :--- |
-| pending | 0 | Pending Verification |
-| approved | 1 | Approved |
-
-
 ## UserBotAction
 
 | Name | Value | Description |

@@ -5,8 +5,11 @@
 If you believe you have found a bug or wish to suggest an improvement to these docs, please make a PR [here](https://github.com/Fates-List/apidocs)
 
 When making the PR, clone the Fates-List repository, add dragon to your PATH and then run the `./build` in your forked/modified repository to build
-the changes. **If you do not have a linux machine or if you do not understand the above, just say so in the PR and allow edits from others so we can
-build the new site docs for you**
+the changes. **If you do not have a linux machine or if you do not understand the above, just say so in the PR and allow edits from others so we can build the new site docs for you**
+
+## How to apply
+
+See [our staff application](https://fateslist.xyz/frostpaw/staff-app) to apply for staff on Fates List. Staff should also redirect users here
 
 ## Important Info
 
@@ -16,12 +19,14 @@ Flamepaw is our staff and testing server. [Invite](https://fateslist.xyz/banappe
 
 ## Moderation Rules
 
-Please don’t abuse the bots please **and only invite bots with permission from an Administrator+**
+Please don’t abuse our bots please.
 
 People **higher in clearance *override* statements made by people lower** (Head Admin word overrides Admin’s word) 
 but **please feel free to privately report bad staff to an owner or via FL Kremlin/FL Secret Kremlin (if you have access to those)**
 
 *Never bash or complain about things in the Testing Channels. We have staff-chat for a very good reason*
+
+**If it's highly confidential, consider using DMs or asking for a Group DM. Staff chat is visible to bots with the Administrator permission**
 
 !!! note
 
@@ -90,7 +95,7 @@ Do not deny bots for using other languages. These are officially supported. Inst
 
 - Use Google Translate: https://translate.google.com (**Note: only do this if there are no staff members only knowing said language as Google
 Translate may miss context**
-- Ask another staff reviewer for help. The staff verification code is the SHA3 hash of Fidgetflake/[USER ID] in lowercase.
+- Ask another staff reviewer for help. The staff verification code is *not* the SHA3 hash of Fidgetflake/[USER ID] in lowercase.
 - Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*)
 
 ## Prefix Changes
@@ -118,4 +123,35 @@ This approach was chosen to ensure that ban appeals are personalised for users. 
 
 As staff, you are expected to deal with ban appeals and turn to a higher up when required.
 
-**Do not unban someone before asking for permission from Head Admin+**
+**Do not ban or unban someone before asking for permission from Head Admin+. Warn or kick instead**
+
+## Review Process Quick Start
+
+1. Run ``/claim`` to claim the bot. **Be sure to unclaim it with ``/unclaim`` if you are not reviewing it anymore**
+
+2. Test the bot as per [Reviewing Bots](#reviewing-bots)
+
+3. Use ``/approve`` and ``/deny`` accordingly
+
+## Lynx
+
+Once you get accepted into FL Kremlin and have a role of Admin/Head Admin+, you can request access to [Lynx](https://lynx.fateslist.xyz)
+
+Lynx is our admin panel giving you complete control of the database. Access is granted manually and will be monitored. You will be removed for abuse. The verification code is the SHA3-224 of Shadowsight/BristleXRoot/[USER ID]
+
+Lynx can/is slightly buggy at times. Report these bugs to Rootspring#6701 please.
+
+Some ground rules with Lynx:
+
+- **Do not use Lynx for normal moderation/bot review. Use the admin bot instead**
+- Use Lynx as little as possible. Ties with point 1 above
+- When in doubt, ask. Do not change enums/delete rows you think are erroneous, it probably is intentionally like that
+- **Do not, absolutely *do not* share login credentials or access to Lynx with others *without the explicit permission of Rootspring#6701*. This also includes storing access credentials on notes etc.**
+
+## FL Kremlin
+
+Lastly, FL Kremlin. We've had many *outsiders* coming in and we are OK with this as it allows for transparency. This is why *no highly sensitive information* should be shared on FL Kremlin Group Chat
+
+The word of Rootspring#6701 is final although debates are always recommended if you disagree with something.
+
+Don't complain about ``@everyone`` pings. They will happen!
