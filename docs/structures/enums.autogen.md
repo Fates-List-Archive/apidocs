@@ -231,6 +231,14 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | guild | guild | Server |
 
 
+## VoteReminderMode
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| disable | 0 | Disable vote reminders |
+| enable | 1 | Enable vote reminders |
+
+
 ## WebhookType
 
 | Name | Value | Description |
