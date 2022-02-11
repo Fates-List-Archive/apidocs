@@ -894,7 +894,8 @@
 <p class="admonition-title">Note</p>
 <p>There are many types of webhooks in Fates List. Please choose the one you use carefully. Also note that all Fates List webhooks (excl. Discord Integration) will have a Authorization header with your API Token or Webhook Secret so you can validate the request. You will also see a X-Request-Sig header that is a HMAC SHA256 of the request body signed with your API Token or Webhook Secret for extra security.</p>
 </div>
-<p>Vote Webhooks are the webhook type if you want to just capture votes in a simple format that is compatible with other lists. If you want more events like review creation and review voting, edit bot and other such events, you will need to switch to the websockets (see <a href="../../websockets">Websockets</a>) especially if you want real time stats.</p>
+<p>Vote Webhooks are the webhook type if you want to just capture votes in a simple format that is compatible with other lists. If you want more events like review creation and review voting, edit bot and other such events, you will need to switch to the websockets (see <a href="../../websockets/getting-started">Websockets</a>) especially if you want real time stats.</p>
+<p>Note that extra fields may be present</p>
 <table>
 <thead>
 <tr>
@@ -918,11 +919,6 @@
 <td align="left">test</td>
 <td align="left">This key is only returned if you are testing your webhook. It will always be true if sent. Use this to check for test webhook or not.</td>
 <td align="left">Boolean?</td>
-</tr>
-<tr>
-<td align="left">mode</td>
-<td align="left">This tells you the mode and allows you to quickly check between ”FC” (FatesHook) or ”VOTE” (Vote Webhook). Ignore it if you are not a library</td>
-<td align="left">String</td>
 </tr>
 <tr>
 <td align="left">payload</td>
