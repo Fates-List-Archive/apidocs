@@ -1,0 +1,1 @@
+``fateslist.py`` is a (work-in-progres) python library implementing most core Fates List APIs. Note that not all endpoints are supported at this time

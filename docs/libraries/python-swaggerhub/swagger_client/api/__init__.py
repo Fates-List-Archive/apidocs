@@ -1,0 +1,17 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from swagger_client.api.api_v2___auth_api import APIV2AuthApi
+from swagger_client.api.api_v2___bots_api import APIV2BotsApi
+from swagger_client.api.api_v2___commands_api import APIV2CommandsApi
+from swagger_client.api.api_v2___custom_resources_api import APIV2CustomResourcesApi
+from swagger_client.api.api_v2___policies_api import APIV2PoliciesApi
+from swagger_client.api.api_v2___promotions_api import APIV2PromotionsApi
+from swagger_client.api.api_v2___reviews_api import APIV2ReviewsApi
+from swagger_client.api.api_v2___servers_api import APIV2ServersApi
+from swagger_client.api.api_v2___staff_apps_api import APIV2StaffAppsApi
+from swagger_client.api.api_v2___system_api import APIV2SystemApi
+from swagger_client.api.api_v2___users_api import APIV2UsersApi
+from swagger_client.api.api_v2___widgets_api import APIV2WidgetsApi
