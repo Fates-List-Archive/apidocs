@@ -1,3 +1,4 @@
 flamepaw --cmd site.enum2html > docs/structures/enums.autogen.md
 flamepaw --cmd site.getdragondocs > docs/advanced/flamepaw.md
+curl https://next.fateslist.xyz/_docs_template > docs/advanced/v3.md
 python -m mkdocs build
