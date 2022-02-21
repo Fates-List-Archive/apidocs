@@ -1,5 +1,5 @@
 # API v3
-**API URL**: ``https://next.fateslist.xyz`` (for now, can change in future)
+**API URL**: ``https://next.fateslist.xyz`` *or* ``https://api.fateslist.xyz`` (for now, can change in future)
 
 ## Authorization
 
@@ -46,7 +46,7 @@ A default API Response will be of the below format:
 
 Returns the index for bots and servers
 
-**API v2 analogue:** (no longer working) [Get Index](https://api.fateslist.xyz/docs/redoc#operation/get_index)
+**API v2 analogue:** (no longer working) [Get Index](https://legacy.fateslist.xyz/docs/redoc#operation/get_index)
 
 **Query parameters**
 
@@ -147,7 +147,7 @@ Returns the index for bots and servers
 
 Resolves the vanity for a bot/server in the list
 
-**API v2 analogue:** (no longer working) [Get Vanity](https://api.fateslist.xyz/docs/redoc#operation/get_vanity)
+**API v2 analogue:** (no longer working) [Get Vanity](https://legacy.fateslist.xyz/docs/redoc#operation/get_vanity)
 
 **Path parameters**
 
@@ -183,7 +183,7 @@ Resolves the vanity for a bot/server in the list
 
 Get policies (rules, privacy policy, terms of service)
 
-**API v2 analogue:** (no longer working) [All Policies](https://api.fateslist.xyz/api/docs/redoc#operation/all_policies)
+**API v2 analogue:** (no longer working) [All Policies](https://legacy.fateslist.xyz/api/docs/redoc#operation/all_policies)
 
 **Request Body**
 
@@ -219,7 +219,7 @@ Differences from API v2:
 **Set the Frostpaw header if you are a custom client**
 
 
-**API v2 analogue:** [Fetch Bot](https://api.fateslist.xyz/docs/redoc#operation/fetch_bot)
+**API v2 analogue:** [Fetch Bot](https://legacy.fateslist.xyz/docs/redoc#operation/fetch_bot)
 
 **Path parameters**
 
@@ -362,7 +362,7 @@ Differences from API v2:
 
 Searches the list based on a query named ``q``
 
-**API v2 analogue:** (no longer working) [Fetch Bot](https://api.fateslist.xyz/docs/redoc#operation/search_list)
+**API v2 analogue:** (no longer working) [Fetch Bot](https://legacy.fateslist.xyz/docs/redoc#operation/search_list)
 
 **Query parameters**
 
@@ -505,7 +505,7 @@ def random_bot():
 ```
 
 
-**API v2 analogue:** (no longer working) [Fetch Random Bot](https://api.fateslist.xyz/api/docs/redoc#operation/fetch_random_bot)
+**API v2 analogue:** (no longer working) [Fetch Random Bot](https://legacy.fateslist.xyz/api/docs/redoc#operation/fetch_random_bot)
 
 **Request Body**
 
@@ -554,7 +554,7 @@ def random_server():
 ```
 
 
-**API v2 analogue:** (no longer working) [Fetch Random Server](https://api.fateslist.xyz/api/docs/redoc#operation/fetch_random_server)
+**API v2 analogue:** (no longer working) [Fetch Random Server](https://legacy.fateslist.xyz/api/docs/redoc#operation/fetch_random_server)
 
 **Request Body**
 
@@ -599,7 +599,7 @@ Differences from API v2:
 **Set the Frostpaw header if you are a custom client**
 
 
-**API v2 analogue:** (no longer working) [Fetch Server](https://api.fateslist.xyz/docs/redoc#operation/fetch_server)
+**API v2 analogue:** (no longer working) [Fetch Server](https://legacy.fateslist.xyz/docs/redoc#operation/fetch_server)
 
 **Path parameters**
 
@@ -667,6 +667,135 @@ Differences from API v2:
 ```
 
 
+### Get User Votes
+#### GET /users/{user_id}/bots/{bot_id}/votes
+
+
+Endpoint to check amount of votes a user has.
+
+- votes | The amount of votes the bot has.
+- voted | Whether or not the user has *ever* voted for the bot.
+- vote_epoch | The redis TTL of the users vote lock. This is not time_to_vote which is the
+elapsed time the user has waited since their last vote.
+- timestamps | A list of timestamps that the user has voted for the bot on that has been recorded.
+- time_to_vote | The time the user has waited since they last voted.
+- vote_right_now | Whether a user can vote right now. Currently equivalent to `vote_epoch < 0`.
+
+Differences from API v2:
+
+- Unlike API v2, this does not require authorization to use. This is to speed up responses and 
+because the last thing people want to scrape are Fates List user votes anyways. **You should not rely on
+this however, it is prone to change *anytime* in the future**.
+- ``vts`` has been renamed to ``timestamps``
+
+
+**API v2 analogue:** (no longer working) [Get User Votes](https://legacy.fateslist.xyz/api/docs/redoc#operation/get_user_votes)
+
+**Path parameters**
+
+- **user_id** [i64 (type info may be incomplete, see example)]
+- **bot_id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "user_id": 0,
+    "bot_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "votes": 10,
+    "voted": true,
+    "vote_right_now": false,
+    "vote_epoch": 101,
+    "time_to_vote": 0,
+    "timestamps": [
+        "1970-01-01T00:00:00Z"
+    ]
+}
+```
+
+
+### Post Stats
+#### GET /bots/{bot_id}/stats
+
+
+Post stats to the list
+
+# On dpy, guild_count is usually the below
+guild_count = len(client.guilds)
+
+# If you are using sharding
+shard_count = len(client.shards)
+shards = client.shards.keys()
+
+# Optional: User count (this is not accurate for larger bots)
+user_count = len(client.users) 
+
+
+Example:
+```py
+import requests
+
+def post_stats(bot_id: int, guild_count: int):
+    res = requests.post(f"{api_url}/bots/{bot_id}/stats", json={"guild_count": guild_count})
+    json = res.json()
+    if res.status != 200:
+        # Handle an error in the api
+        ...
+    return json
+```
+
+
+**API v2 analogue:** (no longer working) [Post Stats](https://legacy.fateslist.xyz/api/docs/redoc#operation/set_stats)
+
+**Request Body**
+
+```json
+{
+    "guild_count": 3939,
+    "shard_count": 48484,
+    "shards": [
+        149,
+        22020
+    ],
+    "user_count": 39393
+}
+```
+
+**Response Body**
+
+```json
+{
+    "guild_count": 0,
+    "description": "",
+    "banner": "",
+    "nsfw": false,
+    "votes": 0,
+    "state": 0,
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    }
+}
+```
+
+
 ## Auth
 
 ### Get OAuth2 Link
@@ -674,7 +803,7 @@ Differences from API v2:
 
 Returns the oauth2 link used to login with
 
-**API v2 analogue:** (no longer working) [Get OAuth2 Link](https://api.fateslist.xyz/docs/redoc#operation/get_oauth2_link)
+**API v2 analogue:** (no longer working) [Get OAuth2 Link](https://legacy.fateslist.xyz/docs/redoc#operation/get_oauth2_link)
 
 **Request Body**
 
@@ -698,7 +827,7 @@ Returns the oauth2 link used to login with
 
 Creates a oauth2 login given a code
 
-**API v2 analogue:** (no longer working) [Login User](https://api.fateslist.xyz/api/docs/redoc#operation/login_user)
+**API v2 analogue:** (no longer working) [Login User](https://legacy.fateslist.xyz/api/docs/redoc#operation/login_user)
 
 **Request Body**
 
@@ -738,7 +867,7 @@ even if you do not use cookies as it may perform other logout tasks in future
 This API is essentially a logout
 
 
-**API v2 analogue:** (no longer working) [Logout Sunbeam](https://api.fateslist.xyz/docs/redoc#operation/logout_sunbeam)
+**API v2 analogue:** (no longer working) [Logout Sunbeam](https://legacy.fateslist.xyz/docs/redoc#operation/logout_sunbeam)
 
 **Request Body**
 
@@ -753,69 +882,6 @@ This API is essentially a logout
     "done": true,
     "reason": null,
     "context": null
-}
-```
-
-
-## User Votes
-
-### Get User Votes
-#### GET /users/{user_id}/bots/{bot_id}/votes
-
-
-Endpoint to check amount of votes a user has.
-
-- votes | The amount of votes the bot has.
-- voted | Whether or not the user has *ever* voted for the bot.
-- vote_epoch | The redis TTL of the users vote lock. This is not time_to_vote which is the
-elapsed time the user has waited since their last vote.
-- timestamps | A list of timestamps that the user has voted for the bot on that has been recorded.
-- time_to_vote | The time the user has waited since they last voted.
-- vote_right_now | Whether a user can vote right now. Currently equivalent to `vote_epoch < 0`.
-
-Differences from API v2:
-
-- Unlike API v2, this does not require authorization to use. This is to speed up responses and 
-because the last thing people want to scrape are Fates List user votes anyways. **You should not rely on
-this however, it is prone to change *anytime* in the future**.
-- ``vts`` has been renamed to ``timestamps``
-
-
-**API v2 analogue:** (no longer working) [Get User Votes](https://api.fateslist.xyz/api/docs/redoc#operation/get_user_votes)
-
-**Path parameters**
-
-- **user_id** [i64 (type info may be incomplete, see example)]
-- **bot_id** [i64 (type info may be incomplete, see example)]
-
-
-**Example**
-
-```json
-{
-    "user_id": 0,
-    "bot_id": 0
-}
-```
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response Body**
-
-```json
-{
-    "votes": 10,
-    "voted": true,
-    "vote_right_now": false,
-    "vote_epoch": 101,
-    "time_to_vote": 0,
-    "timestamps": [
-        "1970-01-01T00:00:00Z"
-    ]
 }
 ```
 

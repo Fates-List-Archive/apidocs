@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://fateslist.xyz/api-v3/</loc>
+         <lastmod>2022-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://fateslist.xyz/advanced/custom-clients/</loc>
          <lastmod>2022-02-21</lastmod>
          <changefreq>daily</changefreq>
@@ -17,11 +22,6 @@
     </url>
     <url>
          <loc>https://fateslist.xyz/advanced/self-hosting/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/advanced/v3/</loc>
          <lastmod>2022-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
