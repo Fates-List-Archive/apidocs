@@ -502,6 +502,79 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#auth" class="md-nav__link">
+    Auth
+  </a>
+  
+    <nav class="md-nav" aria-label="Auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-oauth2-link" class="md-nav__link">
+    Get OAuth2 Link
+  </a>
+  
+    <nav class="md-nav" aria-label="Get OAuth2 Link">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-oauth2" class="md-nav__link">
+    GET /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-oauth2-login" class="md-nav__link">
+    Create OAuth2 Login
+  </a>
+  
+    <nav class="md-nav" aria-label="Create OAuth2 Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-oauth2" class="md-nav__link">
+    POST /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-oauth2-login" class="md-nav__link">
+    Delete OAuth2 Login
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete OAuth2 Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-oauth2" class="md-nav__link">
+    DELETE /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3053,6 +3126,79 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#auth" class="md-nav__link">
+    Auth
+  </a>
+  
+    <nav class="md-nav" aria-label="Auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-oauth2-link" class="md-nav__link">
+    Get OAuth2 Link
+  </a>
+  
+    <nav class="md-nav" aria-label="Get OAuth2 Link">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-oauth2" class="md-nav__link">
+    GET /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-oauth2-login" class="md-nav__link">
+    Create OAuth2 Login
+  </a>
+  
+    <nav class="md-nav" aria-label="Create OAuth2 Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-oauth2" class="md-nav__link">
+    POST /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-oauth2-login" class="md-nav__link">
+    Delete OAuth2 Login
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete OAuth2 Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-oauth2" class="md-nav__link">
+    DELETE /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3663,15 +3809,18 @@ this however, it is prone to change <em>anytime</em> in the future</strong>.</li
 <h3 id="post-stats">Post Stats</h3>
 <h4 id="get-botsbot_idstats">GET /bots/{bot_id}/stats</h4>
 <p>Post stats to the list</p>
-<h1 id="on-dpy-guild_count-is-usually-the-below">On dpy, guild_count is usually the below</h1>
-<p>guild_count = len(client.guilds)</p>
-<h1 id="if-you-are-using-sharding">If you are using sharding</h1>
-<p>shard_count = len(client.shards)
-shards = client.shards.keys()</p>
-<h1 id="optional-user-count-this-is-not-accurate-for-larger-bots">Optional: User count (this is not accurate for larger bots)</h1>
-<p>user_count = len(client.users) </p>
 <p>Example:
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># On dpy, guild_count is usually the below</span>
+<span class="n">guild_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">guilds</span><span class="p">)</span>
+
+<span class="c1"># If you are using sharding</span>
+<span class="n">shard_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">shards</span><span class="p">)</span>
+<span class="n">shards</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">shards</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="c1"># Optional: User count (this is not accurate for larger bots)</span>
+<span class="n">user_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">users</span><span class="p">)</span> 
 
 <span class="k">def</span> <span class="nf">post_stats</span><span class="p">(</span><span class="n">bot_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">guild_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">api_url</span><span class="si">}</span><span class="s2">/bots/</span><span class="si">{</span><span class="n">bot_id</span><span class="si">}</span><span class="s2">/stats&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;guild_count&quot;</span><span class="p">:</span> <span class="n">guild_count</span><span class="p">})</span>
