@@ -497,6 +497,46 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mini-index" class="md-nav__link">
+    Mini Index
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-mini-index" class="md-nav__link">
+    GET /mini-index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gets-bot-settings" class="md-nav__link">
+    Gets Bot Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Gets Bot Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-usersuser_idbotsbot_idsettings" class="md-nav__link">
+    GET /users/{user_id}/bots/{bot_id}/settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3121,6 +3161,46 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mini-index" class="md-nav__link">
+    Mini Index
+  </a>
+  
+    <nav class="md-nav" aria-label="Mini Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-mini-index" class="md-nav__link">
+    GET /mini-index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gets-bot-settings" class="md-nav__link">
+    Gets Bot Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Gets Bot Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-usersuser_idbotsbot_idsettings" class="md-nav__link">
+    GET /users/{user_id}/bots/{bot_id}/settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3390,6 +3470,8 @@ you prefix the token with <code>User</code></p>
 <li>All responses are cached for a short period of time. There is <em>no</em> way to opt out unlike API v2</li>
 <li>Some fields have been renamed or removed (such as <code>promos</code> which may be readded at a later date)</li>
 </ul>
+<p>This API returns some empty fields such as <code>webhook</code>, <code>webhook_secret</code>, `api_token`` and more. 
+This is to allow reuse of the Bot struct in Get Bot Settings which does contain this sensitive data. </p>
 <p><strong>Set the Frostpaw header if you are a custom client</strong></p>
 <p><strong>API v2 analogue:</strong> <a href="https://legacy.fateslist.xyz/docs/redoc#operation/fetch_bot">Fetch Bot</a></p>
 <p><strong>Path parameters</strong></p>
@@ -3510,7 +3592,11 @@ you prefix the token with <code>User</code></p>
 <span class="w">            </span><span class="nt">&quot;resource_link&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;resource_description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;webhook&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;webhook_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;webhook_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;api_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h3 id="search-list">Search List</h3>
@@ -3857,6 +3943,89 @@ this however, it is prone to change <em>anytime</em> in the future</strong>.</li
 <span class="w">        </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;bot&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="mini-index">Mini Index</h3>
+<h4 id="get-mini-index">GET /mini-index</h4>
+<p>Returns a mini-index which is basically a Index but with only <code>tags</code>
+and <code>features</code> having any data. Other fields are empty arrays/vectors.</p>
+<p>This is used internally by sunbeam for the add bot system where a full bot
+index is too costly and making a new struct is unnecessary.</p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;new&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;top_voted&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;certified&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;iconify_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;owner_guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;viewed_as&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="gets-bot-settings">Gets Bot Settings</h3>
+<h4 id="get-usersuser_idbotsbot_idsettings">GET /users/{user_id}/bots/{bot_id}/settings</h4>
+<p>Returns the bot settings.</p>
+<p>The <code>bot</code> key here is equivalent to a Get Bot response with the following
+differences:</p>
+<ul>
+<li>Sensitive fields (see examples) like <code>webhook</code>, <code>api_token</code>, 
+<code>webhook_secret</code> and others are filled out here</li>
+<li>This API only allows bot owners to use it, otherwise it will 400!</li>
+</ul>
+<p>Staff members <em>should</em> instead use Lynx.</p>
+<p>Due to massive changes, this API cannot be mapped onto any v2 API</p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>user_id</strong> [i64 (type info may be incomplete, see example)]</li>
+<li><strong>bot_id</strong> [i64 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bot_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;new&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;top_voted&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;certified&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;iconify_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;owner_guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;viewed_as&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h2 id="auth">Auth</h2>

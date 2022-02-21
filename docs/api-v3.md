@@ -216,6 +216,9 @@ Differences from API v2:
 - All responses are cached for a short period of time. There is *no* way to opt out unlike API v2
 - Some fields have been renamed or removed (such as ``promos`` which may be readded at a later date)
 
+This API returns some empty fields such as ``webhook``, ``webhook_secret``, `api_token`` and more. 
+This is to allow reuse of the Bot struct in Get Bot Settings which does contain this sensitive data. 
+
 **Set the Frostpaw header if you are a custom client**
 
 
@@ -352,7 +355,11 @@ Differences from API v2:
             "resource_link": "",
             "resource_description": ""
         }
-    ]
+    ],
+    "webhook": "This will be redacted for Get Bot endpoint",
+    "webhook_secret": "This will be redacted for Get Bot endpoint",
+    "webhook_type": null,
+    "api_token": "This will be redacted for Get Bot endpoint"
 }
 ```
 
@@ -791,6 +798,120 @@ def post_stats(bot_id: int, guild_count: int):
         "avatar": "",
         "bot": false
     }
+}
+```
+
+
+### Mini Index
+#### GET /mini-index
+
+
+Returns a mini-index which is basically a Index but with only ``tags``
+and ``features`` having any data. Other fields are empty arrays/vectors.
+
+This is used internally by sunbeam for the add bot system where a full bot
+index is too costly and making a new struct is unnecessary.
+
+
+**API v2 analogue:** None
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "new": [],
+    "top_voted": [],
+    "certified": [],
+    "tags": [
+        {
+            "name": "",
+            "iconify_data": "",
+            "id": "",
+            "owner_guild": null
+        }
+    ],
+    "features": [
+        {
+            "id": "",
+            "name": "",
+            "viewed_as": "",
+            "description": ""
+        }
+    ]
+}
+```
+
+
+### Gets Bot Settings
+#### GET /users/{user_id}/bots/{bot_id}/settings
+
+
+Returns the bot settings.
+
+The ``bot`` key here is equivalent to a Get Bot response with the following
+differences:
+
+- Sensitive fields (see examples) like ``webhook``, ``api_token``, 
+``webhook_secret`` and others are filled out here
+- This API only allows bot owners to use it, otherwise it will 400!
+
+Staff members *should* instead use Lynx.
+
+Due to massive changes, this API cannot be mapped onto any v2 API
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **user_id** [i64 (type info may be incomplete, see example)]
+- **bot_id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "user_id": 0,
+    "bot_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "new": [],
+    "top_voted": [],
+    "certified": [],
+    "tags": [
+        {
+            "name": "",
+            "iconify_data": "",
+            "id": "",
+            "owner_guild": null
+        }
+    ],
+    "features": [
+        {
+            "id": "",
+            "name": "",
+            "viewed_as": "",
+            "description": ""
+        }
+    ]
 }
 ```
 
