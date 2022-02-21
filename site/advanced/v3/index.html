@@ -408,6 +408,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-policies" class="md-nav__link">
+    Get Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-policies_1" class="md-nav__link">
+    GET /policies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get-bot" class="md-nav__link">
     Get Bot
   </a>
@@ -541,6 +561,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#create-oauth2-login" class="md-nav__link">
+    Create OAuth2 Login
+  </a>
+  
+    <nav class="md-nav" aria-label="Create OAuth2 Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-oauth2" class="md-nav__link">
+    POST /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#delete-oauth2-login" class="md-nav__link">
     Delete OAuth2 Login
   </a>
@@ -551,6 +591,39 @@
           <li class="md-nav__item">
   <a href="#delete-oauth2" class="md-nav__link">
     DELETE /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-votes" class="md-nav__link">
+    User Votes
+  </a>
+  
+    <nav class="md-nav" aria-label="User Votes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user-votes" class="md-nav__link">
+    Get User Votes
+  </a>
+  
+    <nav class="md-nav" aria-label="Get User Votes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-usersuser_idbotsbot_idvotes" class="md-nav__link">
+    GET /users/{user_id}/bots/{bot_id}/votes
   </a>
   
 </li>
@@ -2883,6 +2956,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-policies" class="md-nav__link">
+    Get Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-policies_1" class="md-nav__link">
+    GET /policies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#get-bot" class="md-nav__link">
     Get Bot
   </a>
@@ -3016,6 +3109,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#create-oauth2-login" class="md-nav__link">
+    Create OAuth2 Login
+  </a>
+  
+    <nav class="md-nav" aria-label="Create OAuth2 Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-oauth2" class="md-nav__link">
+    POST /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#delete-oauth2-login" class="md-nav__link">
     Delete OAuth2 Login
   </a>
@@ -3026,6 +3139,39 @@
           <li class="md-nav__item">
   <a href="#delete-oauth2" class="md-nav__link">
     DELETE /oauth2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-votes" class="md-nav__link">
+    User Votes
+  </a>
+  
+    <nav class="md-nav" aria-label="User Votes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-user-votes" class="md-nav__link">
+    Get User Votes
+  </a>
+  
+    <nav class="md-nav" aria-label="Get User Votes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-usersuser_idbotsbot_idvotes" class="md-nav__link">
+    GET /users/{user_id}/bots/{bot_id}/votes
   </a>
   
 </li>
@@ -3205,6 +3351,19 @@ you prefix the token with <code>User</code></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;target_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bot | server&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;target_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000000000&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="get-policies">Get Policies</h3>
+<h4 id="get-policies_1">GET /policies</h4>
+<p>Get policies (rules, privacy policy, terms of service)</p>
+<p><strong>API v2 analogue:</strong> (no longer working) <a href="https://api.fateslist.xyz/api/docs/redoc#operation/all_policies">All Policies</a></p>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;privacy_policy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <h3 id="get-bot">Get Bot</h3>
@@ -3603,6 +3762,31 @@ you prefix the token with <code>User</code></p>
 <span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://discord.com/.........&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
+<h3 id="create-oauth2-login">Create OAuth2 Login</h3>
+<h4 id="post-oauth2">POST /oauth2</h4>
+<p>Creates a oauth2 login given a code</p>
+<p><strong>API v2 analogue:</strong> (no longer working) <a href="https://api.fateslist.xyz/api/docs/redoc#operation/login_user">Login User</a></p>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;code from discord oauth&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Random UUID right now&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;disc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;bot&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;site_lang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;css&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <h3 id="delete-oauth2-login">Delete OAuth2 Login</h3>
 <h4 id="delete-oauth2">DELETE /oauth2</h4>
 <p>'Deletes' (logs out) a oauth2 login. Always call this when logging out 
@@ -3617,6 +3801,53 @@ even if you do not use cookies as it may perform other logout tasks in future</p
 <span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="user-votes">User Votes</h2>
+<h3 id="get-user-votes">Get User Votes</h3>
+<h4 id="get-usersuser_idbotsbot_idvotes">GET /users/{user_id}/bots/{bot_id}/votes</h4>
+<p>Endpoint to check amount of votes a user has.</p>
+<ul>
+<li>votes | The amount of votes the bot has.</li>
+<li>voted | Whether or not the user has <em>ever</em> voted for the bot.</li>
+<li>vote_epoch | The redis TTL of the users vote lock. This is not time_to_vote which is the
+elapsed time the user has waited since their last vote.</li>
+<li>timestamps | A list of timestamps that the user has voted for the bot on that has been recorded.</li>
+<li>time_to_vote | The time the user has waited since they last voted.</li>
+<li>vote_right_now | Whether a user can vote right now. Currently equivalent to <code>vote_epoch &lt; 0</code>.</li>
+</ul>
+<p>Differences from API v2:</p>
+<ul>
+<li>Unlike API v2, this does not require authorization to use. This is to speed up responses and 
+because the last thing people want to scrape are Fates List user votes anyways. <strong>You should not rely on
+this however, it is prone to change <em>anytime</em> in the future</strong>.</li>
+<li><code>vts</code> has been renamed to <code>timestamps</code></li>
+</ul>
+<p><strong>API v2 analogue:</strong> (no longer working) <a href="https://api.fateslist.xyz/api/docs/redoc#operation/get_user_votes">Get User Votes</a></p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>user_id</strong> [i64 (type info may be incomplete, see example)]</li>
+<li><strong>bot_id</strong> [i64 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bot_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;voted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;vote_right_now&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;vote_epoch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;time_to_vote&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;timestamps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;1970-01-01T00:00:00Z&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
