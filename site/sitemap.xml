@@ -2,697 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://fateslist.xyz/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/api-v3/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/advanced/custom-clients/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/advanced/flamepaw/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/advanced/self-hosting/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/basics/api-pinning/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/basics/api-versions/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/basics/endpoints/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/basics/status-codes/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/changelog/v2_beta2/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/changelog/v2_beta3/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/changelog/v2_dec6/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/css/buttons/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/css/selectors/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/css/tabs/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/css/tags/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/css/useful-information/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/libraries/fateslist-py/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIResponse/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2AuthApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2BotsApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2CommandsApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2CustomResourcesApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2PoliciesApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2PromotionsApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2ReviewsApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2ServersApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2StaffAppsApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2SystemApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2UsersApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/APIV2WidgetsApi/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AddBotInfo/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AllOfBaseUserStatus/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AllOfBotReviewReplies/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AllOfLoginResponseBan/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AllOfPackBotStatus/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AllOfPartialBotQueueUser/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AllOfProfileBotUser/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AnyOfBgcolor/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AnyOfBgcolor1/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AnyOfTextcolor/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/AnyOfTextcolor1/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Badge/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BasePager/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BaseUser/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Bgcolor/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Bgcolor1/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Bot/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotAppeal/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotCommand/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotCommandDelete/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotCommandWithId/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotCommands/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotCommandsGet/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotFeature/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotFeatures/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotIndex/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotListStats/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotLogs/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotMeta/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotOwner/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotOwners/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPack/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPackPartial/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPartial/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPartialList/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPromotion/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPromotionList/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotPromotions/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotQueueGet/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotQueueList/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotRandom/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotResource/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotResourceDelete/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotResources/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotReview/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotReviewList/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotReviewPartial/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotReviewPartialExt/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotReviewVote/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotReviews/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotState/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotStats/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotStatsFull/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotVanity/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/BotVoteCheck/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/CommandType/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/FLTag/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/FLTags/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/FilteredBotOwner/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/FilteredBotTag/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/GCVFormat/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Guild/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/GuildRandom/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/IDResponse/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/IsStaff/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Login/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/LoginBan/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/LoginResponse/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/LongDescType/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/OAuthInfo/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/OwnershipTransfer/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/PackBot/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/PartialBotQueue/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Partner/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/PartnerLinks/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Partners/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Profile/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/ProfileBot/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/ProfileData/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/PromotionType/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/ReviewType/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Search/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/SearchType/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/SiteLang/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/StaffRole/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/StaffRoles/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Status/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/TagSearch/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Textcolor/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Textcolor1/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Troubleshoot/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/Type/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/UpdateUserPreferences/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/UpdateVoteReminders/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/UserState/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/VanityType/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/VoteReminderMode/</loc>
-         <lastmod>2022-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://fateslist.xyz/libraries/python-swaggerhub/docs/WidgetFormat/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/staff-guide/info/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/structures/basic-structures/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/structures/enums.autogen/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/structures/event/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/structures/partial-review/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/structures/review/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/webhook/vote/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/websockets/getting-started/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://fateslist.xyz/websockets/ratelimit/</loc>
-         <lastmod>2022-02-21</lastmod>
+         <lastmod>2022-02-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

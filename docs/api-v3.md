@@ -140,6 +140,7 @@ Returns the index for bots and servers
     ]
 }
 ```
+**Authorization Needed** | 
 
 
 ### Resolve Vanity
@@ -176,6 +177,7 @@ Resolves the vanity for a bot/server in the list
     "target_id": "0000000000"
 }
 ```
+**Authorization Needed** | 
 
 
 ### Get Policies
@@ -199,6 +201,43 @@ Get policies (rules, privacy policy, terms of service)
     "privacy_policy": {}
 }
 ```
+**Authorization Needed** | 
+
+
+### Get Partners
+#### GET /partners
+
+Get policies (rules, privacy policy, terms of service)
+
+**API v2 analogue:** (no longer working) [Get Partners](https://legacy.fateslist.xyz/api/docs/redoc#operation/get_partners)
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "partners": [
+        {
+            "id": "0",
+            "name": "My development",
+            "owner": "12345678901234567",
+            "image": "",
+            "description": "Some random description",
+            "links": {
+                "discord": "https://discord.com/lmao",
+                "website": "https://example.com"
+            }
+        }
+    ],
+    "icons": {}
+}
+```
+**Authorization Needed** | 
 
 
 ### Get Bot
@@ -219,7 +258,7 @@ Differences from API v2:
 This API returns some empty fields such as ``webhook``, ``webhook_secret``, `api_token`` and more. 
 This is to allow reuse of the Bot struct in Get Bot Settings which does contain this sensitive data. 
 
-**Set the Frostpaw header if you are a custom client**
+**Set the Frostpaw header if you are a custom client. Send Frostpaw-Invite header on invites**
 
 
 **API v2 analogue:** [Fetch Bot](https://legacy.fateslist.xyz/docs/redoc#operation/fetch_bot)
@@ -362,6 +401,7 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
     "api_token": "This will be redacted for Get Bot endpoint"
 }
 ```
+**Authorization Needed** | 
 
 
 ### Search List
@@ -369,7 +409,7 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
 
 Searches the list based on a query named ``q``
 
-**API v2 analogue:** (no longer working) [Fetch Bot](https://legacy.fateslist.xyz/docs/redoc#operation/search_list)
+**API v2 analogue:** (no longer working) [Search List](https://legacy.fateslist.xyz/docs/redoc#operation/search_list)
 
 **Query parameters**
 
@@ -490,6 +530,7 @@ Searches the list based on a query named ``q``
     }
 }
 ```
+**Authorization Needed** | 
 
 
 ### Random Bot
@@ -539,6 +580,7 @@ def random_bot():
     }
 }
 ```
+**Authorization Needed** | 
 
 
 ### Random Server
@@ -588,6 +630,7 @@ def random_server():
     }
 }
 ```
+**Authorization Needed** | 
 
 
 ### Get Server
@@ -602,6 +645,8 @@ Differences from API v2:
 - *``long_description/css`` is sanitized with ammonia by default, use `long_description_raw` if you want the unsanitized version*
 - All responses are cached for a short period of time. There is *no* way to opt out unlike API v2
 - Some fields have been renamed or removed
+- ``invite_link`` is returned, however is always None unless ``Frostpaw-Invite`` header is set which then pushes you into 
+server privacy restrictions
 
 **Set the Frostpaw header if you are a custom client**
 
@@ -659,6 +704,7 @@ Differences from API v2:
     "vanity": null,
     "guild_count": 0,
     "invite_amount": 0,
+    "invite_link": null,
     "created_at": "1970-01-01T00:00:00Z",
     "state": 0,
     "flags": [],
@@ -672,6 +718,7 @@ Differences from API v2:
     "total_votes": 0
 }
 ```
+**Authorization Needed** | 
 
 
 ### Get User Votes
@@ -733,10 +780,11 @@ this however, it is prone to change *anytime* in the future**.
     ]
 }
 ```
+**Authorization Needed** | 
 
 
 ### Post Stats
-#### GET /bots/{bot_id}/stats
+#### GET /bots/{id}/stats
 
 
 Post stats to the list
@@ -766,6 +814,19 @@ def post_stats(bot_id: int, guild_count: int):
 
 
 **API v2 analogue:** (no longer working) [Post Stats](https://legacy.fateslist.xyz/api/docs/redoc#operation/set_stats)
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
 
 **Request Body**
 
@@ -800,6 +861,7 @@ def post_stats(bot_id: int, guild_count: int):
     }
 }
 ```
+**Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization)
 
 
 ### Mini Index
@@ -846,6 +908,7 @@ index is too costly and making a new struct is unnecessary.
     ]
 }
 ```
+**Authorization Needed** | 
 
 
 ### Gets Bot Settings
@@ -893,27 +956,129 @@ Due to massive changes, this API cannot be mapped onto any v2 API
 
 ```json
 {
-    "new": [],
-    "top_voted": [],
-    "certified": [],
-    "tags": [
-        {
-            "name": "",
-            "iconify_data": "",
+    "bot": {
+        "user": {
             "id": "",
-            "owner_guild": null
-        }
-    ],
-    "features": [
-        {
-            "id": "",
-            "name": "",
-            "viewed_as": "",
-            "description": ""
-        }
-    ]
+            "username": "",
+            "disc": "",
+            "avatar": "",
+            "bot": false
+        },
+        "description": "",
+        "tags": [],
+        "created_at": "1970-01-01T00:00:00Z",
+        "last_stats_post": "1970-01-01T00:00:00Z",
+        "long_description": "blah blah blah",
+        "long_description_raw": "blah blah blah unsanitized",
+        "long_description_type": 2,
+        "guild_count": 0,
+        "shard_count": 493,
+        "user_count": 0,
+        "shards": [],
+        "prefix": null,
+        "library": "",
+        "invite": null,
+        "invite_link": "https://discord.com/api/oauth2/authorize....",
+        "invite_amount": 48,
+        "owners": [
+            {
+                "user": {
+                    "id": "",
+                    "username": "",
+                    "disc": "",
+                    "avatar": "",
+                    "bot": false
+                },
+                "main": false
+            }
+        ],
+        "owners_html": "",
+        "features": [
+            {
+                "id": "",
+                "name": "",
+                "viewed_as": "",
+                "description": ""
+            }
+        ],
+        "state": 0,
+        "page_style": 1,
+        "website": null,
+        "support": "",
+        "github": null,
+        "css": "<style></style>",
+        "votes": 0,
+        "total_votes": 0,
+        "vanity": "",
+        "donate": null,
+        "privacy_policy": null,
+        "nsfw": false,
+        "banner_card": null,
+        "banner_page": null,
+        "keep_banner_decor": false,
+        "client_id": "",
+        "flags": [],
+        "action_logs": [
+            {
+                "user_id": "",
+                "action": 0,
+                "action_time": "1970-01-01T00:00:00Z",
+                "context": null
+            }
+        ],
+        "uptime_checks_total": 30,
+        "uptime_checks_failed": 19,
+        "commands": {
+            "default": [
+                {
+                    "cmd_type": 0,
+                    "cmd_groups": [],
+                    "cmd_name": "",
+                    "vote_locked": false,
+                    "description": "",
+                    "args": [],
+                    "examples": [],
+                    "premium_only": false,
+                    "notes": [],
+                    "doc_link": "",
+                    "id": ""
+                }
+            ]
+        },
+        "resources": [
+            {
+                "id": "",
+                "resource_title": "",
+                "resource_link": "",
+                "resource_description": ""
+            }
+        ],
+        "webhook": "This will be redacted for Get Bot endpoint",
+        "webhook_secret": "This will be redacted for Get Bot endpoint",
+        "webhook_type": null,
+        "api_token": "This will be redacted for Get Bot endpoint"
+    },
+    "context": {
+        "tags": [
+            {
+                "name": "",
+                "iconify_data": "",
+                "id": "",
+                "owner_guild": null
+            }
+        ],
+        "features": [
+            {
+                "id": "",
+                "name": "",
+                "viewed_as": "",
+                "description": ""
+            }
+        ]
+    }
 }
 ```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
 
 
 ## Auth
@@ -940,6 +1105,7 @@ Returns the oauth2 link used to login with
     "context": "https://discord.com/........."
 }
 ```
+**Authorization Needed** | 
 
 
 ### Create OAuth2 Login
@@ -975,6 +1141,7 @@ Creates a oauth2 login given a code
     "css": null
 }
 ```
+**Authorization Needed** | 
 
 
 ### Delete OAuth2 Login
@@ -1004,5 +1171,284 @@ This API is essentially a logout
     "context": null
 }
 ```
+**Authorization Needed** | 
+
+
+## Security
+
+### New Bot Token
+#### DELETE /bots/{id}/token
+
+
+'Deletes' a bot token and reissues a new bot token. Use this if your bots
+token ever gets leaked.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### New User Token
+#### DELETE /users/{id}/token
+
+
+'Deletes' a user token and reissues a new user token. Use this if your user
+token ever gets leaked.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### New Server Token
+#### DELETE /servers/{id}/token
+
+
+'Deletes' a server token and reissues a new server token. Use this if your server
+token ever gets leaked.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [Server](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+## Bot Auth
+
+### New Bot
+#### POST /users/{id}/bots
+
+
+Creates a new bot. 
+
+Set ``created_at``, ``last_stats_post`` to sometime in the past
+
+Set ``api_token``, ``guild_count`` etc (unknown/not editable fields) to any 
+random value of the same type
+
+With regards to ``extra_owners``, put all of them as a ``BotOwner`` object
+containing ``main`` set to ``false`` and ``user`` as a dummy ``user`` object 
+containing ``id`` filled in and the rest of a ``user``empty strings. Set ``bot``
+to false.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "description": "",
+    "tags": [],
+    "created_at": "1970-01-01T00:00:00Z",
+    "last_stats_post": "1970-01-01T00:00:00Z",
+    "long_description": "blah blah blah",
+    "long_description_raw": "blah blah blah unsanitized",
+    "long_description_type": 2,
+    "guild_count": 0,
+    "shard_count": 493,
+    "user_count": 0,
+    "shards": [],
+    "prefix": null,
+    "library": "",
+    "invite": null,
+    "invite_link": "https://discord.com/api/oauth2/authorize....",
+    "invite_amount": 48,
+    "owners": [
+        {
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            },
+            "main": false
+        }
+    ],
+    "owners_html": "",
+    "features": [
+        {
+            "id": "",
+            "name": "",
+            "viewed_as": "",
+            "description": ""
+        }
+    ],
+    "state": 0,
+    "page_style": 1,
+    "website": null,
+    "support": "",
+    "github": null,
+    "css": "<style></style>",
+    "votes": 0,
+    "total_votes": 0,
+    "vanity": "",
+    "donate": null,
+    "privacy_policy": null,
+    "nsfw": false,
+    "banner_card": null,
+    "banner_page": null,
+    "keep_banner_decor": false,
+    "client_id": "",
+    "flags": [],
+    "action_logs": [
+        {
+            "user_id": "",
+            "action": 0,
+            "action_time": "1970-01-01T00:00:00Z",
+            "context": null
+        }
+    ],
+    "uptime_checks_total": 30,
+    "uptime_checks_failed": 19,
+    "commands": {
+        "default": [
+            {
+                "cmd_type": 0,
+                "cmd_groups": [],
+                "cmd_name": "",
+                "vote_locked": false,
+                "description": "",
+                "args": [],
+                "examples": [],
+                "premium_only": false,
+                "notes": [],
+                "doc_link": "",
+                "id": ""
+            }
+        ]
+    },
+    "resources": [
+        {
+            "id": "",
+            "resource_title": "",
+            "resource_link": "",
+            "resource_description": ""
+        }
+    ],
+    "webhook": "This will be redacted for Get Bot endpoint",
+    "webhook_secret": "This will be redacted for Get Bot endpoint",
+    "webhook_type": null,
+    "api_token": "This will be redacted for Get Bot endpoint"
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
 
 
