@@ -9,11 +9,4 @@ We hope you enjoy using the Fates List API just as we enjoyed making it for you!
 
 ## Endpoints
 
-Please click [here](https://api.fateslist.xyz/api/docs/redoc) for our HTTP API documentation. Note that structures, enum references and staff guides are still here 
-and not on our HTTP API documentation at this time.
-
-<div style="background: white">
-	<iframe src="https://api.fateslist.xyz/api/docs/redoc" style="width: 100%; height: 800px; border: none" frameBorder="0"></iframe>
-</div>
- 
- 
+Please click [here](api-v3) for our HTTP API documentation. 

@@ -398,9 +398,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Endpoints
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Endpoints
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-v2-docs" class="md-nav__link">
+    API v2 Docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-v3-documentation" class="md-nav__link">
+    API v3 documentation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -937,6 +975,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-v2-docs" class="md-nav__link">
+    API v2 Docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-v3-documentation" class="md-nav__link">
+    API v3 documentation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -953,15 +1013,17 @@
 
 
 <h1 id="endpoints">Endpoints</h1>
-<p>You can see the documentation for the actual API endpoints provided by Fates List via Swagger, Redoc or the raw OpenAPI schema (for those who just want the raw OpenAPI schema to plug into an API tester):</p>
-<p>Redoc (recommended): <a href="https://api.fateslist.xyz/docs/redoc">https://api.fateslist.xyz/docs/redoc</a></p>
-<p>Swagger: <a href="https://api.fateslist.xyz/docs/swagger">https://api.fateslist.xyz/docs/swagger</a></p>
-<p>OpenAPI JSON: <a href="https://api.fateslist.xyz/docs/openapi">https://api.fateslist.xyz/docs/openapi</a></p>
+<p>Fates List does not provide a OpenAPI schema for API v3 however this is something that is being looked into!</p>
+<h2 id="api-v2-docs">API v2 Docs</h2>
+<p>Swagger: <a href="https://legacy.fateslist.xyz/docs/swagger">https://legacy.fateslist.xyz/docs/swagger</a></p>
+<p>OpenAPI JSON: <a href="https://legacy.fateslist.xyz/docs/openapi">https://legacy.fateslist.xyz/docs/openapi</a></p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>It is recommended to use (python) requests, (NodeJS) node-fetch or <a href="https://reqbin.com">reqbin</a> though reqbin should be used as a <strong>last resort</strong> as it does not support DELETE requests with a request body.</p>
 </details>
 <p>These endpoints are subject to change over time. For information on the rest of the API and how to use the API, continue reading the API Documentation here. The above URLs cover all the endpoints while this documentation (the main one) just covers the additional things you need to know in order to read the above properly.</p>
+<h2 id="api-v3-documentation">API v3 documentation</h2>
+<p>see <a href="../api-v3">v3</a></p>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>Both https://api.fateslist.xyz and https://api.fateslist.xyz/api are acceptable base URLs for the API. As such both https://api.fateslist.xyz/docs/swagger and https://api.fateslist.xyz/api/docs/swagger are valid</p>
