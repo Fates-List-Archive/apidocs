@@ -368,6 +368,12 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
             "context": null
         }
     ],
+    "vpm": [
+        {
+            "votes": 0,
+            "ts": "1970-01-01T00:00:00Z"
+        }
+    ],
     "uptime_checks_total": 30,
     "uptime_checks_failed": 19,
     "commands": {
@@ -1026,6 +1032,12 @@ Due to massive changes, this API cannot be mapped onto any v2 API
                 "context": null
             }
         ],
+        "vpm": [
+            {
+                "votes": 0,
+                "ts": "1970-01-01T00:00:00Z"
+            }
+        ],
         "uptime_checks_total": 30,
         "uptime_checks_failed": 19,
         "commands": {
@@ -1406,6 +1418,12 @@ to false.
             "context": null
         }
     ],
+    "vpm": [
+        {
+            "votes": 0,
+            "ts": "1970-01-01T00:00:00Z"
+        }
+    ],
     "uptime_checks_total": 30,
     "uptime_checks_failed": 19,
     "commands": {
@@ -1437,6 +1455,214 @@ to false.
     "webhook_secret": "This will be redacted for Get Bot endpoint",
     "webhook_type": null,
     "api_token": "This will be redacted for Get Bot endpoint"
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Edit Bot
+#### PATCH /users/{id}/bots
+
+
+Edits a existing bot. 
+
+Set ``created_at``, ``last_stats_post`` to sometime in the past
+
+Set ``api_token``, ``guild_count`` etc (unknown/not editable fields) to any 
+random value of the same type
+
+With regards to ``extra_owners``, put all of them as a ``BotOwner`` object
+containing ``main`` set to ``false`` and ``user`` as a dummy ``user`` object 
+containing ``id`` filled in and the rest of a ``user``empty strings. Set ``bot``
+to false.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "description": "",
+    "tags": [],
+    "created_at": "1970-01-01T00:00:00Z",
+    "last_stats_post": "1970-01-01T00:00:00Z",
+    "long_description": "blah blah blah",
+    "long_description_raw": "blah blah blah unsanitized",
+    "long_description_type": 2,
+    "guild_count": 0,
+    "shard_count": 493,
+    "user_count": 0,
+    "shards": [],
+    "prefix": null,
+    "library": "",
+    "invite": null,
+    "invite_link": "https://discord.com/api/oauth2/authorize....",
+    "invite_amount": 48,
+    "owners": [
+        {
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            },
+            "main": false
+        }
+    ],
+    "owners_html": "",
+    "features": [
+        {
+            "id": "",
+            "name": "",
+            "viewed_as": "",
+            "description": ""
+        }
+    ],
+    "state": 0,
+    "page_style": 1,
+    "website": null,
+    "support": "",
+    "github": null,
+    "css": "<style></style>",
+    "votes": 0,
+    "total_votes": 0,
+    "vanity": "",
+    "donate": null,
+    "privacy_policy": null,
+    "nsfw": false,
+    "banner_card": null,
+    "banner_page": null,
+    "keep_banner_decor": false,
+    "client_id": "",
+    "flags": [],
+    "action_logs": [
+        {
+            "user_id": "",
+            "action": 0,
+            "action_time": "1970-01-01T00:00:00Z",
+            "context": null
+        }
+    ],
+    "vpm": [
+        {
+            "votes": 0,
+            "ts": "1970-01-01T00:00:00Z"
+        }
+    ],
+    "uptime_checks_total": 30,
+    "uptime_checks_failed": 19,
+    "commands": {
+        "default": [
+            {
+                "cmd_type": 0,
+                "cmd_groups": [],
+                "cmd_name": "",
+                "vote_locked": false,
+                "description": "",
+                "args": [],
+                "examples": [],
+                "premium_only": false,
+                "notes": [],
+                "doc_link": "",
+                "id": ""
+            }
+        ]
+    },
+    "resources": [
+        {
+            "id": "",
+            "resource_title": "",
+            "resource_link": "",
+            "resource_description": ""
+        }
+    ],
+    "webhook": "This will be redacted for Get Bot endpoint",
+    "webhook_secret": "This will be redacted for Get Bot endpoint",
+    "webhook_type": null,
+    "api_token": "This will be redacted for Get Bot endpoint"
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+## Appeal
+
+### New Appeal
+#### DELETE /users/{user_id}/bots/{bot_id}/appeal
+
+
+Creates a appeal/request for a bot.
+
+``request_type`` is a ``BotRequestType``, see [Enum Reference](https://docs.fateslist.xyz/structures/enums.autogen/)
+
+**Ideally should only be used for custom clients**
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **user_id** [i64 (type info may be incomplete, see example)]
+- **bot_id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "user_id": 0,
+    "bot_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "request_type": 0,
+    "appeal": "This bot deserves to be unbanned because..."
 }
 ```
 

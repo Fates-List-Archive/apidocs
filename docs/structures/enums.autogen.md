@@ -82,6 +82,14 @@ Handles bot admin operations
 | system | 5 | System bot |
 
 
+## BotRequestType
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| appeal | 0 | Bot |
+| certification | 1 | Certification |
+
+
 ## BotState
 
 | Name | Value | Description |
