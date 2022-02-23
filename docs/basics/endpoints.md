@@ -18,7 +18,7 @@ These endpoints are subject to change over time. For information on the rest of 
 
 ## API v3 documentation
 
-see [v3](../api-v3)
+see [v3](../../api-v3)
 
 ???+ note
 
