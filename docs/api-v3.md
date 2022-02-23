@@ -1630,7 +1630,7 @@ to false.
 ## Appeal
 
 ### New Appeal
-#### DELETE /users/{user_id}/bots/{bot_id}/appeal
+#### POST /users/{user_id}/bots/{bot_id}/appeal
 
 
 Creates a appeal/request for a bot.
