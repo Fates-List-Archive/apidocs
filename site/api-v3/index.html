@@ -418,6 +418,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#search-tag" class="md-nav__link">
+    Search Tag
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Tag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-search-tagsqquery" class="md-nav__link">
+    GET /search-tags?q={query}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#random-bot" class="md-nav__link">
     Random Bot
   </a>
@@ -709,11 +729,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bot-auth" class="md-nav__link">
-    Bot Auth
+  <a href="#bot-actions" class="md-nav__link">
+    Bot Actions
   </a>
   
-    <nav class="md-nav" aria-label="Bot Auth">
+    <nav class="md-nav" aria-label="Bot Actions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -747,6 +767,46 @@
           <li class="md-nav__item">
   <a href="#patch-usersidbots" class="md-nav__link">
     PATCH /users/{id}/bots
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-ownership" class="md-nav__link">
+    Transfer Ownership
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersuser_idbotsbot_idmain-owner" class="md-nav__link">
+    PATCH /users/{user_id}/bots/{bot_id}/main-owner
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-bot" class="md-nav__link">
+    Delete Bot
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersuser_idbotsbot_id" class="md-nav__link">
+    DELETE /users/{user_id}/bots/{bot_id}
   </a>
   
 </li>
@@ -1627,6 +1687,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#search-tag" class="md-nav__link">
+    Search Tag
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Tag">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-search-tagsqquery" class="md-nav__link">
+    GET /search-tags?q={query}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#random-bot" class="md-nav__link">
     Random Bot
   </a>
@@ -1918,11 +1998,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bot-auth" class="md-nav__link">
-    Bot Auth
+  <a href="#bot-actions" class="md-nav__link">
+    Bot Actions
   </a>
   
-    <nav class="md-nav" aria-label="Bot Auth">
+    <nav class="md-nav" aria-label="Bot Actions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1956,6 +2036,46 @@
           <li class="md-nav__item">
   <a href="#patch-usersidbots" class="md-nav__link">
     PATCH /users/{id}/bots
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-ownership" class="md-nav__link">
+    Transfer Ownership
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersuser_idbotsbot_idmain-owner" class="md-nav__link">
+    PATCH /users/{user_id}/bots/{bot_id}/main-owner
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-bot" class="md-nav__link">
+    Delete Bot
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersuser_idbotsbot_id" class="md-nav__link">
+    DELETE /users/{user_id}/bots/{bot_id}
   </a>
   
 </li>
@@ -2453,6 +2573,81 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
 <span class="w">            </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1970-01-01T00:00:00Z&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;iconify_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;owner_guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;servers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;iconify_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;owner_guild&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | </p>
+<h3 id="search-tag">Search Tag</h3>
+<h4 id="get-search-tagsqquery">GET /search-tags?q={query}</h4>
+<p>Searches the list for all bots/servers with tag <em>exactly</em> specified <code>q</code></p>
+<p><strong>API v2 analogue:</strong> (no longer working) <a href="https://legacy.fateslist.xyz/docs/redoc#operation/search_list">Search List</a></p>
+<p><strong>Query parameters</strong></p>
+<ul>
+<li><strong>q</strong> [String? | default = music (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;q&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;music&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;guild_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;banner&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;nsfw&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;disc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;bot&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;servers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;guild_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;banner&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;nsfw&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;disc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;bot&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;profiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;packs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;bots&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">            </span><span class="p">{</span><span class="w"></span>
@@ -3050,7 +3245,7 @@ token ever gets leaked.</p>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">Server</a></p>
-<h2 id="bot-auth">Bot Auth</h2>
+<h2 id="bot-actions">Bot Actions</h2>
 <h3 id="new-bot">New Bot</h3>
 <h4 id="post-usersidbots">POST /users/{id}/bots</h4>
 <p>Creates a new bot. </p>
@@ -3318,6 +3513,69 @@ to false.</p>
 <span class="w">    </span><span class="nt">&quot;webhook_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;api_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">User</a></p>
+<h3 id="transfer-ownership">Transfer Ownership</h3>
+<h4 id="patch-usersuser_idbotsbot_idmain-owner">PATCH /users/{user_id}/bots/{bot_id}/main-owner</h4>
+<p>Transfers bot ownership.</p>
+<p>You <strong>must</strong> be main owner to use this endpoint.</p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>user_id</strong> [i64 (type info may be incomplete, see example)]</li>
+<li><strong>bot_id</strong> [i64 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bot_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;id here&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leave blank&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;disc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leave blank&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leave blank&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;bot&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">User</a></p>
+<h3 id="delete-bot">Delete Bot</h3>
+<h4 id="delete-usersuser_idbotsbot_id">DELETE /users/{user_id}/bots/{bot_id}</h4>
+<p>Deletes a bot.</p>
+<p>You <strong>must</strong> be main owner to use this endpoint.</p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>user_id</strong> [i64 (type info may be incomplete, see example)]</li>
+<li><strong>bot_id</strong> [i64 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bot_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Response Body</strong></p>
 <p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>

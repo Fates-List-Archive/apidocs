@@ -539,6 +539,95 @@ Searches the list based on a query named ``q``
 **Authorization Needed** | 
 
 
+### Search Tag
+#### GET /search-tags?q={query}
+
+Searches the list for all bots/servers with tag *exactly* specified ``q``
+
+**API v2 analogue:** (no longer working) [Search List](https://legacy.fateslist.xyz/docs/redoc#operation/search_list)
+
+**Query parameters**
+
+- **q** [String? | default = music (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "q": "music"
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "bots": [
+        {
+            "guild_count": 0,
+            "description": "",
+            "banner": "",
+            "nsfw": false,
+            "votes": 0,
+            "state": 0,
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            }
+        }
+    ],
+    "servers": [
+        {
+            "guild_count": 0,
+            "description": "",
+            "banner": "",
+            "nsfw": false,
+            "votes": 0,
+            "state": 0,
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            }
+        }
+    ],
+    "profiles": [],
+    "packs": [],
+    "tags": {
+        "bots": [
+            {
+                "name": "",
+                "iconify_data": "",
+                "id": "",
+                "owner_guild": null
+            }
+        ],
+        "servers": [
+            {
+                "name": "",
+                "iconify_data": "",
+                "id": "",
+                "owner_guild": null
+            }
+        ]
+    }
+}
+```
+**Authorization Needed** | 
+
+
 ### Random Bot
 #### GET /random-bot
 
@@ -1311,7 +1400,7 @@ token ever gets leaked.
 **Authorization Needed** | [Server](https://docs.fateslist.xyz/api-v3/#authorization)
 
 
-## Bot Auth
+## Bot Actions
 
 ### New Bot
 #### POST /users/{id}/bots
@@ -1613,6 +1702,103 @@ to false.
     "webhook_type": null,
     "api_token": "This will be redacted for Get Bot endpoint"
 }
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Transfer Ownership
+#### PATCH /users/{user_id}/bots/{bot_id}/main-owner
+
+
+Transfers bot ownership.
+
+You **must** be main owner to use this endpoint.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **user_id** [i64 (type info may be incomplete, see example)]
+- **bot_id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "user_id": 0,
+    "bot_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "user": {
+        "id": "id here",
+        "username": "Leave blank",
+        "disc": "Leave blank",
+        "avatar": "Leave blank",
+        "bot": false
+    },
+    "main": true
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Delete Bot
+#### DELETE /users/{user_id}/bots/{bot_id}
+
+
+Deletes a bot.
+
+You **must** be main owner to use this endpoint.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **user_id** [i64 (type info may be incomplete, see example)]
+- **bot_id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "user_id": 0,
+    "bot_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
 ```
 
 **Response Body**

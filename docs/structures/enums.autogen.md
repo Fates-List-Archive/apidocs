@@ -217,6 +217,7 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | unclaim | 5 | Unclaim |
 | transfer_ownership | 6 | Transfer Bot Ownership |
 | edit_bot | 7 | Edit Bot |
+| delete_bot | 8 | Delete Bot |
 
 
 ## UserState
