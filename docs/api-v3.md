@@ -2112,3 +2112,185 @@ This may change in the future and is given by ``per_page`` key.
 **Authorization Needed** | 
 
 
+### Create Review
+#### POST /reviews/{id}
+
+
+Creates a review.
+
+``id`` and ``page`` should be set to null or omitted though are ignored by this endpoint
+so there should not be an error even if provided.
+
+A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.
+
+A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+
+This reviewable entities id which is a ``i64`` is the id that is specifed in the
+path.
+
+``user_id`` is *required* for this endpoint and must be the user making the review. It must
+also match the user token sent in the ``Authorization`` header
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **page** [Optional <i32> (type info may be incomplete, see example)]
+- **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "target_type": 0,
+    "page": null,
+    "user_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "id": null,
+    "reply": false,
+    "star_rating": "0",
+    "review_text": "",
+    "review_upvotes": [],
+    "review_downvotes": [],
+    "flagged": false,
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "epoch": [],
+    "replies": [],
+    "parent_id": null
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Edit Review
+#### PATCH /reviews/{id}
+
+
+Edits a review.
+
+``page`` should be set to null or omitted though are ignored by this endpoint
+so there should not be an error even if provided.
+
+A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.
+
+A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+
+This reviewable entities id which is a ``i64`` is the id that is specifed in the
+path.
+
+The id of the review must be specified as ``id`` in the request body which accepts a ``Review``
+object. The ``user_id`` specified must *own*/have created the review being editted. Staff should
+edit reviews using Lynx when required.
+
+``user_id`` is *required* for this endpoint and must be the user making the review. It must
+also match the user token sent in the ``Authorization`` header
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **page** [Optional <i32> (type info may be incomplete, see example)]
+- **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "target_type": 0,
+    "page": null,
+    "user_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "id": "1c1269ad-83db-4e14-bd01-a79746e95de4",
+    "reply": false,
+    "star_rating": "0",
+    "review_text": "",
+    "review_upvotes": [],
+    "review_downvotes": [],
+    "flagged": false,
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "epoch": [],
+    "replies": [],
+    "parent_id": null
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | 
+
+
