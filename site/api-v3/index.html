@@ -988,6 +988,46 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#delete-review" class="md-nav__link">
+    Delete Review
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-reviewsrid" class="md-nav__link">
+    DELETE /reviews/{rid}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-review" class="md-nav__link">
+    Vote Review
+  </a>
+  
+    <nav class="md-nav" aria-label="Vote Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-reviewsridvotes" class="md-nav__link">
+    PATCH /reviews/{rid}/votes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2387,6 +2427,46 @@
           <li class="md-nav__item">
   <a href="#patch-reviewsid" class="md-nav__link">
     PATCH /reviews/{id}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-review" class="md-nav__link">
+    Delete Review
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-reviewsrid" class="md-nav__link">
+    DELETE /reviews/{rid}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-review" class="md-nav__link">
+    Vote Review
+  </a>
+  
+    <nav class="md-nav" aria-label="Vote Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-reviewsridvotes" class="md-nav__link">
+    PATCH /reviews/{rid}/votes
   </a>
   
 </li>
@@ -4043,8 +4123,11 @@ This may change in the future and is given by <code>per_page</code> key.</p>
 <span class="w">            </span><span class="nt">&quot;reply&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;star_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;review_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;review_upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;review_downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;flagged&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
@@ -4069,8 +4152,11 @@ This may change in the future and is given by <code>per_page</code> key.</p>
 <span class="w">        </span><span class="nt">&quot;reply&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;star_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;review_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;review_upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;review_downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;flagged&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
@@ -4127,8 +4213,11 @@ also match the user token sent in the <code>Authorization</code> header</p>
 <span class="w">    </span><span class="nt">&quot;reply&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;star_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;review_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;review_upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;review_downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;flagged&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
@@ -4190,12 +4279,15 @@ also match the user token sent in the <code>Authorization</code> header</p>
 </code></pre></div>
 <p><strong>Request Body</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1c1269ad-83db-4e14-bd01-a79746e95de4&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;58d7f168-7c51-4a6f-af81-e465d474d407&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;reply&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;star_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;review_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;review_upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;review_downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;votes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;upvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;downvotes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;flagged&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
@@ -4216,7 +4308,87 @@ also match the user token sent in the <code>Authorization</code> header</p>
 <span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<strong>Authorization Needed</strong> | </p>
+<strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">User</a></p>
+<h3 id="delete-review">Delete Review</h3>
+<h4 id="delete-reviewsrid">DELETE /reviews/{rid}</h4>
+<p>Deletes a review</p>
+<p><code>rid</code> must be a valid uuid.</p>
+<p><code>user_id</code> is <em>required</em> for this endpoint and must be the user making the review. It must
+also match the user token sent in the <code>Authorization</code> header</p>
+<p>A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.</p>
+<p>A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the <code>target_type</code></p>
+<p><code>target_type</code> is not currently checked but it is a good idea to set it anyways. You must
+set this a ReviewType anyways so you might as well set it correctly.</p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>rid</strong> [String (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;edfcaab4-a40b-41d8-a14d-52f325113dc1&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Query parameters</strong></p>
+<ul>
+<li><strong>target_type</strong> [fates::models::ReviewType (type info may be incomplete, see example)]</li>
+<li><strong>page</strong> [Optional <i32> (type info may be incomplete, see example)]</li>
+<li><strong>user_id</strong> [i64? | default = 0 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;target_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">User</a></p>
+<h3 id="vote-review">Vote Review</h3>
+<h4 id="patch-reviewsridvotes">PATCH /reviews/{rid}/votes</h4>
+<p>Creates a vote for a review</p>
+<p><code>rid</code> must be a valid uuid.</p>
+<p><code>user_id</code> is <em>required</em> for this endpoint and must be the user making the review. It must
+also match the user token sent in the <code>Authorization</code> header. </p>
+<p><strong>Unlike other review APIs, <code>user_id</code> here is in request body as ReviewVote object</strong></p>
+<p>A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.</p>
+<p>A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the <code>target_type</code></p>
+<p><strong>This endpoint does not require <code>target_type</code> at all. You can safely omit it</strong></p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>rid</strong> [String (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3760a7d4-dd73-4135-8f99-36455db053b5&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user id here&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;upvote&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">User</a></p>
 
   <hr>
 <div class="md-source-file">

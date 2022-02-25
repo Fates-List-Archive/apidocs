@@ -2067,8 +2067,11 @@ This may change in the future and is given by ``per_page`` key.
             "reply": false,
             "star_rating": "0",
             "review_text": "",
-            "review_upvotes": [],
-            "review_downvotes": [],
+            "votes": {
+                "votes": [],
+                "upvotes": [],
+                "downvotes": []
+            },
             "flagged": false,
             "user": {
                 "id": "",
@@ -2093,8 +2096,11 @@ This may change in the future and is given by ``per_page`` key.
         "reply": false,
         "star_rating": "0",
         "review_text": "",
-        "review_upvotes": [],
-        "review_downvotes": [],
+        "votes": {
+            "votes": [],
+            "upvotes": [],
+            "downvotes": []
+        },
         "flagged": false,
         "user": {
             "id": "",
@@ -2173,8 +2179,11 @@ also match the user token sent in the ``Authorization`` header
     "reply": false,
     "star_rating": "0",
     "review_text": "",
-    "review_upvotes": [],
-    "review_downvotes": [],
+    "votes": {
+        "votes": [],
+        "upvotes": [],
+        "downvotes": []
+    },
     "flagged": false,
     "user": {
         "id": "",
@@ -2262,12 +2271,15 @@ also match the user token sent in the ``Authorization`` header
 
 ```json
 {
-    "id": "1c1269ad-83db-4e14-bd01-a79746e95de4",
+    "id": "58d7f168-7c51-4a6f-af81-e465d474d407",
     "reply": false,
     "star_rating": "0",
     "review_text": "",
-    "review_upvotes": [],
-    "review_downvotes": [],
+    "votes": {
+        "votes": [],
+        "upvotes": [],
+        "downvotes": []
+    },
     "flagged": false,
     "user": {
         "id": "",
@@ -2291,6 +2303,133 @@ also match the user token sent in the ``Authorization`` header
     "context": null
 }
 ```
-**Authorization Needed** | 
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Delete Review
+#### DELETE /reviews/{rid}
+
+
+Deletes a review
+
+``rid`` must be a valid uuid.
+
+``user_id`` is *required* for this endpoint and must be the user making the review. It must
+also match the user token sent in the ``Authorization`` header
+
+A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.
+
+A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+
+``target_type`` is not currently checked but it is a good idea to set it anyways. You must
+set this a ReviewType anyways so you might as well set it correctly.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **rid** [String (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "rid": "edfcaab4-a40b-41d8-a14d-52f325113dc1"
+}
+```
+
+**Query parameters**
+
+- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **page** [Optional <i32> (type info may be incomplete, see example)]
+- **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "target_type": 0,
+    "page": null,
+    "user_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Vote Review
+#### PATCH /reviews/{rid}/votes
+
+
+Creates a vote for a review
+
+``rid`` must be a valid uuid.
+
+``user_id`` is *required* for this endpoint and must be the user making the review. It must
+also match the user token sent in the ``Authorization`` header. 
+
+**Unlike other review APIs, ``user_id`` here is in request body as ReviewVote object**
+
+A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.
+
+A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+
+**This endpoint does not require ``target_type`` at all. You can safely omit it**
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **rid** [String (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "rid": "3760a7d4-dd73-4135-8f99-36455db053b5"
+}
+```
+
+**Request Body**
+
+```json
+{
+    "user_id": "user id here",
+    "upvote": true
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
 
 
