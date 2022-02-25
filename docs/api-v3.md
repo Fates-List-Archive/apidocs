@@ -85,7 +85,8 @@ Returns the index for bots and servers
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "top_voted": [
@@ -102,7 +103,8 @@ Returns the index for bots and servers
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "certified": [
@@ -119,7 +121,8 @@ Returns the index for bots and servers
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "tags": [
@@ -363,6 +366,7 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
     "action_logs": [
         {
             "user_id": "",
+            "bot_id": "",
             "action": 0,
             "action_time": "1970-01-01T00:00:00Z",
             "context": null
@@ -454,7 +458,8 @@ Searches the list based on a query named ``q``
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "servers": [
@@ -471,7 +476,8 @@ Searches the list based on a query named ``q``
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "profiles": [
@@ -583,7 +589,8 @@ Searches the list for all bots/servers with tag *exactly* specified ``q``
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "servers": [
@@ -600,7 +607,8 @@ Searches the list for all bots/servers with tag *exactly* specified ``q``
                 "disc": "",
                 "avatar": "",
                 "bot": false
-            }
+            },
+            "flags": []
         }
     ],
     "profiles": [],
@@ -672,7 +680,8 @@ def random_bot():
         "disc": "",
         "avatar": "",
         "bot": false
-    }
+    },
+    "flags": []
 }
 ```
 **Authorization Needed** | 
@@ -722,7 +731,8 @@ def random_server():
         "disc": "",
         "avatar": "",
         "bot": false
-    }
+    },
+    "flags": []
 }
 ```
 **Authorization Needed** | 
@@ -953,7 +963,8 @@ def post_stats(bot_id: int, guild_count: int):
         "disc": "",
         "avatar": "",
         "bot": false
-    }
+    },
+    "flags": []
 }
 ```
 **Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization)
@@ -1116,6 +1127,7 @@ Due to massive changes, this API cannot be mapped onto any v2 API
         "action_logs": [
             {
                 "user_id": "",
+                "bot_id": "",
                 "action": 0,
                 "action_time": "1970-01-01T00:00:00Z",
                 "context": null
@@ -1502,6 +1514,7 @@ to false.
     "action_logs": [
         {
             "user_id": "",
+            "bot_id": "",
             "action": 0,
             "action_time": "1970-01-01T00:00:00Z",
             "context": null
@@ -1659,6 +1672,7 @@ to false.
     "action_logs": [
         {
             "user_id": "",
+            "bot_id": "",
             "action": 0,
             "action_time": "1970-01-01T00:00:00Z",
             "context": null
@@ -1862,5 +1876,239 @@ Creates a appeal/request for a bot.
 }
 ```
 **Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+## Packs
+
+### Add Pack
+#### GET /users/{id}/packs
+
+
+Creates a bot pack. 
+
+- Set ``id`` to empty string, 
+- Set ``created_at`` to any datetime
+- In user and bot, only ``id`` must be filled, all others can be left empty string
+but must exist in the object
+
+
+**API v2 analogue:** None
+
+**Request Body**
+
+```json
+{
+    "id": "0",
+    "name": "",
+    "description": "",
+    "icon": "",
+    "banner": "",
+    "resolved_bots": [
+        {
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            },
+            "description": ""
+        }
+    ],
+    "owner": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "created_at": "1970-01-01T00:00:00Z"
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+## Users
+
+### Get Profile
+#### GET /profiles/{id}
+
+
+Gets a user profile.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "bots": [],
+    "description": "",
+    "profile_css": "",
+    "user_css": "",
+    "vote_reminder_channel": null,
+    "packs": [],
+    "state": 0,
+    "action_logs": []
+}
+```
+**Authorization Needed** | 
+
+
+## Reviews
+
+### Get Reviews
+#### GET /reviews/{id}
+
+
+Gets reviews for a reviewable entity.
+
+A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
+in the future.
+
+A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+
+This reviewable entities id which is a ``i64`` is the id that is specifed in the
+path.
+
+``page`` must be greater than 0 or omitted (which will default to page 1).
+
+``user_id`` is optional for this endpoint but specifying it will provide ``user_reviews`` if
+the user has made a review. This will tell you the users review for the entity.
+
+``per_page`` (amount of root/non-reply reviews per page) is currently set to 9. 
+This may change in the future and is given by ``per_page`` key.
+
+``from`` contains the index/count of the first review of the page.
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **page** [Optional <i32> (type info may be incomplete, see example)]
+- **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "target_type": 0,
+    "page": 1,
+    "user_id": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "reviews": [
+        {
+            "id": null,
+            "reply": false,
+            "star_rating": "0",
+            "review_text": "",
+            "review_upvotes": [],
+            "review_downvotes": [],
+            "flagged": false,
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            },
+            "epoch": [],
+            "replies": [],
+            "parent_id": null
+        }
+    ],
+    "per_page": 9,
+    "from": 0,
+    "stats": {
+        "average_stars": "8.800000",
+        "total": 78
+    },
+    "user_review": {
+        "id": null,
+        "reply": false,
+        "star_rating": "0",
+        "review_text": "",
+        "review_upvotes": [],
+        "review_downvotes": [],
+        "flagged": false,
+        "user": {
+            "id": "",
+            "username": "",
+            "disc": "",
+            "avatar": "",
+            "bot": false
+        },
+        "epoch": [],
+        "replies": [],
+        "parent_id": null
+    }
+}
+```
+**Authorization Needed** | 
 
 
