@@ -4,17 +4,14 @@
 
 200 - Success
 
-206 - Success with extra info
-
 404 - Not Found
 
-400 - Error in processing request/misc error
+400 - Error in processing request/misc error/Invalid Input
 
 401/403 - Unauthorized Request/Bad Token
 
-422 - Bad Request/Invalid Input
+408 - Site down for maintenance/Critical error in request
 
 429 - Ratelimited
 
-500 - Server Error, this will give you HTML output (edited)
- 
+**A 500 should not be possible on API v3, instead critical errors will return a 408** 

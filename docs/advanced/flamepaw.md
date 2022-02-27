@@ -3,7 +3,7 @@ Flamepaw is internally used by the bot to provide a RESTful API for tasks requir
 
 ## Pprof
 
-#### PPROF /api/dragon/pprof
+#### PPROF /pprof
 **Description:** Golang pprof (debugging, may not always exist!)
 
 **Request Body:**
@@ -18,7 +18,7 @@ null
 
 ## Ping Server
 
-#### GET /api/dragon/ping
+#### GET /ping
 **Description:** Ping the server
 
 **Request Body:**
@@ -37,7 +37,7 @@ null
 
 ## Get Stats
 
-#### GET /api/dragon/__stats
+#### GET /__stats
 **Description:** Get stats of websocket server
 
 **Request Body:**
@@ -52,7 +52,7 @@ null
 
 ## Github Webhook
 
-#### POST /api/dragon/github
+#### POST /github
 **Description:** Post to github webhook. Needs authorization
 
 **Request Body:**
@@ -222,7 +222,7 @@ null
 
 ## Vote Bot
 
-#### OPTIONS /api/dragon/bots/:id/votes
+#### OPTIONS /bots/:id/votes
 **Description:** Creates a vote for a bot. Needs authorization. This is the CORS code
 
 **Request Body:**
@@ -237,7 +237,7 @@ null
 
 ## Vote Bot
 
-#### PATCH /api/dragon/bots/:id/votes
+#### PATCH /bots/:id/votes
 **Description:** Creates a vote for a bot. Needs authorization. This is the actual route
 
 **Request Body:**
@@ -260,7 +260,7 @@ null
 
 ## Websocket
 
-#### WS /api/dragon/ws
+#### WS /ws
 **Description:** The websocket gateway for Fates List
 
 **Request Body:**

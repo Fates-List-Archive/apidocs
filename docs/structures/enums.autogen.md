@@ -274,3 +274,11 @@ Status object (See https://docs.fateslist.xyz/basics/basic-structures#status for
 | png | png | Widget (as png image) |
 | webp | webp | Widget (as webp image) |
 
+
+## WidgetType
+
+| Name | Value | Description |
+| :--- | :--- | :--- |
+| bot | bot |  |
+| server | server |  |
+

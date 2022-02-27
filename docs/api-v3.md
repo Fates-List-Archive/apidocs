@@ -384,8 +384,8 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
         "default": [
             {
                 "cmd_type": 0,
-                "cmd_groups": [],
-                "cmd_name": "",
+                "groups": [],
+                "name": "",
                 "vote_locked": false,
                 "description": "",
                 "args": [],
@@ -393,13 +393,14 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
                 "premium_only": false,
                 "notes": [],
                 "doc_link": "",
-                "id": ""
+                "id": null,
+                "nsfw": false
             }
         ]
     },
     "resources": [
         {
-            "id": "",
+            "id": null,
             "resource_title": "",
             "resource_link": "",
             "resource_description": ""
@@ -1145,8 +1146,8 @@ Due to massive changes, this API cannot be mapped onto any v2 API
             "default": [
                 {
                     "cmd_type": 0,
-                    "cmd_groups": [],
-                    "cmd_name": "",
+                    "groups": [],
+                    "name": "",
                     "vote_locked": false,
                     "description": "",
                     "args": [],
@@ -1154,13 +1155,14 @@ Due to massive changes, this API cannot be mapped onto any v2 API
                     "premium_only": false,
                     "notes": [],
                     "doc_link": "",
-                    "id": ""
+                    "id": null,
+                    "nsfw": false
                 }
             ]
         },
         "resources": [
             {
-                "id": "",
+                "id": null,
                 "resource_title": "",
                 "resource_link": "",
                 "resource_description": ""
@@ -1532,8 +1534,8 @@ to false.
         "default": [
             {
                 "cmd_type": 0,
-                "cmd_groups": [],
-                "cmd_name": "",
+                "groups": [],
+                "name": "",
                 "vote_locked": false,
                 "description": "",
                 "args": [],
@@ -1541,13 +1543,14 @@ to false.
                 "premium_only": false,
                 "notes": [],
                 "doc_link": "",
-                "id": ""
+                "id": null,
+                "nsfw": false
             }
         ]
     },
     "resources": [
         {
-            "id": "",
+            "id": null,
             "resource_title": "",
             "resource_link": "",
             "resource_description": ""
@@ -1690,8 +1693,8 @@ to false.
         "default": [
             {
                 "cmd_type": 0,
-                "cmd_groups": [],
-                "cmd_name": "",
+                "groups": [],
+                "name": "",
                 "vote_locked": false,
                 "description": "",
                 "args": [],
@@ -1699,13 +1702,14 @@ to false.
                 "premium_only": false,
                 "notes": [],
                 "doc_link": "",
-                "id": ""
+                "id": null,
+                "nsfw": false
             }
         ]
     },
     "resources": [
         {
-            "id": "",
+            "id": null,
             "resource_title": "",
             "resource_link": "",
             "resource_description": ""
@@ -1986,7 +1990,68 @@ Gets a user profile.
     "vote_reminder_channel": null,
     "packs": [],
     "state": 0,
+    "site_lang": "",
     "action_logs": []
+}
+```
+**Authorization Needed** | 
+
+
+### Edit Profile
+#### PATCH /profiles/{id}
+
+
+Edits a user profile.
+
+``user`` can be completely empty valued but the keys present in a User must
+be present
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "user": {
+        "id": "",
+        "username": "",
+        "disc": "",
+        "avatar": "",
+        "bot": false
+    },
+    "bots": [],
+    "description": "",
+    "profile_css": "",
+    "user_css": "",
+    "vote_reminder_channel": null,
+    "packs": [],
+    "state": 0,
+    "site_lang": "",
+    "action_logs": []
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
 }
 ```
 **Authorization Needed** | 
@@ -2003,7 +2068,7 @@ Gets reviews for a reviewable entity.
 A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
 in the future.
 
-A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``target_type``
 
 This reviewable entities id which is a ``i64`` is the id that is specifed in the
 path.
@@ -2036,7 +2101,7 @@ This may change in the future and is given by ``per_page`` key.
 
 **Query parameters**
 
-- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
 - **page** [Optional <i32> (type info may be incomplete, see example)]
 - **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
 
@@ -2130,7 +2195,7 @@ so there should not be an error even if provided.
 A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
 in the future.
 
-A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``target_type``
 
 This reviewable entities id which is a ``i64`` is the id that is specifed in the
 path.
@@ -2156,7 +2221,7 @@ also match the user token sent in the ``Authorization`` header
 
 **Query parameters**
 
-- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
 - **page** [Optional <i32> (type info may be incomplete, see example)]
 - **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
 
@@ -2222,7 +2287,7 @@ so there should not be an error even if provided.
 A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
 in the future.
 
-A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``target_type``
 
 This reviewable entities id which is a ``i64`` is the id that is specifed in the
 path.
@@ -2252,7 +2317,7 @@ also match the user token sent in the ``Authorization`` header
 
 **Query parameters**
 
-- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
 - **page** [Optional <i32> (type info may be incomplete, see example)]
 - **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
 
@@ -2271,7 +2336,7 @@ also match the user token sent in the ``Authorization`` header
 
 ```json
 {
-    "id": "58d7f168-7c51-4a6f-af81-e465d474d407",
+    "id": "b421c94d-34b3-472b-b9ca-8c3ab824dbe0",
     "reply": false,
     "star_rating": "0",
     "review_text": "",
@@ -2320,10 +2385,10 @@ also match the user token sent in the ``Authorization`` header
 A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
 in the future.
 
-A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``target_type``
 
 ``target_type`` is not currently checked but it is a good idea to set it anyways. You must
-set this a ReviewType anyways so you might as well set it correctly.
+set this a TargetType anyways so you might as well set it correctly.
 
 
 **API v2 analogue:** None
@@ -2337,13 +2402,13 @@ set this a ReviewType anyways so you might as well set it correctly.
 
 ```json
 {
-    "rid": "edfcaab4-a40b-41d8-a14d-52f325113dc1"
+    "rid": "1c505663-c802-44ce-8d3d-0a0dcd37ab44"
 }
 ```
 
 **Query parameters**
 
-- **target_type** [fates::models::ReviewType (type info may be incomplete, see example)]
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
 - **page** [Optional <i32> (type info may be incomplete, see example)]
 - **user_id** [i64? | default = 0 (type info may be incomplete, see example)]
 
@@ -2392,7 +2457,7 @@ also match the user token sent in the ``Authorization`` header.
 A reviewable entity is currently only a bot or a server. Profile reviews are a possibility
 in the future.
 
-A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``target_type``
+A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``target_type``
 
 **This endpoint does not require ``target_type`` at all. You can safely omit it**
 
@@ -2408,7 +2473,7 @@ A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``
 
 ```json
 {
-    "rid": "3760a7d4-dd73-4135-8f99-36455db053b5"
+    "rid": "8f10f69b-b7b0-44de-9e67-dc8c1dfdb3d0"
 }
 ```
 
@@ -2431,5 +2496,261 @@ A bot has a ReviewType of 0 while a server has a ReviewType of 1. This is the ``
 }
 ```
 **Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+## Stats
+
+### Get List Stats
+#### GET /stats
+
+
+Returns the bot list stats. This currently returns the full list of all bots
+as a vector/list of IndexBot structs.
+
+As a client, it is your responsibility, to parse this. Pagination may be added
+if the list grows and then requires it.
+
+
+**API v2 analogue:** None
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "total_bots": 0,
+    "total_servers": 0,
+    "total_users": 0,
+    "bots": [
+        {
+            "guild_count": 0,
+            "description": "",
+            "banner": "",
+            "nsfw": false,
+            "votes": 0,
+            "state": 0,
+            "user": {
+                "id": "",
+                "username": "",
+                "disc": "",
+                "avatar": "",
+                "bot": false
+            },
+            "flags": []
+        }
+    ],
+    "servers": [],
+    "uptime": 0.0,
+    "cpu_idle": 0.0,
+    "mem_total": 0,
+    "mem_free": 0,
+    "mem_available": 0,
+    "swap_total": 0,
+    "swap_free": 0,
+    "mem_dirty": 0,
+    "mem_active": 0,
+    "mem_inactive": 0,
+    "mem_buffers": 0,
+    "mem_committed": 0
+}
+```
+**Authorization Needed** | 
+
+
+## Resources
+
+### Create Resource
+#### POST /resources/{id}
+
+
+Creates a resource. Both bots and servers support these however only bots 
+support the frontend resource creator in Bot Settings as of right now.
+
+The ``id`` here must be the resource id
+
+A bot has a TargetType of 0 while a server has a TargetType of 1. 
+This is the ``target_type``
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "target_type": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "id": null,
+    "resource_title": "",
+    "resource_link": "",
+    "resource_description": ""
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization), [Server](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Delete Resource
+#### DELETE /resources/{id}
+
+
+Deletes a resource. Both bots and servers support these however only bots 
+support the frontend resource creator in Bot Settings as of right now.
+
+The ``id`` here must be the resource id
+
+A bot has a TargetType of 0 while a server has a TargetType of 1. 
+This is the ``target_type``
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **id** [String (type info may be incomplete, see example)]
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": "7b514a19-96ef-4fdc-92cd-29dd9cddf45a",
+    "target_type": 0
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization), [Server](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+## Commands
+
+### Create Bot Command
+#### POST /bots/{id}/commands
+
+
+Creates a command.
+
+The ``id`` here must be the bot id you wish to add the command for
+
+**This command is a *upsert* meaning it will either create or update 
+the command depending on its ``name``.**
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **target_type** [fates::models::TargetType (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "target_type": 0
+}
+```
+
+**Request Body**
+
+```json
+{
+    "id": null,
+    "resource_title": "",
+    "resource_link": "",
+    "resource_description": ""
+}
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization)
 
 

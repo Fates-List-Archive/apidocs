@@ -409,20 +409,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basics/api-pinning/" class="md-nav__link">
-        API Pinning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../basics/api-versions/" class="md-nav__link">
         API Versions
       </a>
@@ -1018,7 +1004,7 @@
 <p>BTW please add your bots there if you wish to support us or even </p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Fates List is extremely difficult to the point of almost impossible (without knowledge in python) to self host. It requires Ubuntu (support for Windows and MacOS will never be happening since we do not use it). It also needs a huge amount of moving parts including PostgreSQL 14 (older versions <em>may</em> work but will never be tested), Redis and RabbitMQ. In short: <strong>This page is only meant for people who wish to contribute to Fates List</strong></p>
+<p>Fates List is rather annoying (without knowledge in python/golang/rust) to self host. It requires Fedora (support for Windows will never be happening since we do not use it. MacOS support is upcoming). It also needs a large amount of moving parts including PostgreSQL 14 (older versions <em>may</em> work but will never be tested) and Redis. In short: <strong>This page is only meant for people who wish to contribute to Fates List. These docs may be out of date. We are working on it</strong></p>
 </div>
 <h2 id="domain-setup">Domain Setup</h2>
 <ol>
@@ -1050,13 +1036,16 @@
 <p>Download the Fates List repo on the VPS using <code>git clone https://github.com/Fates-List/FatesList</code>. Make sure the location it is downloaded to is publicly accessible AKA not in a /root folder or anything like that.</p>
 </li>
 <li>
-<p>Download snowtuft using <code>git clone https://github.com/Fates-List/Snowtuft</code>. Make sure you have xkcdpass, python3.10 and docker compose ready. Make sure gcc-c++, libffi-devel, libxslt-devel, libxml2-devel, libpq-devel packages are installed. Run <code>make install</code> to install Snowtuft</p>
+<p>Download infra using <code>git clone https://github.com/Fates-List/infra FatesList</code>. Make sure you have xkcdpass, python3.10, <em>nightly</em> rust, go 1.18 or newer and docker-compose ready. Make sure gcc-c++, libffi-devel, libxslt-devel, libxml2-devel, libpq-devel packages are installed. Run <code>make install</code> to install Snowtuft</p>
 </li>
 <li>
-<p>Enter Fates List directory, copy config_secrets_template.py to config_secrets.py and fill in the required information on there. You do not need to change site_url or mobile_site_url fields (site and mobile_site do need to be filled in without the https://). </p>
+<p>Run <code>tmux new -s flamepaw-pinger</code>. Then enter the <code>modules/infra/flamepaw</code> folder and run <code>make &amp;&amp; make install</code>. This will build flamepaw for your system.</p>
 </li>
 <li>
-<p>If you have a packup, copy it to /backups/latest.bak, then run <code>snowtuft dbs setup</code>. Setup venv using <code>snowtuft venv setup</code> (you may need to run this multiple times to install all development dependencies</p>
+<p>Enter <code>FatesList/config/data</code> folder and fill in the required information on the JSON files there. </p>
+</li>
+<li>
+<p>If you have a database backup, copy it to <code>/backups/latest.bak</code> where <code>/</code> is the root of your hard disk, then run <code>flamepaw --cmd db.setup</code>. Setup venv using <code>snowtuft venv setup</code> (you may need to run this multiple times to install all development dependencies</p>
 </li>
 <li>
 <p>Copy the nginx conf in info/nginx to /etc/nginx</p>
@@ -1065,13 +1054,19 @@
 <p>Restart nginx</p>
 </li>
 <li>
-<p>Run <code>tmux new -s rabbit</code>. Then run <code>python3 rabbitmq_worker.py</code>. This must be run before running Fates as this will create a queue on RabbitMQ.</p>
+<p>Run <code>python3 pinger.py</code> in <code>flamepaw-pinger</code> tmux session in the <code>FatesList/modules/infra/flamepaw-pinger</code> folder to start <code>flamepaw-pinger</code> which will then start <code>flamepaw</code></p>
 </li>
 <li>
-<p>Run <code>bin/run</code> in the repo folder</p>
+<p>Enter a tmux session called <code>baypaw</code>. Download baypaw using <code>git clone https://github.com/Fates-List/baypaw</code>, enter the folder, run <code>make</code> and then run <code>target/release/baypaw</code> to start baypaw which is a microservice for global API requests across Fates List services.</p>
 </li>
 <li>
-<p>Follow <a href="https://stevescargall.com/2020/05/13/how-to-install-prometheus-and-grafana-on-fedora-server/">this</a> to set up Prometheus and Grafana for monitoring. Set Grafanas port to 5050. Use a firewall or the digital ocean firewall to block other ports. Do not open prometheus's port in the firewall, only open Grafana's.</p>
+<p>Enter a tmux session called <code>next-api</code>. Download api-v3 using <code>git clone https://github.com/Fates-List/api-v3</code>, enter the folder, run <code>make</code> and then run <code>target/release-lto/fates</code> to start api v3.</p>
+</li>
+<li>
+<p>Enter a tmux session called <code>widgets</code>. Run widget API by running <code>flamepaw --cmd site.run</code>.</p>
+</li>
+<li>
+<p>(optional, not done on Fates due to issues) Follow <a href="https://stevescargall.com/2020/05/13/how-to-install-prometheus-and-grafana-on-fedora-server/">this</a> to set up Prometheus and Grafana for monitoring. Set Grafanas port to 5050. Use a firewall or the digital ocean firewall to block other ports. Do not open prometheus's port in the firewall, only open Grafana's.</p>
 </li>
 </ol>
 <p>Fates List probihits the monetization or resale of coins or any part of Fates List for real money.</p>
@@ -1115,13 +1110,13 @@
       
       
         
-        <a href="../../basics/api-pinning/" class="md-footer__link md-footer__link--next" aria-label="Next: API Pinning" rel="next">
+        <a href="../../basics/api-versions/" class="md-footer__link md-footer__link--next" aria-label="Next: API Versions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              API Pinning
+              API Versions
             </div>
           </div>
           <div class="md-footer__button md-icon">

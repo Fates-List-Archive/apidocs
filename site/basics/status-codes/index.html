@@ -361,20 +361,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-pinning/" class="md-nav__link">
-        API Pinning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../api-versions/" class="md-nav__link">
         API Versions
       </a>
@@ -955,13 +941,12 @@
 <h1 id="status-codes">Status Codes</h1>
 <p><strong>Here is a incomplete list of status codes emitted from our API</strong></p>
 <p>200 - Success</p>
-<p>206 - Success with extra info</p>
 <p>404 - Not Found</p>
-<p>400 - Error in processing request/misc error</p>
+<p>400 - Error in processing request/misc error/Invalid Input</p>
 <p>401/403 - Unauthorized Request/Bad Token</p>
-<p>422 - Bad Request/Invalid Input</p>
+<p>408 - Site down for maintenance/Critical error in request</p>
 <p>429 - Ratelimited</p>
-<p>500 - Server Error, this will give you HTML output (edited)</p>
+<p><strong>A 500 should not be possible on API v3, instead critical errors will return a 408</strong> </p>
 
   <hr>
 <div class="md-source-file">
