@@ -1,5 +1,5 @@
 # Flamepaw
-Flamepaw is internally used by the bot to provide a RESTful API for tasks requiring high concurrency.
+Flamepaw is internally used by the bot to provide a RESTful API for tasks requiring high concurrency. The base url is ``https://api.fateslist.xyz/flamepaw``
 
 ## Pprof
 

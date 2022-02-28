@@ -2336,7 +2336,7 @@ also match the user token sent in the ``Authorization`` header
 
 ```json
 {
-    "id": "b421c94d-34b3-472b-b9ca-8c3ab824dbe0",
+    "id": "bee7af70-7085-4b2c-b931-c8fd293a13c5",
     "reply": false,
     "star_rating": "0",
     "review_text": "",
@@ -2402,7 +2402,7 @@ set this a TargetType anyways so you might as well set it correctly.
 
 ```json
 {
-    "rid": "1c505663-c802-44ce-8d3d-0a0dcd37ab44"
+    "rid": "b8423659-f528-4a4c-b3ad-a16e8564a611"
 }
 ```
 
@@ -2473,7 +2473,7 @@ A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``
 
 ```json
 {
-    "rid": "8f10f69b-b7b0-44de-9e67-dc8c1dfdb3d0"
+    "rid": "50f72358-7d69-4056-ba27-3115aad89e3d"
 }
 ```
 
@@ -2666,7 +2666,7 @@ This is the ``target_type``
 
 ```json
 {
-    "id": "7b514a19-96ef-4fdc-92cd-29dd9cddf45a",
+    "id": "4d551191-5da5-4bb4-970e-2505d0e16f60",
     "target_type": 0
 }
 ```
@@ -2699,7 +2699,7 @@ Creates a command.
 
 The ``id`` here must be the bot id you wish to add the command for
 
-**This command is a *upsert* meaning it will either create or update 
+**This performs a *upsert* meaning it will either create or update 
 the command depending on its ``name``.**
 
 
@@ -2740,6 +2740,68 @@ the command depending on its ``name``.**
     "resource_link": "",
     "resource_description": ""
 }
+```
+
+**Response Body**
+
+```json
+{
+    "done": true,
+    "reason": null,
+    "context": null
+}
+```
+**Authorization Needed** | [Bot](https://docs.fateslist.xyz/api-v3/#authorization)
+
+
+### Delete Bot Command
+#### DELETE /bots/{id}/commands
+
+
+DELETE a command.
+
+The ``id`` here must be the bot id you wish to add the command for
+
+``names`` and ``ids`` must be a ``|`` seperated list of ``names`` or valid
+UUIDs in the case of ids. Bad names/ids will be ignored
+
+
+**API v2 analogue:** None
+
+**Path parameters**
+
+- **id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "id": 0
+}
+```
+
+**Query parameters**
+
+- **nuke** [Optional <bool> (type info may be incomplete, see example)]
+- **names** [String? | default = command name|command name 2 (type info may be incomplete, see example)]
+- **ids** [String? | default = id 1|id 2 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "nuke": false,
+    "names": "command name|command name 2",
+    "ids": "id 1|id 2"
+}
+```
+
+**Request Body**
+
+```json
+{}
 ```
 
 **Response Body**

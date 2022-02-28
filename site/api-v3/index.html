@@ -1167,6 +1167,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#delete-bot-command" class="md-nav__link">
+    Delete Bot Command
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Bot Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-botsidcommands" class="md-nav__link">
+    DELETE /bots/{id}/commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2731,6 +2751,26 @@
           <li class="md-nav__item">
   <a href="#post-botsidcommands" class="md-nav__link">
     POST /bots/{id}/commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-bot-command" class="md-nav__link">
+    Delete Bot Command
+  </a>
+  
+    <nav class="md-nav" aria-label="Delete Bot Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-botsidcommands" class="md-nav__link">
+    DELETE /bots/{id}/commands
   </a>
   
 </li>
@@ -4591,7 +4631,7 @@ also match the user token sent in the <code>Authorization</code> header</p>
 </code></pre></div>
 <p><strong>Request Body</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b421c94d-34b3-472b-b9ca-8c3ab824dbe0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bee7af70-7085-4b2c-b931-c8fd293a13c5&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;reply&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;star_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;review_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
@@ -4639,7 +4679,7 @@ set this a TargetType anyways so you might as well set it correctly.</p>
 </ul>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1c505663-c802-44ce-8d3d-0a0dcd37ab44&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b8423659-f528-4a4c-b3ad-a16e8564a611&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Query parameters</strong></p>
@@ -4684,7 +4724,7 @@ in the future.</p>
 </ul>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8f10f69b-b7b0-44de-9e67-dc8c1dfdb3d0&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;50f72358-7d69-4056-ba27-3115aad89e3d&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Request Body</strong></p>
@@ -4818,7 +4858,7 @@ This is the <code>target_type</code></p>
 </ul>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7b514a19-96ef-4fdc-92cd-29dd9cddf45a&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4d551191-5da5-4bb4-970e-2505d0e16f60&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;target_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -4838,7 +4878,7 @@ This is the <code>target_type</code></p>
 <h4 id="post-botsidcommands">POST /bots/{id}/commands</h4>
 <p>Creates a command.</p>
 <p>The <code>id</code> here must be the bot id you wish to add the command for</p>
-<p><strong>This command is a <em>upsert</em> meaning it will either create or update 
+<p><strong>This performs a <em>upsert</em> meaning it will either create or update 
 the command depending on its <code>name</code>.</strong></p>
 <p><strong>API v2 analogue:</strong> None</p>
 <p><strong>Path parameters</strong></p>
@@ -4875,13 +4915,53 @@ the command depending on its <code>name</code>.</strong></p>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">Bot</a></p>
+<h3 id="delete-bot-command">Delete Bot Command</h3>
+<h4 id="delete-botsidcommands">DELETE /bots/{id}/commands</h4>
+<p>DELETE a command.</p>
+<p>The <code>id</code> here must be the bot id you wish to add the command for</p>
+<p><code>names</code> and <code>ids</code> must be a <code>|</code> seperated list of <code>names</code> or valid
+UUIDs in the case of ids. Bad names/ids will be ignored</p>
+<p><strong>API v2 analogue:</strong> None</p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>id</strong> [i64 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Query parameters</strong></p>
+<ul>
+<li><strong>nuke</strong> [Optional <bool> (type info may be incomplete, see example)]</li>
+<li><strong>names</strong> [String? | default = command name|command name 2 (type info may be incomplete, see example)]</li>
+<li><strong>ids</strong> [String? | default = id 1|id 2 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nuke&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;names&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;command name|command name 2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;id 1|id 2&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | <a href="https://docs.fateslist.xyz/api-v3/#authorization">Bot</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2022</span>
       
     
   </small>
