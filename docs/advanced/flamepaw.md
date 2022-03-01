@@ -220,44 +220,6 @@ null
 }
 ```
 
-## Vote Bot
-
-#### OPTIONS /bots/:id/votes
-**Description:** Creates a vote for a bot. Needs authorization. This is the CORS code
-
-**Request Body:**
-```json
-null
-```
-
-**Response Body:**
-```json
-null
-```
-
-## Vote Bot
-
-#### PATCH /bots/:id/votes
-**Description:** Creates a vote for a bot. Needs authorization. This is the actual route
-
-**Request Body:**
-```json
-{
-	"user_id": "",
-	"bot_id": "",
-	"test": false
-}
-```
-
-**Response Body:**
-```json
-{
-	"done": false,
-	"reason": null,
-	"context": null
-}
-```
-
 ## Websocket
 
 #### WS /ws

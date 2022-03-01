@@ -243,6 +243,32 @@ Get policies (rules, privacy policy, terms of service)
 **Authorization Needed** | 
 
 
+### Preview Description
+#### POST /partners
+
+Given the preview and long description, parse it and give the sanitized output
+
+**API v2 analogue:** None
+
+**Request Body**
+
+```json
+{
+    "text": "",
+    "long_description_type": 1
+}
+```
+
+**Response Body**
+
+```json
+{
+    "preview": ""
+}
+```
+**Authorization Needed** | 
+
+
 ### Get Bot
 #### GET /bots/{id}
 
@@ -315,7 +341,7 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
     "last_stats_post": "1970-01-01T00:00:00Z",
     "long_description": "blah blah blah",
     "long_description_raw": "blah blah blah unsanitized",
-    "long_description_type": 2,
+    "long_description_type": 1,
     "guild_count": 0,
     "shard_count": 493,
     "user_count": 0,
@@ -804,7 +830,7 @@ server privacy restrictions
     },
     "description": "",
     "tags": [],
-    "long_description_type": 0,
+    "long_description_type": 1,
     "long_description": "",
     "long_description_raw": "",
     "vanity": null,
@@ -1077,7 +1103,7 @@ Due to massive changes, this API cannot be mapped onto any v2 API
         "last_stats_post": "1970-01-01T00:00:00Z",
         "long_description": "blah blah blah",
         "long_description_raw": "blah blah blah unsanitized",
-        "long_description_type": 2,
+        "long_description_type": 1,
         "guild_count": 0,
         "shard_count": 493,
         "user_count": 0,
@@ -1465,7 +1491,7 @@ to false.
     "last_stats_post": "1970-01-01T00:00:00Z",
     "long_description": "blah blah blah",
     "long_description_raw": "blah blah blah unsanitized",
-    "long_description_type": 2,
+    "long_description_type": 1,
     "guild_count": 0,
     "shard_count": 493,
     "user_count": 0,
@@ -1624,7 +1650,7 @@ to false.
     "last_stats_post": "1970-01-01T00:00:00Z",
     "long_description": "blah blah blah",
     "long_description_raw": "blah blah blah unsanitized",
-    "long_description_type": 2,
+    "long_description_type": 1,
     "guild_count": 0,
     "shard_count": 493,
     "user_count": 0,
@@ -2336,7 +2362,7 @@ also match the user token sent in the ``Authorization`` header
 
 ```json
 {
-    "id": "bee7af70-7085-4b2c-b931-c8fd293a13c5",
+    "id": "f8617374-9286-4af0-a6be-4551da96270c",
     "reply": false,
     "star_rating": "0",
     "review_text": "",
@@ -2402,7 +2428,7 @@ set this a TargetType anyways so you might as well set it correctly.
 
 ```json
 {
-    "rid": "b8423659-f528-4a4c-b3ad-a16e8564a611"
+    "rid": "7feb7c01-4710-4638-8ceb-421fe4514105"
 }
 ```
 
@@ -2473,7 +2499,7 @@ A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``
 
 ```json
 {
-    "rid": "50f72358-7d69-4056-ba27-3115aad89e3d"
+    "rid": "3725fbd5-b38c-4480-85d9-6691b777ce85"
 }
 ```
 
@@ -2666,7 +2692,7 @@ This is the ``target_type``
 
 ```json
 {
-    "id": "4d551191-5da5-4bb4-970e-2505d0e16f60",
+    "id": "e3a8190c-7bd2-40e0-8d86-effa7c07767f",
     "target_type": 0
 }
 ```
