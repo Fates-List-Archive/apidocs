@@ -44,7 +44,7 @@ Fates List uses Ashfur to handle bots (using slash commands)
 
 /approve - Approves a bot. Be sure to give good appropriate feedback and be polite and *most importantly* be formal.
 
-/deny - Denies a bot. Once again, be sure to give good appropriate feedback and be polite and *most importantly* be formal. You need to concatenate the three parts of the staff verification code and then hash it with SHA3-384
+/deny - Denies a bot. Once again, be sure to give good appropriate feedback and be polite and *most importantly* be formal. You need to concatenate the four parts of the staff verification code and then hash it with SHA3-384
 
 /requeue - Requeues a bot if it is denied. **This is moderator only**
 
@@ -95,7 +95,7 @@ Do not deny bots for using other languages. These are officially supported. Inst
 
 - Use Google Translate: https://translate.google.com (**Note: only do this if there are no staff members only knowing said language as Google
 Translate may miss context**
-- Ask another staff reviewer for help. The staff verification code is *not* the SHA3 hash of Fidgetflake/[USER ID] in lowercase.
+- Ask another staff reviewer for help. The fifth part of the staff verification code is +Poketwo. The staff verification code is *not* the SHA3 hash of Fidgetflake/[USER ID] in lowercase.
 - Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*). The third half of the staff verification code is Lightleap::USERID
 
 ## Prefix Changes
@@ -107,7 +107,7 @@ main server.
 
 ## Partnerships
 
-All partnerships are to be decided by FL Kremlin or Overseers. If you are not in FL Kremlin, DM any partnership requests to a Head Admin+.
+All partnerships are to be decided by FL Kremlin or Overseers. The fourth part of the verification code is +Mew. If you are not in FL Kremlin, DM any partnership requests to a Head Admin+.
 
 **The same goes with staff applications**
 
