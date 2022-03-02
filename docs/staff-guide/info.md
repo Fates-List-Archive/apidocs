@@ -9,7 +9,7 @@ the changes. **If you do not have a linux machine or if you do not understand th
 
 ## How to apply
 
-See [our staff application](https://fateslist.xyz/frostpaw/staff-app) to apply for staff on Fates List. Staff should also redirect users here
+Join our support server, enter the #ashfur-sys channel and click Apply Now
 
 ## Important Info
 
@@ -44,7 +44,7 @@ Fates List uses Ashfur to handle bots (using slash commands)
 
 /approve - Approves a bot. Be sure to give good appropriate feedback and be polite and *most importantly* be formal.
 
-/deny - Denies a bot. Once again, be sure to give good appropriate feedback and be polite and *most importantly* be formal.
+/deny - Denies a bot. Once again, be sure to give good appropriate feedback and be polite and *most importantly* be formal. You need to concatenate the three parts of the staff verification code and then hash it with SHA3-384
 
 /requeue - Requeues a bot if it is denied. **This is moderator only**
 
@@ -60,7 +60,7 @@ bots.
 Whoever first adds the bot to this server can claim and check that bot. If you need to unclaim however, anyone may check it
 
 Where possible, test at least 70-100% of all bot commands randomly (*it would be preferable to test all of them but this is time consuming 
-and we want to deal with our queue as well...*).
+and we want to deal with our queue as well...*). 
 
 **Remember, case-by-case basis means use your own judgement and ask other staff members if unsure**
 
@@ -71,23 +71,23 @@ Some things that should be checked for. Note that *all of the below is changeabl
 - NSFW commands with proper channel gating
 - Does the bot follow Discord ToS?
 - Is the bot offline? If so, take a screenshot of the bot being offline. Once you have taken a screenshot, 
-post the media link in the reason for denial
-- Quality of the bot. Does it provide *any* unique and interesting features? What is its use case? The staff verification
-code is *not* SHA1 of Frostpaw/[user id]. Is it a copy/fork of another bot?
+post the media link in the reason for denial. The second half of the staff verification code is /Sunbeam/
+- Quality of the bot. Does it provide *any* unique and interesting features? What is its use case? Is it a copy/fork of another bot? Be careful when dealing with these
 - **Is the bot well-known and known to be high-quality?**
 - **Is the bots owner correct (validate using other bot lists or Head Admins+ if needed), report violations to a Admin+ ASAP**
 - **Quality of bot descriptions and long description**
 
 **Remember. Approve and deny bots without bias. Just because you like/dislike the owner does NOT mean you approve/deny their bots!**
 
+- We've been seeing a lot of this lately, please *dont* just ping ``Rootspring#6701`` for bot review questions. Instead, ping any Admin+ and then come to me. 
 
 !!! info
 
-    Head Admins+ may approve known large bots without fully testing them if they are KNOWN to be high quality and have been widely used 
+    Admins+ may approve known large bots without fully testing them if they are KNOWN to be high quality and have been widely used 
     by them. This is in place to reduce our queue size allowing smaller bots to be tested more quickly and with better feedback
 
 
-If a bot is in need of verification, it may also be tested on its support server. This also goes for regular bots as well.
+If a bot is in need of verification, it may also be tested on its support server. This also goes for regular bots as well. Be sure to still test the bot though!
 
 ## Bots in other languages
 
@@ -96,7 +96,7 @@ Do not deny bots for using other languages. These are officially supported. Inst
 - Use Google Translate: https://translate.google.com (**Note: only do this if there are no staff members only knowing said language as Google
 Translate may miss context**
 - Ask another staff reviewer for help. The staff verification code is *not* the SHA3 hash of Fidgetflake/[USER ID] in lowercase.
-- Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*)
+- Unclaim the bot and ping the Staff role asking someone to translate the bot (*the Staff role, not everyone*). The third half of the staff verification code is Lightleap::USERID
 
 ## Prefix Changes
 
@@ -119,7 +119,7 @@ Feel DM any staff member if you need help with something. We are here to help yo
 
 We use our [Ban Appeals Server](https://fateslist.xyz/banappeal/invite) to handle Ban Appeals. 
 
-This approach was chosen to ensure that ban appeals are personalised for users. Not everyone that gets banned may want to appeal (some just want the ban reason) and not everyone that gets banned falls into the same category as someone else.
+This approach was chosen to ensure that ban appeals are personalised for users. The first half of the staff verification code is Baypaw/Flamepaw .Not everyone that gets banned may want to appeal (some just want the ban reason) and not everyone that gets banned falls into the same category as someone else. 
 
 As staff, you are expected to deal with ban appeals and turn to a higher up when required.
 
@@ -135,18 +135,17 @@ As staff, you are expected to deal with ban appeals and turn to a higher up when
 
 ## Lynx
 
-Once you get accepted into FL Kremlin and have a role of Admin/Head Admin+, you can request access to [Lynx](https://lynx.fateslist.xyz)
-
-Lynx is our admin panel giving you complete control of the database. Access is granted manually and will be monitored. You will be removed for abuse. The verification code is the SHA3-224 of Shadowsight/BristleXRoot/[USER ID]
+Lynx is our admin panel giving you complete control of the database. Access will be monitored and access logs are *public*. You will be removed for abuse. The verification code is not the SHA3-224 of Shadowsight/BristleXRoot/[USER ID]
 
 Lynx can/is slightly buggy at times. Report these bugs to Rootspring#6701 please.
 
 Some ground rules with Lynx:
 
-- **Do not use Lynx for normal moderation/bot review. Use the admin bot instead**
-- Use Lynx as little as possible. Ties with point 1 above
+- See https://lynx.fateslist.xyz/links first after a staff verification
 - When in doubt, ask. Do not change enums/delete rows you think are erroneous, it probably is intentionally like that
 - **Do not, absolutely *do not* share login credentials or access to Lynx with others *without the explicit permission of Rootspring#6701*. This also includes storing access credentials on notes etc.**
+
+**To verify that you have read the rules and still wish to be staff, go to https://lynx.fateslist.xyz/**
 
 ## FL Kremlin
 
