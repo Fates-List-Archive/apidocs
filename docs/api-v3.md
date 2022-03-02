@@ -435,6 +435,7 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
     "webhook": "This will be redacted for Get Bot endpoint",
     "webhook_secret": "This will be redacted for Get Bot endpoint",
     "webhook_type": null,
+    "webhook_hmac_only": null,
     "api_token": "This will be redacted for Get Bot endpoint"
 }
 ```
@@ -915,6 +916,63 @@ this however, it is prone to change *anytime* in the future**.
 **Authorization Needed** | 
 
 
+### Create User Vote
+#### PATCH /users/{user_id}/bots/{bot_id}/votes
+
+
+This endpoint creates a vote for a bot which can only be done *once* every 8 hours.
+
+**It is documented purely to enable staff to use it**
+
+
+**API v2 analogue:** (no longer working) [Get User Votes](https://legacy.fateslist.xyz/api/docs/redoc#operation/get_user_votes)
+
+**Path parameters**
+
+- **user_id** [i64 (type info may be incomplete, see example)]
+- **bot_id** [i64 (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "user_id": 0,
+    "bot_id": 0
+}
+```
+
+**Query parameters**
+
+- **test** [bool (type info may be incomplete, see example)]
+
+
+**Example**
+
+```json
+{
+    "test": true
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response Body**
+
+```json
+{
+    "done": false,
+    "reason": "Why the vote failed",
+    "context": null
+}
+```
+**Authorization Needed** | 
+
+
 ### Post Stats
 #### GET /bots/{id}/stats
 
@@ -1197,6 +1255,7 @@ Due to massive changes, this API cannot be mapped onto any v2 API
         "webhook": "This will be redacted for Get Bot endpoint",
         "webhook_secret": "This will be redacted for Get Bot endpoint",
         "webhook_type": null,
+        "webhook_hmac_only": null,
         "api_token": "This will be redacted for Get Bot endpoint"
     },
     "context": {
@@ -1585,6 +1644,7 @@ to false.
     "webhook": "This will be redacted for Get Bot endpoint",
     "webhook_secret": "This will be redacted for Get Bot endpoint",
     "webhook_type": null,
+    "webhook_hmac_only": null,
     "api_token": "This will be redacted for Get Bot endpoint"
 }
 ```
@@ -1744,6 +1804,7 @@ to false.
     "webhook": "This will be redacted for Get Bot endpoint",
     "webhook_secret": "This will be redacted for Get Bot endpoint",
     "webhook_type": null,
+    "webhook_hmac_only": null,
     "api_token": "This will be redacted for Get Bot endpoint"
 }
 ```
@@ -2362,7 +2423,7 @@ also match the user token sent in the ``Authorization`` header
 
 ```json
 {
-    "id": "f8617374-9286-4af0-a6be-4551da96270c",
+    "id": "0d9f2487-21d2-4e4b-af6d-7cc0d47397fe",
     "reply": false,
     "star_rating": "0",
     "review_text": "",
@@ -2428,7 +2489,7 @@ set this a TargetType anyways so you might as well set it correctly.
 
 ```json
 {
-    "rid": "7feb7c01-4710-4638-8ceb-421fe4514105"
+    "rid": "5ed709ca-72d7-4101-9bef-12ab7f8b7dbd"
 }
 ```
 
@@ -2499,7 +2560,7 @@ A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``
 
 ```json
 {
-    "rid": "3725fbd5-b38c-4480-85d9-6691b777ce85"
+    "rid": "313f6ccf-cebc-472e-9888-8769de72bea8"
 }
 ```
 
@@ -2692,7 +2753,7 @@ This is the ``target_type``
 
 ```json
 {
-    "id": "e3a8190c-7bd2-40e0-8d86-effa7c07767f",
+    "id": "57106809-b611-418a-b975-6c948de511d6",
     "target_type": 0
 }
 ```

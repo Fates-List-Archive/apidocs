@@ -538,6 +538,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#create-user-vote" class="md-nav__link">
+    Create User Vote
+  </a>
+  
+    <nav class="md-nav" aria-label="Create User Vote">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersuser_idbotsbot_idvotes" class="md-nav__link">
+    PATCH /users/{user_id}/bots/{bot_id}/votes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#post-stats" class="md-nav__link">
     Post Stats
   </a>
@@ -2151,6 +2171,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#create-user-vote" class="md-nav__link">
+    Create User Vote
+  </a>
+  
+    <nav class="md-nav" aria-label="Create User Vote">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersuser_idbotsbot_idvotes" class="md-nav__link">
+    PATCH /users/{user_id}/bots/{bot_id}/votes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#post-stats" class="md-nav__link">
     Post Stats
   </a>
@@ -3198,6 +3238,7 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
 <span class="w">    </span><span class="nt">&quot;webhook&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;webhook_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;webhook_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;webhook_hmac_only&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;api_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -3584,6 +3625,42 @@ this however, it is prone to change <em>anytime</em> in the future</strong>.</li
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <strong>Authorization Needed</strong> | </p>
+<h3 id="create-user-vote">Create User Vote</h3>
+<h4 id="patch-usersuser_idbotsbot_idvotes">PATCH /users/{user_id}/bots/{bot_id}/votes</h4>
+<p>This endpoint creates a vote for a bot which can only be done <em>once</em> every 8 hours.</p>
+<p><strong>It is documented purely to enable staff to use it</strong></p>
+<p><strong>API v2 analogue:</strong> (no longer working) <a href="https://legacy.fateslist.xyz/api/docs/redoc#operation/get_user_votes">Get User Votes</a></p>
+<p><strong>Path parameters</strong></p>
+<ul>
+<li><strong>user_id</strong> [i64 (type info may be incomplete, see example)]</li>
+<li><strong>bot_id</strong> [i64 (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bot_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Query parameters</strong></p>
+<ul>
+<li><strong>test</strong> [bool (type info may be incomplete, see example)]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Request Body</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Response Body</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;done&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Why the vote failed&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<strong>Authorization Needed</strong> | </p>
 <h3 id="post-stats">Post Stats</h3>
 <h4 id="get-botsidstats">GET /bots/{id}/stats</h4>
 <p>Post stats to the list</p>
@@ -3819,6 +3896,7 @@ differences:</p>
 <span class="w">        </span><span class="nt">&quot;webhook&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;webhook_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;webhook_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;webhook_hmac_only&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;api_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -4107,6 +4185,7 @@ to false.</p>
 <span class="w">    </span><span class="nt">&quot;webhook&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;webhook_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;webhook_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;webhook_hmac_only&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;api_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -4247,6 +4326,7 @@ to false.</p>
 <span class="w">    </span><span class="nt">&quot;webhook&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;webhook_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;webhook_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;webhook_hmac_only&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;api_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This will be redacted for Get Bot endpoint&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -4687,7 +4767,7 @@ also match the user token sent in the <code>Authorization</code> header</p>
 </code></pre></div>
 <p><strong>Request Body</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f8617374-9286-4af0-a6be-4551da96270c&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0d9f2487-21d2-4e4b-af6d-7cc0d47397fe&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;reply&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;star_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;review_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
@@ -4735,7 +4815,7 @@ set this a TargetType anyways so you might as well set it correctly.</p>
 </ul>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7feb7c01-4710-4638-8ceb-421fe4514105&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5ed709ca-72d7-4101-9bef-12ab7f8b7dbd&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Query parameters</strong></p>
@@ -4780,7 +4860,7 @@ in the future.</p>
 </ul>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3725fbd5-b38c-4480-85d9-6691b777ce85&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;rid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;313f6ccf-cebc-472e-9888-8769de72bea8&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Request Body</strong></p>
@@ -4914,7 +4994,7 @@ This is the <code>target_type</code></p>
 </ul>
 <p><strong>Example</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;e3a8190c-7bd2-40e0-8d86-effa7c07767f&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;57106809-b611-418a-b975-6c948de511d6&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;target_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
@@ -5017,7 +5097,7 @@ UUIDs in the case of ids. Bad names/ids will be ignored</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 1, 2022</span>
       
     
   </small>
