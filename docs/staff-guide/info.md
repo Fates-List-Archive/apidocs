@@ -9,7 +9,7 @@ the changes. **If you do not have a linux machine or if you do not understand th
 
 ## How to apply
 
-Join our support server, enter the #ashfur-sys channel and click Apply Now
+Join our support server, enter the [`#ashfur-sys`](https://discord.com/channels/789934742128558080/848605596936437791) channel and click `Apply` Button
 
 ## Important Info
 
