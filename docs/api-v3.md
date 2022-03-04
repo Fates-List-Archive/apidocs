@@ -84,7 +84,8 @@ Returns the index for bots and servers
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -102,7 +103,8 @@ Returns the index for bots and servers
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -120,7 +122,8 @@ Returns the index for bots and servers
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -333,11 +336,13 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "description": "",
     "tags": [],
     "created_at": "1970-01-01T00:00:00Z",
+    "last_updated_at": "1970-01-01T00:00:00Z",
     "last_stats_post": "1970-01-01T00:00:00Z",
     "long_description": "blah blah blah",
     "long_description_raw": "blah blah blah unsanitized",
@@ -358,7 +363,8 @@ This is to allow reuse of the Bot struct in Get Bot Settings which does contain 
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "main": false
         }
@@ -485,7 +491,8 @@ Searches the list based on a query named ``q``
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -503,7 +510,8 @@ Searches the list based on a query named ``q``
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -517,7 +525,8 @@ Searches the list based on a query named ``q``
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             }
         }
     ],
@@ -535,7 +544,8 @@ Searches the list based on a query named ``q``
                         "username": "",
                         "disc": "",
                         "avatar": "",
-                        "bot": false
+                        "bot": false,
+                        "status": "Unknown"
                     },
                     "description": ""
                 }
@@ -545,7 +555,8 @@ Searches the list based on a query named ``q``
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "created_at": "1970-01-01T00:00:00Z"
         }
@@ -616,7 +627,8 @@ Searches the list for all bots/servers with tag *exactly* specified ``q``
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -634,7 +646,8 @@ Searches the list for all bots/servers with tag *exactly* specified ``q``
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -707,7 +720,8 @@ def random_bot():
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "flags": []
 }
@@ -758,7 +772,8 @@ def random_server():
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "flags": []
 }
@@ -827,7 +842,8 @@ server privacy restrictions
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "description": "",
     "tags": [],
@@ -925,7 +941,7 @@ This endpoint creates a vote for a bot which can only be done *once* every 8 hou
 **It is documented purely to enable staff to use it**
 
 
-**API v2 analogue:** (no longer working) [Get User Votes](https://legacy.fateslist.xyz/api/docs/redoc#operation/get_user_votes)
+**API v2 analogue:** None
 
 **Path parameters**
 
@@ -970,7 +986,7 @@ This endpoint creates a vote for a bot which can only be done *once* every 8 hou
     "context": null
 }
 ```
-**Authorization Needed** | 
+**Authorization Needed** | [User](https://docs.fateslist.xyz/api-v3/#authorization)
 
 
 ### Post Stats
@@ -1047,7 +1063,8 @@ def post_stats(bot_id: int, guild_count: int):
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "flags": []
 }
@@ -1153,11 +1170,13 @@ Due to massive changes, this API cannot be mapped onto any v2 API
             "username": "",
             "disc": "",
             "avatar": "",
-            "bot": false
+            "bot": false,
+            "status": "Unknown"
         },
         "description": "",
         "tags": [],
         "created_at": "1970-01-01T00:00:00Z",
+        "last_updated_at": "1970-01-01T00:00:00Z",
         "last_stats_post": "1970-01-01T00:00:00Z",
         "long_description": "blah blah blah",
         "long_description_raw": "blah blah blah unsanitized",
@@ -1178,7 +1197,8 @@ Due to massive changes, this API cannot be mapped onto any v2 API
                     "username": "",
                     "disc": "",
                     "avatar": "",
-                    "bot": false
+                    "bot": false,
+                    "status": "Unknown"
                 },
                 "main": false
             }
@@ -1335,7 +1355,8 @@ Creates a oauth2 login given a code
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "site_lang": "",
     "css": null
@@ -1542,11 +1563,13 @@ to false.
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "description": "",
     "tags": [],
     "created_at": "1970-01-01T00:00:00Z",
+    "last_updated_at": "1970-01-01T00:00:00Z",
     "last_stats_post": "1970-01-01T00:00:00Z",
     "long_description": "blah blah blah",
     "long_description_raw": "blah blah blah unsanitized",
@@ -1567,7 +1590,8 @@ to false.
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "main": false
         }
@@ -1702,11 +1726,13 @@ to false.
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "description": "",
     "tags": [],
     "created_at": "1970-01-01T00:00:00Z",
+    "last_updated_at": "1970-01-01T00:00:00Z",
     "last_stats_post": "1970-01-01T00:00:00Z",
     "long_description": "blah blah blah",
     "long_description_raw": "blah blah blah unsanitized",
@@ -1727,7 +1753,8 @@ to false.
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "main": false
         }
@@ -1856,7 +1883,8 @@ You **must** be main owner to use this endpoint.
         "username": "Leave blank",
         "disc": "Leave blank",
         "avatar": "Leave blank",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "main": true
 }
@@ -2001,7 +2029,8 @@ but must exist in the object
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "description": ""
         }
@@ -2011,7 +2040,8 @@ but must exist in the object
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "created_at": "1970-01-01T00:00:00Z"
 }
@@ -2068,7 +2098,8 @@ Gets a user profile.
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "bots": [],
     "description": "",
@@ -2118,7 +2149,8 @@ be present
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "bots": [],
     "description": "",
@@ -2230,7 +2262,8 @@ This may change in the future and is given by ``per_page`` key.
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "epoch": [],
             "replies": [],
@@ -2259,7 +2292,8 @@ This may change in the future and is given by ``per_page`` key.
             "username": "",
             "disc": "",
             "avatar": "",
-            "bot": false
+            "bot": false,
+            "status": "Unknown"
         },
         "epoch": [],
         "replies": [],
@@ -2342,7 +2376,8 @@ also match the user token sent in the ``Authorization`` header
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "epoch": [],
     "replies": [],
@@ -2423,7 +2458,7 @@ also match the user token sent in the ``Authorization`` header
 
 ```json
 {
-    "id": "0d9f2487-21d2-4e4b-af6d-7cc0d47397fe",
+    "id": "e7f11d71-f6e9-4970-a9e5-0d4d3a9470b4",
     "reply": false,
     "star_rating": "0",
     "review_text": "",
@@ -2438,7 +2473,8 @@ also match the user token sent in the ``Authorization`` header
         "username": "",
         "disc": "",
         "avatar": "",
-        "bot": false
+        "bot": false,
+        "status": "Unknown"
     },
     "epoch": [],
     "replies": [],
@@ -2489,7 +2525,7 @@ set this a TargetType anyways so you might as well set it correctly.
 
 ```json
 {
-    "rid": "5ed709ca-72d7-4101-9bef-12ab7f8b7dbd"
+    "rid": "c87744bb-0e32-4864-9abf-7c4f192acf12"
 }
 ```
 
@@ -2560,7 +2596,7 @@ A bot has a TargetType of 0 while a server has a TargetType of 1. This is the ``
 
 ```json
 {
-    "rid": "313f6ccf-cebc-472e-9888-8769de72bea8"
+    "rid": "6a831576-8cc0-4ff0-a87d-a89ffe341a99"
 }
 ```
 
@@ -2626,7 +2662,8 @@ if the list grows and then requires it.
                 "username": "",
                 "disc": "",
                 "avatar": "",
-                "bot": false
+                "bot": false,
+                "status": "Unknown"
             },
             "flags": []
         }
@@ -2753,7 +2790,7 @@ This is the ``target_type``
 
 ```json
 {
-    "id": "57106809-b611-418a-b975-6c948de511d6",
+    "id": "868203e9-d540-49a3-a487-78a63fc38e68",
     "target_type": 0
 }
 ```
